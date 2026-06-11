@@ -3,22 +3,20 @@ title: "Wiki Index"
 type: meta
 updated: 2026-06-11
 total_sources: 0
-total_pages: 1
+total_pages: 2
 ---
 
 # Wiki Index
 
-Master catalog of all pages in this knowledge base. Updated on every ingest.
+Master catalog of all pages. See [[Learning Dashboard]] for learned / to-learn status.
 
-**Quick stats**: 0 sources ingested · 1 wiki page · last updated 2026-06-11
-
-**Navigation tip**: Read this file first when answering a query. Find relevant pages, then drill in.
+**Quick stats**: 0 sources · 2 content pages · last updated 2026-06-11
 
 ---
 
-## Sources
+## Topics (learning maps)
 
-_None yet._
+- [[Prostate Cancer]] — disease-area map: biology, staging, treatments, trial endpoints, regulatory context
 
 ## Concepts
 
@@ -28,6 +26,6 @@ _None yet._
 
 _None yet._
 
-## Topics
+## Sources
 
 _None yet._
