@@ -7,7 +7,7 @@ total_pages: 12
 
 # Wiki Index
 
-Master catalog of all pages, organized by layer. See [[Learning Dashboard]] for learned / to-learn status.
+Master catalog of all pages, organized by layer. See [[learning|Learning Dashboard]] for learned / to-learn status.
 
 **Quick stats**: 12 content pages across 4 layers · last updated 2026-06-11
 

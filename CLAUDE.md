@@ -137,6 +137,7 @@ sources: 1                        # count of raw captures that informed this pag
 - Use the readable title as the filename, including spaces, parentheses, em-dashes, curly braces: `Analysis Results Data ({cards}).md`.
 - Sanitize Windows-illegal chars (`< > : " / \ | ? *`) by rephrasing the title — do not invent a kebab-case alternate.
 - When referencing a page, use the **exact** canonical title. One canonical title per file; fix variant references rather than tolerating them.
+- **Meta files are the exception** (`index.md`, `learning.md`, `log.md`): their filenames intentionally differ from their titles ("Wiki Index", "Learning Dashboard", "Activity Log"). Quartz resolves a `[[wiki-link]]` by **filename slug, not title**, so link the dashboard as `[[learning|Learning Dashboard]]` (not `[[Learning Dashboard]]`, which 404s). Content pages keep filename == title so plain `[[Title]]` works.
 
 Folder placement — every content page lives in exactly one of four layer folders:
 
