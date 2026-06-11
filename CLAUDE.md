@@ -1,6 +1,6 @@
 # CLAUDE.md — biostat-kb Operating Schema
 
-This is the operating schema for `biostat-kb`, a personal **learning ledger** for a clinical-trial biostatistician. You (Claude) maintain the `wiki/` directory. The human curates `raw/` sources and directs what to ingest. You never modify `raw/`.
+This is the operating schema for `biostat-kb`, a personal **learning ledger** for a clinical-trial biostatistician. You (Claude) maintain the `wiki/` directory. The human curates `raw/` sources and directs what to ingest. You never modify or delete a human-authored file in `raw/` — your only write to `raw/` is creating new source files that capture the human's own chat input (see "Everything the human gives you is a source").
 
 ## Purpose — read this first
 
@@ -16,6 +16,16 @@ Consequences for how you write:
 - **Do not over-summarize.** The human digests the material themselves; you record that it happened and wire up the links. When in doubt, write less and link more.
 - **Never fabricate coverage.** Only create or expand a page for material the human actually ingested or explicitly said they learned.
 
+## Everything the human gives you is a source
+
+Knowledge does not enter the wiki as conversation. If it isn't captured as a source, it has no provenance, doesn't persist, and can't be re-examined — it's wasted. So:
+
+- **When the human conveys knowledge in chat** (a fact, their understanding, material to record), first **persist it verbatim** to `raw/sources/` as a dated personal note, *then* run the ingest workflow on it. Do NOT write chat narrative straight into wiki pages — that bypasses the source layer and breaks provenance.
+- **Distinguish knowledge from commands.** Directions like "ingest X", "lint the wiki", "what should I learn next", "restructure this" are instructions, not sources — execute them, don't save them. If one message carries both knowledge and a command, extract the knowledge part into a source and act on the command.
+- **Capture faithfully.** Save the human's own words with only light cleanup; the raw note is the original, the wiki page is the digested version. Both are kept.
+
+Capture file convention: `raw/sources/YYYY-MM-DD <short topic>.md`, with a first line noting origin (`Personal note — conversation, <date>`).
+
 ## Repository Layout
 
 ```
@@ -23,7 +33,7 @@ biostat-kb/
 ├── CLAUDE.md            # This file
 ├── raw/
 │   ├── assets/          # PDFs, images (human-managed, read-only for you)
-│   └── sources/         # Raw clipped articles / notes (human-managed, read-only for you)
+│   └── sources/         # Raw clipped articles + notes captured from chat (don't edit human-authored ones)
 ├── site/                # Quartz v4 framework — do not touch except for site config changes
 ├── wiki/                # You maintain everything below
 │   ├── index.md         # Catalog of all pages — update on every ingest
@@ -91,9 +101,14 @@ Folder placement: `sources/` one note per raw source · `concepts/` methods, sta
 
 ## Workflows
 
+### Capture (when the human gives knowledge in chat)
+
+1. Write their input verbatim (light cleanup only) to `raw/sources/YYYY-MM-DD <short topic>.md`, first line `Personal note — conversation, <date>`.
+2. Continue straight into the Ingest workflow on that new file.
+
 ### Ingest (default: light touch)
 
-When told to ingest a source:
+When told to ingest a source (or right after Capture):
 
 1. **Read** the raw file in `raw/sources/`.
 2. **Create** a short source note in `wiki/sources/` (template: `source-note.md`, ≤ 15 bullet lines).
