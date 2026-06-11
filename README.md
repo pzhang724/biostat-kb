@@ -4,10 +4,11 @@ My learning ledger as a biostatistician — a record of what I've **already lear
 
 ## How I use it
 
-Give Claude material in one of two ways, then say "ingest it":
+Give Claude material in one of three ways, then say "ingest it":
 
-- **a link**, or
-- **a file / picture I upload**
+- **a link**,
+- **a file / picture I upload**, or
+- **something I tell it in chat** ("诶，这个可能有用") — Claude saves my words as a source first
 
 Claude saves it to `raw/`, then writes a short marker page in `wiki/` and links it into what I already know. Pages are markers that I learned something — not summaries to read instead of the source.
 

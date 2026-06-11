@@ -1,6 +1,46 @@
-# CLAUDE.md — biostat-kb Operating Schema
+<!--
+═══════════════════════════════════════════════════════════════════
+HOW TO USE THIS TEMPLATE
+═══════════════════════════════════════════════════════════════════
+This is a generalized template of the biostat-kb operating schema —
+a personal "learning ledger" wiki maintained by Claude, published
+with Quartz v4.
 
-This is the operating schema for `biostat-kb`, a personal **learning ledger** for a clinical-trial biostatistician. You (Claude) maintain the `wiki/` directory. The human curates `raw/` sources and directs what to ingest. You never modify or delete a human-authored file in `raw/` — your only writes to `raw/` are creating new capture files (fetched link copies, saved uploads, chat-shared knowledge; see "Everything the human gives you is a source").
+To adopt it for a new person/repo:
+
+1. Copy this file to the new repo root as `CLAUDE.md`.
+2. Replace every `{{...}}` placeholder:
+   - {{REPO_NAME}}     — the repository name (e.g. `biostat-kb`)
+   - {{OWNER_ROLE}}    — who the wiki is for (e.g. `a clinical-trial
+                         biostatistician`, `a frontend engineer`)
+   - {{DOMAIN_TAGS}}   — the controlled tag vocabulary: 5–9 domains
+                         covering the owner's field, e.g.
+                         `biology` · `medical` · `statistics` ·
+                         `standards` · `regulatory` ·
+                         `data-management` · `trial-conduct`
+   - {{N_DOMAINS}}     — how many tags are in that list
+3. Create the matching folder skeleton (see Repository Layout):
+   `raw/assets/`, `raw/sources/`, `wiki/` with `index.md`,
+   `learning.md`, `log.md`, and the `sources/ concepts/ entities/
+   topics/ templates/` subfolders, plus the Quartz site in `site/`.
+4. Adjust the publishing notes (Quartz, GitHub Pages workflow) if a
+   different static-site setup is used.
+5. Delete this comment block.
+
+Design intent worth preserving when adapting:
+- The wiki is a LEARNING LEDGER, not an encyclopedia — pages are
+  terse markers that learning happened, never summaries to read
+  instead of the source.
+- Knowledge enters ONLY as human-supplied sources (link / upload /
+  chat-shared), captured to `raw/` first.
+- Page exists ⇔ learned (or actively learning); to-learn items are
+  checkboxes, not pages.
+═══════════════════════════════════════════════════════════════════
+-->
+
+# CLAUDE.md — {{REPO_NAME}} Operating Schema
+
+This is the operating schema for `{{REPO_NAME}}`, a personal **learning ledger** for {{OWNER_ROLE}}. You (Claude) maintain the `wiki/` directory. The human curates `raw/` sources and directs what to ingest. You never modify or delete a human-authored file in `raw/` — your only writes to `raw/` are creating new capture files (fetched link copies, saved uploads, chat-shared knowledge; see "Everything the human gives you is a source").
 
 ## Purpose — read this first
 
@@ -24,7 +64,7 @@ The human provides material in exactly **three forms**, and all become sources:
 
 1. **A link (URL)** — fetch it, save a captured copy to `raw/sources/`, then ingest.
 2. **Uploaded files / pictures** — save the file to `raw/sources/` (documents/notes) or `raw/assets/` (images/PDFs), then ingest.
-3. **Knowledge shared in chat** — when the human states or pastes knowledge in conversation (e.g. "诶，这个可能有用", relaying something they learned at work, a snippet with their own commentary): capture *their words* faithfully to a new file in `raw/sources/`, then ingest. This is the one write to `raw/` you are allowed. Capture what they said, not your elaboration of it.
+3. **Knowledge shared in chat** — when the human states or pastes knowledge in conversation (e.g. "hey, this might be useful", relaying something they learned at work, a snippet with their own commentary): capture *their words* faithfully to a new file in `raw/sources/`, then ingest. This is the one write to `raw/` you are allowed. Capture what they said, not your elaboration of it.
 
 Rules:
 
@@ -34,40 +74,10 @@ Rules:
 
 Capture file convention: `raw/sources/YYYY-MM-DD <short topic>.md`, first line noting origin (e.g. `Source: <url>, captured <date>`, `Uploaded file, <date>`, or `From chat, <date>`).
 
-## User Preferences & Notes
-
-Durable preferences live **here** (in the repo), not in external/per-machine memory — the human may switch machines and the repo travels with them. Add new ones to this section.
-
-- **Save Q&A by default — and never ask whether to.** When the human asks a substantive question and you answer, capture that Q&A as a raw source (`From chat, <date>`) and run a light-touch ingest — without asking each time. This includes **follow-up and clarification questions**: the human has confirmed they don't ask things casually, so every substantive question they ask counts as material to keep. Do not pause to ask "should I record this?" — just do it. This **extends form #3 above**: for this human, their question + the ensuing answer *is* material worth keeping (it overrides the general "your chat explanations aren't a source / ask before capturing" caution). Still execute pure commands ("ingest X", "lint", "what next") as instructions, not material.
-- **Answer short first, expect follow-ups.** Keep the first answer to a short paragraph (~4–6 sentences or a few short bullets) — direct answer plus a little context, not a one-liner and not an exposition. The human follows up quickly to pull out detail. Applies to all chat, not just the Query workflow.
-- **Capture/ingest first, answer last.** Do the recording (capture + ingest + index/log/dashboard updates) BEFORE delivering the answer, so the substantive answer is the final thing in the turn — the human shouldn't have to scroll up past tool calls to re-find it. A one-line note like "记录并 ingest" before the tool calls is fine; the real answer goes at the bottom. (This reorders, but does not relax, "Save Q&A by default" or "Answer short first".)
-- **Chinese annotations are welcome in wiki pages.** When it aids the human's understanding, add a brief Chinese gloss next to an English term — inline parenthetical (e.g. `lesion (病灶)`) for a key term, or a short Chinese note for a tricky concept. Use judgment: annotate where it genuinely helps (jargon, non-obvious translations), don't gloss everything. English remains the primary text; titles/filenames stay in their canonical (usually English) form.
-- **Published site:** Quartz v4 → https://pzhang724.github.io/biostat-kb/ (auto-deploys on push to `main`).
-- **Human:** clinical-trial biostatistician.
-
-## Confidentiality — never commit sensitive data
-
-**This rule overrides "Capture faithfully" and "Save Q&A by default."** Before writing anything to `raw/`, `wiki/`, `log.md`, a commit message, or any file, scrub sensitive identifiers — when in doubt, mask and ask rather than store.
-
-Treat as sensitive and **never persist verbatim**:
-
-- **Protocol / study / trial identifiers** — protocol numbers (e.g. `XXX-020-001`), study codes, internal trial IDs, IND/NDA numbers.
-- **Drug / compound identifiers** — sponsor compound codes, investigational product names, isotope/formulation codes that identify a specific program.
-- **Sponsor-confidential information** — unpublished company/program internals, pipeline specifics, anything the human relays from work that isn't public.
-- **Patient data** — any patient-level data or PHI: names, subject/patient IDs, dates of birth, site-identifying details, etc.
-
-How to handle when such content appears (in chat, a pasted snippet, an uploaded file, or a draft page):
-
-1. **Mask it** — refer to it generically in plain language: "some study", "a patient", "the study drug", "a sponsor" (the human prefers this natural phrasing over bracketed tokens). Keep only the transferable, non-identifying methodology/concept. Bracketed placeholders (`[PROTOCOL]`, `[SUBJECT ID]`) are fine where a slot needs to be explicit.
-2. **Or flag it** — tell the human "this looks confidential — mask or skip?" and wait, rather than capturing it.
-3. Keep wiki pages at the level of **public, generalizable knowledge** (methods, standards, CDISC, statistical concepts). Identifying specifics never belong in a repo that auto-deploys to public GitHub Pages.
-
-If sensitive data has already been saved, scrub it from the working tree immediately; if it ever reaches a commit, stop and tell the human (history rewrite is their call).
-
 ## Repository Layout
 
 ```
-biostat-kb/
+{{REPO_NAME}}/
 ├── CLAUDE.md            # This file
 ├── raw/
 │   ├── assets/          # PDFs, images (human-managed, read-only for you)
@@ -78,18 +88,18 @@ biostat-kb/
 │   ├── learning.md      # Learning dashboard: Learned / In Progress / To Learn
 │   ├── log.md           # Append-only activity log
 │   ├── sources/         # One short note per ingested raw source
-│   ├── concepts/        # Methods, standards, frameworks, diseases, biology
-│   ├── entities/        # People, R packages, software, organizations, guidances
-│   ├── topics/          # Maps of Content (MOCs): per-domain or per-disease learning maps
+│   ├── concepts/        # Methods, standards, frameworks, domain concepts
+│   ├── entities/        # People, software/packages, organizations, key documents
+│   ├── topics/          # Maps of Content (MOCs): per-domain learning maps
 │   └── templates/       # Page templates (reference only — not published, do not modify)
 └── .github/workflows/   # Pushing to main auto-deploys wiki/ to GitHub Pages
 ```
 
 ## Domain Context
 
-Knowledge spans seven domains (this is also the controlled tag vocabulary):
+Knowledge spans {{N_DOMAINS}} domains (this is also the controlled tag vocabulary):
 
-`biology` · `medical` · `statistics` · `standards` · `regulatory` · `data-management` · `trial-conduct`
+{{DOMAIN_TAGS}}
 
 Most pages are cross-domain — tag each page with 1–3 domains from this exact list. **Never invent new domain tags.** Additional free-form tags are allowed after the domain tags but keep them rare.
 
@@ -100,7 +110,7 @@ This is the core mechanism of the wiki:
 - **A wiki page exists ⇔ the human has learned it (or is actively learning it).** Frontmatter `status:` is `learning` or `learned`.
 - **To-learn items are NOT pages.** They live as `- [ ]` checklist entries inside topic (MOC) pages, and the highest-priority ones are mirrored in `wiki/learning.md`.
 - **When the human learns something**: check the box in the topic page, create the page (status `learning` or `learned` as directed), link it from related pages, update `learning.md` and `index.md`.
-- **Chat remarks are progress signals.** When the human mentions in conversation "我在学 X" / "I'm learning X" / "I finished X", treat it as a directive to update this layer (create the page as `learning`, flip status, check boxes) — no link or upload needed for a status change. This is distinct from chat-shared *knowledge*, which gets captured to `raw/sources/` first.
+- **Chat remarks are progress signals.** When the human mentions in conversation "I'm learning X" / "I finished X" (in any language), treat it as a directive to update this layer (create the page as `learning`, flip status, check boxes) — no link or upload needed for a status change. This is distinct from chat-shared *knowledge*, which gets captured to `raw/sources/` first.
 - Do not pre-create stub pages for unlearned material — an unlearned item is a checkbox, not a page.
 
 `wiki/learning.md` has three sections — **Learned** (links to pages with status `learned`), **In Progress** (status `learning`), **To Learn** (checklist, grouped by topic). Keep it in sync whenever any page's status changes.
@@ -114,7 +124,7 @@ This is the core mechanism of the wiki:
 title: "Page Title"
 type: source | concept | entity | topic
 status: learning | learned        # not used on type: source pages
-tags: [medical, statistics]       # 1–3 from the domain vocabulary
+tags: [tag-1, tag-2]              # 1–3 from the domain vocabulary
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 sources: 1                        # count of raw sources that informed this page
@@ -136,7 +146,7 @@ sources: 1                        # count of raw sources that informed this page
 - Sanitize Windows-illegal chars (`< > : " / \ | ? *`) by rephrasing the title — do not invent a kebab-case alternate.
 - When referencing a page, use the **exact** canonical title. One canonical title per file; fix variant references rather than tolerating them.
 
-Folder placement: `sources/` one note per raw source · `concepts/` methods, standards, diseases, biology · `entities/` people, packages, organizations, guidance documents · `topics/` MOCs and syntheses.
+Folder placement: `sources/` one note per raw source · `concepts/` methods, standards, domain concepts · `entities/` people, packages, organizations, key documents · `topics/` MOCs and syntheses.
 
 ## Workflows
 
@@ -159,7 +169,7 @@ When told to ingest a source (or right after Capture):
 
 1. Read `wiki/index.md` (and `learning.md` if the question concerns progress).
 2. Read the relevant pages in full; synthesize with `[[Page Title]]` citations.
-3. **Answer short first.** The human follows up quickly — give the direct answer plus a little context (aim for a short paragraph, ~4-6 sentences, not a one-liner and not an exposition); let the follow-ups pull out detail.
+3. **Answer short first.** The human follows up quickly — give the direct answer, not an exposition; let the follow-ups pull out detail.
 
 ### Learning Review
 
