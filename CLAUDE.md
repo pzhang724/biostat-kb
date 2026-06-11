@@ -13,18 +13,25 @@ This wiki is **NOT an encyclopedia**. Its purpose is to let the human:
 Consequences for how you write:
 
 - **Be terse.** Pages are evidence of learning, not substitutes for the source. A source note is ≤ 15 bullet lines. A concept page is a definition plus a handful of key points plus links — never textbook prose.
-- **Do not over-summarize.** The human digests the material themselves; you record that it happened and wire up the links. When in doubt, write less and link more.
+- **Do not over-summarize.** The human digests the material themselves; you record that it happened and wire up the links. When in doubt, write less and link more. A page the human reads *instead of* the source defeats the purpose — pages are markers, not replacements.
 - **Never fabricate coverage.** Only create or expand a page for material the human actually ingested or explicitly said they learned.
 
 ## Everything the human gives you is a source
 
-Knowledge does not enter the wiki as conversation. If it isn't captured as a source, it has no provenance, doesn't persist, and can't be re-examined — it's wasted. So:
+The wiki records what the human has **already** learned. They learn from the original material themselves — **your summaries are not a substitute for that** (if they didn't read the source, they didn't learn it, no matter what you wrote). So a wiki page is a terse **marker that learning happened**, plus links — never a summary meant to be read in place of the source.
 
-- **When the human conveys knowledge in chat** (a fact, their understanding, material to record), first **persist it verbatim** to `raw/sources/` as a dated personal note, *then* run the ingest workflow on it. Do NOT write chat narrative straight into wiki pages — that bypasses the source layer and breaks provenance.
-- **Distinguish knowledge from commands.** Directions like "ingest X", "lint the wiki", "what should I learn next", "restructure this" are instructions, not sources — execute them, don't save them. If one message carries both knowledge and a command, extract the knowledge part into a source and act on the command.
-- **Capture faithfully.** Save the human's own words with only light cleanup; the raw note is the original, the wiki page is the digested version. Both are kept.
+The human provides material in exactly **two forms**, and both become sources:
 
-Capture file convention: `raw/sources/YYYY-MM-DD <short topic>.md`, with a first line noting origin (`Personal note — conversation, <date>`).
+1. **A link (URL)** — fetch it, save a captured copy to `raw/sources/`, then ingest.
+2. **Uploaded files / pictures** — save the file to `raw/sources/` (documents/notes) or `raw/assets/` (images/PDFs), then ingest.
+
+Rules:
+
+- **Never invent the source.** Knowledge enters only through a link or an uploaded file. Do not write knowledge into the wiki that the human didn't supply this way.
+- **Distinguish material from commands.** "ingest X", "lint the wiki", "what should I learn next", "restructure this" are instructions — execute them, don't save them.
+- **Capture faithfully.** The raw copy is the original; the wiki page is the terse digested marker. Both are kept.
+
+Capture file convention: `raw/sources/YYYY-MM-DD <short topic>.md`, first line noting origin (e.g. `Source: <url>, captured <date>` or `Uploaded file, <date>`).
 
 ## Repository Layout
 
@@ -101,9 +108,9 @@ Folder placement: `sources/` one note per raw source · `concepts/` methods, sta
 
 ## Workflows
 
-### Capture (when the human gives knowledge in chat)
+### Capture (when the human supplies a link or uploads a file/picture)
 
-1. Write their input verbatim (light cleanup only) to `raw/sources/YYYY-MM-DD <short topic>.md`, first line `Personal note — conversation, <date>`.
+1. For a link: fetch it and save a captured copy to `raw/sources/YYYY-MM-DD <short topic>.md` (origin line `Source: <url>, captured <date>`). For an upload: save it to `raw/sources/` (notes/docs) or `raw/assets/` (images/PDFs).
 2. Continue straight into the Ingest workflow on that new file.
 
 ### Ingest (default: light touch)
