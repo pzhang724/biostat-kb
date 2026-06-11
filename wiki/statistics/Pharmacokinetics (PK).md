@@ -23,4 +23,3 @@ Measured by sampling blood (sometimes urine) at set times after dosing to build 
 
 For radioactive drugs the radiation analogue of PK exposure is [[Dosimetry]] (absorbed dose in Gy rather than drug concentration). See also [[PSMA PET-CT]] for the imaging side of radioligand programs.
 
-Source: [[PK and dosimetry (chat)]]

@@ -32,4 +32,3 @@ In trials the **kinetics** matter more than any single value: a falling PSA / lo
 
 PSA is exactly the kind of efficacy measure that is easily contaminated by concomitant or subsequent treatment: changes must be read in light of what other anti-cancer therapy the patient received (see [[Anti-Cancer Therapy Categories in Oncology Trials]]).
 
-Sources: [[PSA (chat)]] · [[PSA high vs low (chat)]] · [[ORR based on PSA (chat)]]

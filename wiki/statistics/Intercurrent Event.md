@@ -24,4 +24,3 @@ E9(R1) requires pre-specifying, for each ICE type, one of five **handling strate
 
 The choice of strategy, together with population, endpoint, and summary measure, defines the **estimand**. In oncology, subsequent anti-cancer therapy (see [[Anti-Cancer Therapy Categories in Oncology Trials]]) is the most common ICE in **OS** analysis: a treatment-policy strategy keeps following OS as usual, whereas a hypothetical strategy censors at the switch.
 
-Source: [[Intercurrent events (chat)]]

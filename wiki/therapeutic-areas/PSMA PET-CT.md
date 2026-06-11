@@ -23,4 +23,3 @@ sources: 1
 
 **Caveat vs response criteria:** [[RECIST 1.1]] / [[PCWG3 Criteria]] (and the composite [[Modified RECIST 1.1 and PCWG3 Criteria]]) were built on **conventional** imaging. PSMA PET's higher sensitivity causes stage migration and can flag progression earlier or discordantly; how to fold PSMA-PET findings into formal response/progression endpoints is still **evolving** (emerging PSMA-PET response criteria such as RECIP). So PSMA PET is excellent for **detection/selection** but is not yet the standard **response-assessment** criterion. See [[Measurable vs Non-Measurable Disease (RECIST)]].
 
-Source: [[PSMA PET-CT (chat)]]

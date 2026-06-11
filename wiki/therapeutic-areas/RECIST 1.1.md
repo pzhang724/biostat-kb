@@ -64,4 +64,3 @@ Limitation that motivates [[PCWG3 Criteria]]: RECIST needs measurable disease, s
 
 Eisenhauer EA, Therasse P, Bogaerts J, et al. **New response evaluation criteria in solid tumours: revised RECIST guideline (version 1.1).** *Eur J Cancer.* 2009;45(2):228–247. doi:10.1016/j.ejca.2008.10.026
 
-Sources: [[RECIST 1.1 and PCWG3 (chat)]] · [[RECIST overall response combinations (chat)]]

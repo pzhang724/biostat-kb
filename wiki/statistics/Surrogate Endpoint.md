@@ -24,4 +24,3 @@ Worked example — **[[PSA (Prostate-Specific Antigen)|PSA]] response (PSA50)** 
 
 Related: a surrogate that gets contaminated after the fact (e.g. by subsequent therapy) ties back to the [[Intercurrent Event]] / estimand framing.
 
-Source: [[PSA50 as a surrogate endpoint (chat)]]

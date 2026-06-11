@@ -24,4 +24,3 @@ sources: 1
 
 **Theranostic link:** the same **PSMA** target imaged on [[PSMA PET-CT]] is what ¹⁷⁷Lu-PSMA binds; dosimetry quantifies the radiation that delivery actually deposits. Shared idea with PK: both answer *"how much reaches where, over time."*
 
-Source: [[PK and dosimetry (chat)]]

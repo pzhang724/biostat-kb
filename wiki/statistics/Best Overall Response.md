@@ -29,4 +29,3 @@ Downstream endpoints derive from BOR:
 
 So the per-patient pipeline is: **timepoint statuses → BOR (best, with confirmation/duration rules) → 1/0 responder flag → ORR across patients**.
 
-Source: [[Best overall response (chat)]]

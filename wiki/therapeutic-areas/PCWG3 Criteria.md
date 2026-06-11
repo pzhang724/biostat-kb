@@ -39,4 +39,3 @@ When a protocol fuses soft-tissue RECIST and bone PCWG3 into a **single named co
 
 Scher HI, Morris MJ, Stadler WM, et al. **Trial design and objectives for castration-resistant prostate cancer: updated recommendations from the Prostate Cancer Clinical Trials Working Group 3.** *J Clin Oncol.* 2016;34(12):1402–1418. doi:10.1200/JCO.2015.64.2702
 
-Sources: [[RECIST 1.1 and PCWG3 (chat)]] · [[Combining RECIST and PCWG3 into rPFS (chat)]] · [[Combined radiographic assessment matrix (chat)]]

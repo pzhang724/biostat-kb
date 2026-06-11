@@ -26,4 +26,3 @@ A few linked terms used in solid-tumor response assessment:
 
 Why it matters statistically: RECIST-based [[PSA (Prostate-Specific Antigen)|ORR]] requires **measurable disease at baseline**. Bone-predominant patients — typical in prostate cancer — often have no measurable target lesion, so RECIST ORR is not evaluable for them. That is precisely why **PSA-based response (PSA50)** and bone-scan progression criteria ([[PCWG3 Criteria]]) are used instead. See [[PSA (Prostate-Specific Antigen)]].
 
-Source: [[Lesion, bone mets, measurable disease (chat)]]

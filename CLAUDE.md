@@ -12,7 +12,7 @@ This wiki is **NOT an encyclopedia**. Its purpose is to let the human:
 
 Consequences for how you write:
 
-- **Be terse.** Pages are evidence of learning, not substitutes for the source. A source note is ≤ 15 bullet lines. A concept page is a definition plus a handful of key points plus links — never textbook prose.
+- **Be terse.** Pages are evidence of learning, not substitutes for the source. A content page is a definition plus a handful of key points plus links — never textbook prose.
 - **Do not over-summarize.** The human digests the material themselves; you record that it happened and wire up the links. When in doubt, write less and link more. A page the human reads *instead of* the source defeats the purpose — pages are markers, not replacements.
 - **Never fabricate coverage.** Only create or expand a page for material the human actually ingested or explicitly said they learned.
 
@@ -33,6 +33,8 @@ Rules:
 - **Capture faithfully.** The raw copy is the original; the wiki page is the terse digested marker. Both are kept.
 
 Capture file convention: `raw/sources/YYYY-MM-DD <short topic>.md`, first line noting origin (e.g. `Source: <url>, captured <date>`, `Uploaded file, <date>`, or `From chat, <date>`).
+
+**Raw captures are provenance only — they are NOT published.** The wiki does **not** keep a per-source note page (the old `wiki/sources/` layer was removed). The `raw/sources/` capture *is* the saved source; the published marker of learning is the content page (in one of the four layer folders below) plus the `wiki/log.md` entry that records which raw capture it came from. Do not recreate a published per-source-note layer.
 
 ## User Preferences & Notes
 
@@ -73,14 +75,14 @@ biostat-kb/
 │   ├── assets/          # PDFs, images (human-managed, read-only for you)
 │   └── sources/         # Raw clipped articles + notes captured from chat (don't edit human-authored ones)
 ├── site/                # Quartz v4 framework — do not touch except for site config changes
-├── wiki/                # You maintain everything below
-│   ├── index.md         # Catalog of all pages — update on every ingest
+├── wiki/                # You maintain everything below (this is what publishes)
+│   ├── index.md         # Catalog of all pages, grouped by layer — update on every ingest
 │   ├── learning.md      # Learning dashboard: Learned / In Progress / To Learn
 │   ├── log.md           # Append-only activity log
-│   ├── sources/         # One short note per ingested raw source
-│   ├── concepts/        # Methods, standards, frameworks, diseases, biology
-│   ├── entities/        # People, R packages, software, organizations, guidances
-│   ├── topics/          # Maps of Content (MOCs): per-domain or per-disease learning maps
+│   ├── therapeutic-areas/   # Clinical/disease/oncology: diseases, biology, imaging, response criteria
+│   ├── statistics/          # Statistical & methodological concepts: endpoints, estimands, PK/exposure
+│   ├── data-standards/      # CDISC and data standards: SDTM, ADaM, controlled terminology
+│   ├── regulatory-guidance/ # Regulatory guidances/frameworks: ICH, FDA/EMA guidance documents
 │   └── templates/       # Page templates (reference only — not published, do not modify)
 └── .github/workflows/   # Pushing to main auto-deploys wiki/ to GitHub Pages
 ```
@@ -98,8 +100,8 @@ Most pages are cross-domain — tag each page with 1–3 domains from this exact
 This is the core mechanism of the wiki:
 
 - **A wiki page exists ⇔ the human has learned it (or is actively learning it).** Frontmatter `status:` is `learning` or `learned`.
-- **To-learn items are NOT pages.** They live as `- [ ]` checklist entries inside topic (MOC) pages, and the highest-priority ones are mirrored in `wiki/learning.md`.
-- **When the human learns something**: check the box in the topic page, create the page (status `learning` or `learned` as directed), link it from related pages, update `learning.md` and `index.md`.
+- **To-learn items are NOT pages.** They live as `- [ ]` checklist entries in the **To Learn** section of `wiki/learning.md`, grouped by layer/topic.
+- **When the human learns something**: check the box in `learning.md`, create the page (status `learning` or `learned` as directed) in the right layer folder, link it from related pages, update `learning.md` and `index.md`.
 - **Chat remarks are progress signals.** When the human mentions in conversation "我在学 X" / "I'm learning X" / "I finished X", treat it as a directive to update this layer (create the page as `learning`, flip status, check boxes) — no link or upload needed for a status change. This is distinct from chat-shared *knowledge*, which gets captured to `raw/sources/` first.
 - Do not pre-create stub pages for unlearned material — an unlearned item is a checkbox, not a page.
 
@@ -112,12 +114,12 @@ This is the core mechanism of the wiki:
 ```yaml
 ---
 title: "Page Title"
-type: source | concept | entity | topic
-status: learning | learned        # not used on type: source pages
+type: concept                     # all content pages; the layer folder encodes the category
+status: learning | learned
 tags: [medical, statistics]       # 1–3 from the domain vocabulary
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-sources: 1                        # count of raw sources that informed this page
+sources: 1                        # count of raw captures that informed this page
 ---
 ```
 
@@ -136,7 +138,14 @@ sources: 1                        # count of raw sources that informed this page
 - Sanitize Windows-illegal chars (`< > : " / \ | ? *`) by rephrasing the title — do not invent a kebab-case alternate.
 - When referencing a page, use the **exact** canonical title. One canonical title per file; fix variant references rather than tolerating them.
 
-Folder placement: `sources/` one note per raw source · `concepts/` methods, standards, diseases, biology · `entities/` people, packages, organizations, guidance documents · `topics/` MOCs and syntheses.
+Folder placement — every content page lives in exactly one of four layer folders:
+
+- `therapeutic-areas/` — clinical / disease / oncology knowledge: diseases, biology, imaging, response criteria (e.g. RECIST, PCWG3, PSA, PSMA PET).
+- `statistics/` — statistical & methodological concepts: endpoints, estimands, intercurrent events, surrogate endpoints, PK, dosimetry.
+- `data-standards/` — CDISC and data standards: SDTM, ADaM, controlled terminology.
+- `regulatory-guidance/` — regulatory guidances & frameworks: ICH (e.g. E9(R1)), FDA/EMA guidance documents.
+
+Many pages are cross-cutting — file under the **primary** layer and wiki-link to the others. Moving a page between folders does **not** break `[[wiki-links]]` (Quartz resolves by title, not path).
 
 ## Workflows
 
@@ -150,10 +159,9 @@ Folder placement: `sources/` one note per raw source · `concepts/` methods, sta
 When told to ingest a source (or right after Capture):
 
 1. **Read** the raw file in `raw/sources/`.
-2. **Create** a short source note in `wiki/sources/` (template: `source-note.md`, ≤ 15 bullet lines).
-3. **Create or update** concept/entity pages **only for what the human actually engaged with** — typically 1–4 pages, not an exhaustive sweep. Ask if unsure what they consider "learned" from it.
-4. **Check off** any matching to-learn items in topic pages and `learning.md`.
-5. **Update** `wiki/index.md`; **append** to `wiki/log.md`.
+2. **Create or update** content pages in the right layer folder (`therapeutic-areas/`, `statistics/`, `data-standards/`, `regulatory-guidance/`) **only for what the human actually engaged with** — typically 1–4 pages, not an exhaustive sweep. Ask if unsure what they consider "learned" from it. Do **not** create a published source-note page.
+3. **Check off** any matching to-learn items in `learning.md`.
+4. **Update** `wiki/index.md` (under the right layer section); **append** to `wiki/log.md`, naming the `raw/sources/` capture the page came from.
 
 ### Query
 
@@ -163,11 +171,11 @@ When told to ingest a source (or right after Capture):
 
 ### Learning Review
 
-When asked "what should I learn next" (or similar): read `learning.md` and topic MOCs, propose 2–3 next items with a one-line rationale each, considering what learned pages they would connect to.
+When asked "what should I learn next" (or similar): read `learning.md` and `index.md`, propose 2–3 next items with a one-line rationale each, considering what learned pages they would connect to.
 
 ### Lint
 
-When told to "lint the wiki": check for broken wiki-links, filename/title mismatches, orphan pages, status/dashboard drift between pages and `learning.md`, stale checkboxes (item learned but box unchecked), and missing links between clearly related pages. Report as a numbered checklist; fix only when told.
+When told to "lint the wiki": check for broken wiki-links, filename/title mismatches, pages filed in the wrong layer folder, orphan pages, status/dashboard drift between pages and `learning.md`, stale checkboxes (item learned but box unchecked), index sections out of sync with the folders, and missing links between clearly related pages. Report as a numbered checklist; fix only when told.
 
 ## Log Format
 
@@ -175,6 +183,6 @@ Append to `wiki/log.md`, newest entry at the bottom:
 
 ```
 ## YYYY-MM-DD
-- Ingested `raw/sources/<file>` → [[Source Note Title]]; created [[X]], updated [[Y]]
-- Marked [[Z]] as learned; checked off in [[Topic]] and learning.md
+- Ingested `raw/sources/<file>`; created [[X]] (statistics), updated [[Y]] (therapeutic-areas)
+- Marked [[Z]] as learned; checked off in learning.md
 ```
