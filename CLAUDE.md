@@ -80,10 +80,11 @@ biostat-kb/
 │   ├── index.md         # Catalog of all pages, grouped by layer — update on every ingest
 │   ├── learning.md      # Learning dashboard: Learned / In Progress / To Learn
 │   ├── log.md           # Append-only activity log
-│   ├── therapeutic-areas/   # Clinical/disease/oncology: diseases, biology, imaging, response criteria
-│   ├── statistics/          # Statistical & methodological concepts: endpoints, estimands, PK/exposure
-│   ├── data-standards/      # CDISC and data standards: SDTM, ADaM, controlled terminology
-│   ├── regulatory-guidance/ # Regulatory guidances/frameworks: ICH, FDA/EMA guidance documents
+│   ├── therapeutic-areas/   # MAIN-NARRATIVE maps (MOCs) per disease/area: Prostate Cancer, Oncology — string terms together
+│   ├── biomedical/          # Biomedical concepts: diseases, biology, biomarkers, imaging, response criteria, PK/dosimetry
+│   ├── statistics/          # Statistical concepts: endpoints, estimands, surrogate/intercurrent, inference
+│   ├── data-standards/      # Data-standard concepts: CDISC SDTM, ADaM, controlled terminology
+│   ├── regulatory-guidance/ # Regulatory concepts: ICH (e.g. E9(R1)), FDA/EMA guidance documents
 │   └── templates/       # Page templates (reference only — not published, do not modify)
 └── .github/workflows/   # Pushing to main auto-deploys wiki/ to GitHub Pages
 ```
@@ -115,7 +116,7 @@ This is the core mechanism of the wiki:
 ```yaml
 ---
 title: "Page Title"
-type: concept                     # all content pages; the layer folder encodes the category
+type: concept | therapeutic-area  # concept = a term page; therapeutic-area = a main-narrative MOC
 status: learning | learned
 tags: [medical, statistics]       # 1–3 from the domain vocabulary
 created: YYYY-MM-DD
@@ -140,14 +141,16 @@ sources: 1                        # count of raw captures that informed this pag
 - When referencing a page, use the **exact** canonical title. One canonical title per file; fix variant references rather than tolerating them.
 - **Meta files are the exception** (`index.md`, `learning.md`, `log.md`): their filenames intentionally differ from their titles ("Wiki Index", "Learning Dashboard", "Activity Log"). Quartz resolves a `[[wiki-link]]` by **filename slug, not title**, so link the dashboard as `[[learning|Learning Dashboard]]` (not `[[Learning Dashboard]]`, which 404s). Content pages keep filename == title so plain `[[Title]]` works.
 
-Folder placement — every content page lives in exactly one of four layer folders:
+Folder placement — two kinds of pages:
 
-- `therapeutic-areas/` — clinical / disease / oncology knowledge: diseases, biology, imaging, response criteria (e.g. RECIST, PCWG3, PSA, PSMA PET).
-- `statistics/` — statistical & methodological concepts: endpoints, estimands, intercurrent events, surrogate endpoints, PK, dosimetry.
-- `data-standards/` — CDISC and data standards: SDTM, ADaM, controlled terminology.
-- `regulatory-guidance/` — regulatory guidances & frameworks: ICH (e.g. E9(R1)), FDA/EMA guidance documents.
+1. **Therapeutic-area maps** live in `therapeutic-areas/`. A therapeutic area is the **main narrative** at the disease/area granularity (e.g. `Prostate Cancer`, `Oncology`) — **not** an individual term. Each is a MOC (`type: therapeutic-area`) whose job is to **string the relevant terms together** into a narrative and link them; it adds no new knowledge of its own.
+2. **Concept pages** (the actual terms) live in exactly one **concept-type** folder by their nature:
+   - `biomedical/` — biomedical concepts: diseases, biology, biomarkers, imaging, response criteria (RECIST, PCWG3, PSA, PSMA PET, PK, dosimetry).
+   - `statistics/` — statistical concepts: endpoints, estimands, intercurrent events, surrogate endpoints, best overall response.
+   - `data-standards/` — data-standard concepts: CDISC SDTM, ADaM, controlled terminology.
+   - `regulatory-guidance/` — regulatory concepts: ICH (e.g. E9(R1)), FDA/EMA guidance documents.
 
-Many pages are cross-cutting — file under the **primary** layer and wiki-link to the others. Moving a page between folders does **not** break `[[wiki-links]]` (Quartz resolves by title, not path).
+So the granularity is: **a term is NOT a therapeutic area** — it is a biomedical/statistical/data-standard/regulatory concept, and a therapeutic-area map links to it. Many concepts are cross-cutting — file under the **primary** type and wiki-link to the rest. Moving a page between folders does **not** break `[[wiki-links]]` (Quartz resolves by title, not path).
 
 ## Workflows
 
