@@ -9,13 +9,9 @@ updated: 2026-06-12
 
 # Oncology
 
-Top-level main narrative for the oncology learning thread. Indications sit under it (they reuse the same cross-cutting concepts); the disease-specific maps link the rest.
+Top-level main narrative for the oncology learning thread. Indications are sections within this page (they reuse the same cross-cutting concepts); each links out to its terms.
 
-## Indications
-
-- [[Prostate Cancer]]
-
-## Cross-cutting oncology concepts (reused across indications)
+## Cross-cutting concepts (reused across indications)
 
 **Criteria & rules**
 - [[RECIST 1.1]]
@@ -28,3 +24,9 @@ Top-level main narrative for the oncology learning thread. Indications sit under
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
+
+## Prostate cancer
+
+How treatment effect is read out in advanced/mCRPC trials: a [[PSA (Prostate-Specific Antigen)|PSA]] biomarker and [[PSMA PET-CT]] imaging measure disease; bone progression follows [[PCWG3 Criteria]], fused with soft-tissue [[RECIST 1.1]] into the [[Modified RECIST 1.1 and PCWG3 Criteria]] criterion; [[PSA (Prostate-Specific Antigen)|PSA]] response is only a [[Surrogate Endpoint]]; radioligand programs add [[Pharmacokinetics (PK)]] / [[Dosimetry]].
+
+Prostate-specific terms: [[PSA (Prostate-Specific Antigen)]] · [[PSMA PET-CT]] · [[PCWG3 Criteria]] · [[Modified RECIST 1.1 and PCWG3 Criteria]] · [[Pharmacokinetics (PK)]] · [[Dosimetry]].

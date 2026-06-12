@@ -144,7 +144,7 @@ sources: 1                        # count of raw captures that informed this pag
 
 Folder placement — two kinds of pages:
 
-1. **Therapeutic-area maps** live in `therapeutic-areas/`. A therapeutic area is the **main narrative** at the disease/area granularity — **not** an individual term. `Oncology` is the top map; indications (e.g. `Prostate Cancer`) sit under it and reuse the same cross-cutting concepts. Each is a MOC (`type: therapeutic-area`) whose job is to **string the relevant terms together** and link them; it adds no new knowledge of its own.
+1. **Therapeutic-area maps** live in `therapeutic-areas/`. A therapeutic area is the **main narrative** at the disease/area granularity — **not** an individual term. `Oncology` is the top map; indications (e.g. prostate cancer) are **sections within `Oncology`**, not separate peer pages — they reuse the same cross-cutting concepts, so don't split them out. A therapeutic-area page is a MOC (`type: therapeutic-area`) whose job is to **string the relevant terms together** and link them; it adds no new knowledge of its own. (Promote an indication to its own page only if it grows large enough to need one.)
 2. **Concept pages** (the actual terms) live in exactly one **concept-type** folder by their nature:
    - `criteria/` — criteria & rules: standardized assessment/decision rule-sets (RECIST 1.1, PCWG3, the modified composite criterion, measurability rules; later iRECIST, censoring/DLT rules, etc.). These are *rules for classifying a state/endpoint* — distinct from data standards (how data is structured) and from biomedical concepts (the biology/clinical entities themselves).
    - `biomedical/` — biomedical concepts: diseases, biology, biomarkers, imaging, PK, dosimetry.

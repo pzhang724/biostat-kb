@@ -31,7 +31,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 ## In Progress
 
 Therapeutic-area maps (main narratives that string the terms together):
-- [[Oncology]] → [[Prostate Cancer]]
+- [[Oncology]] (prostate cancer is a section within it)
 
 ## To Learn
 
