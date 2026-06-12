@@ -20,7 +20,7 @@ sources: 3
 
 **Philosophy shift:** separate "**is the patient still benefiting?**" from "first sign of change" — treat through early PSA/scan changes, and report progression **by mode** (bone vs soft tissue vs PSA vs symptoms) as *separate* endpoints rather than one lumped PD. Both **bone-scan flare** and **PSA flare** can mimic early progression.
 
-**Preferred efficacy endpoints:** **rPFS** (radiographic progression-free survival) and **OS**; also captures CTCs and symptomatic skeletal events. This is the framework behind why PSA response is reported but treated only as a [[Surrogate Endpoint|surrogate]].
+**Preferred efficacy endpoints:** **rPFS** (radiographic progression-free survival) and **OS**. This is the framework behind why PSA response is reported but treated only as a [[Surrogate Endpoint|surrogate]].
 
 ## How RECIST 1.1 and PCWG3 combine into one decision
 

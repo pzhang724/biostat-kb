@@ -15,6 +15,7 @@ Consequences for how you write:
 - **Be terse.** Pages are evidence of learning, not substitutes for the source. A content page is a definition plus a handful of key points plus links — never textbook prose.
 - **Do not over-summarize.** The human digests the material themselves; you record that it happened and wire up the links. When in doubt, write less and link more. A page the human reads *instead of* the source defeats the purpose — pages are markers, not replacements.
 - **Never fabricate coverage.** Only create or expand a page for material the human actually ingested or explicitly said they learned.
+- **A page must not exceed what the human actually saw.** The ceiling for a page's content is **what you told the human in chat** (the answer they read) — nothing more. Do **not** add facts, parameters, caveats, examples, sub-points, or references that you did not surface in the conversation, even if correct and relevant. If it wasn't in the chat the human read, it does not go in the wiki — adding it puts material on the page that the human has never seen, which breaks "a page = I learned this." When unsure whether something was said, leave it out. Write **less** than the chat, never more.
 
 ## Everything the human gives you is a source
 

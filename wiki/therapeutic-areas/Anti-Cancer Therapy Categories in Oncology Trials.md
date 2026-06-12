@@ -21,5 +21,5 @@ Pharmacologically, the study drug *is* a type of anti-cancer therapy — the buc
 
 A bare "anti-cancer therapy used = Yes" flag means little on its own — the load-bearing question is *when* and *at what stage relative to the study drug*, which assigns it to one of the buckets above and decides whether it is a baseline characteristic, a covariate/confounder, or a signal to explain.
 
-Why it matters for analysis: AE attribution (study drug vs concomitant), efficacy purity ([[PSA (Prostate-Specific Antigen)|PSA]]/RECIST/PET), OS interpretation (subsequent therapy), and baseline characterization (prior therapy defines line & refractory status). CDISC oncology TAUG recommends dedicated prior-therapy capture; sponsors often tag CM with CMCAT/CMSCAT to derive line of therapy and ADaM prior-therapy variables.
+Why it matters for analysis: AE attribution (study drug vs concomitant), efficacy purity ([[PSA (Prostate-Specific Antigen)|PSA]]/RECIST/PET), OS interpretation (subsequent therapy), and baseline characterization (prior therapy defines line & refractory status).
 
