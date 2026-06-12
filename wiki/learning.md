@@ -10,13 +10,15 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 
 ## Learned
 
-**Biomedical**
-- [[PSA (Prostate-Specific Antigen)]]
-- [[PSMA PET-CT]]
-- [[Measurable vs Non-Measurable Disease (RECIST)]]
+**Criteria & rules**
 - [[RECIST 1.1]]
 - [[PCWG3 Criteria]]
 - [[Modified RECIST 1.1 and PCWG3 Criteria]]
+- [[Measurable vs Non-Measurable Disease (RECIST)]]
+
+**Biomedical**
+- [[PSA (Prostate-Specific Antigen)]]
+- [[PSMA PET-CT]]
 - [[Anti-Cancer Therapy Categories in Oncology Trials]]
 - [[Pharmacokinetics (PK)]]
 - [[Dosimetry]]
@@ -29,7 +31,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 ## In Progress
 
 Therapeutic-area maps (main narratives that string the terms together):
-- [[Prostate Cancer]]
+- [[Oncology]] → [[Prostate Cancer]]
 
 ## To Learn
 

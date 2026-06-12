@@ -80,8 +80,9 @@ biostat-kb/
 │   ├── index.md         # Catalog of all pages, grouped by layer — update on every ingest
 │   ├── learning.md      # Learning dashboard: Learned / In Progress / To Learn
 │   ├── log.md           # Append-only activity log
-│   ├── therapeutic-areas/   # MAIN-NARRATIVE maps (MOCs) per disease/area: Prostate Cancer, Oncology — string terms together
-│   ├── biomedical/          # Biomedical concepts: diseases, biology, biomarkers, imaging, response criteria, PK/dosimetry
+│   ├── therapeutic-areas/   # MAIN-NARRATIVE maps (MOCs): Oncology at top, indications (Prostate Cancer) under it — string terms together
+│   ├── criteria/            # Criteria & rules: assessment/decision rule-sets (RECIST, PCWG3, iRECIST, censoring/DLT rules…)
+│   ├── biomedical/          # Biomedical concepts: diseases, biology, biomarkers, imaging, PK/dosimetry
 │   ├── statistics/          # Statistical concepts: endpoints, estimands, surrogate/intercurrent, inference
 │   ├── data-standards/      # Data-standard concepts: CDISC SDTM, ADaM, controlled terminology
 │   ├── regulatory-guidance/ # Regulatory concepts: ICH (e.g. E9(R1)), FDA/EMA guidance documents
@@ -143,14 +144,15 @@ sources: 1                        # count of raw captures that informed this pag
 
 Folder placement — two kinds of pages:
 
-1. **Therapeutic-area maps** live in `therapeutic-areas/`. A therapeutic area is the **main narrative** at the disease/area granularity (e.g. `Prostate Cancer`, `Oncology`) — **not** an individual term. Each is a MOC (`type: therapeutic-area`) whose job is to **string the relevant terms together** into a narrative and link them; it adds no new knowledge of its own.
+1. **Therapeutic-area maps** live in `therapeutic-areas/`. A therapeutic area is the **main narrative** at the disease/area granularity — **not** an individual term. `Oncology` is the top map; indications (e.g. `Prostate Cancer`) sit under it and reuse the same cross-cutting concepts. Each is a MOC (`type: therapeutic-area`) whose job is to **string the relevant terms together** and link them; it adds no new knowledge of its own.
 2. **Concept pages** (the actual terms) live in exactly one **concept-type** folder by their nature:
-   - `biomedical/` — biomedical concepts: diseases, biology, biomarkers, imaging, response criteria (RECIST, PCWG3, PSA, PSMA PET, PK, dosimetry).
+   - `criteria/` — criteria & rules: standardized assessment/decision rule-sets (RECIST 1.1, PCWG3, the modified composite criterion, measurability rules; later iRECIST, censoring/DLT rules, etc.). These are *rules for classifying a state/endpoint* — distinct from data standards (how data is structured) and from biomedical concepts (the biology/clinical entities themselves).
+   - `biomedical/` — biomedical concepts: diseases, biology, biomarkers, imaging, PK, dosimetry.
    - `statistics/` — statistical concepts: endpoints, estimands, intercurrent events, surrogate endpoints, best overall response.
    - `data-standards/` — data-standard concepts: CDISC SDTM, ADaM, controlled terminology.
    - `regulatory-guidance/` — regulatory concepts: ICH (e.g. E9(R1)), FDA/EMA guidance documents.
 
-So the granularity is: **a term is NOT a therapeutic area** — it is a biomedical/statistical/data-standard/regulatory concept, and a therapeutic-area map links to it. Many concepts are cross-cutting — file under the **primary** type and wiki-link to the rest. Moving a page between folders does **not** break `[[wiki-links]]` (Quartz resolves by title, not path).
+So the granularity is: **a term is NOT a therapeutic area** — it is a criteria/biomedical/statistical/data-standard/regulatory concept, and a therapeutic-area map links to it. Many concepts are cross-cutting — file under the **primary** type and wiki-link to the rest. Moving a page between folders does **not** break `[[wiki-links]]` (Quartz resolves by title, not path).
 
 ## Workflows
 
