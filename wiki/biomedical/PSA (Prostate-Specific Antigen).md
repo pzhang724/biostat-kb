@@ -10,7 +10,7 @@ sources: 4
 
 # PSA (Prostate-Specific Antigen)
 
-**PSA (prostate-specific antigen / 前列腺特异性抗原)** is a glycoprotein secreted by prostate epithelial cells. It is secreted into semen at high concentration; only a small amount leaks into the bloodstream, and clinically "PSA" means the **serum PSA** level (ng/mL) measured from a blood sample. A rising serum value reflects more PSA leaking out as prostate tissue architecture is disrupted (cancer, inflammation, BPH). Total, free, and complexed forms are reported; the free/total ratio helps separate cancer from BPH in the grey zone. (Distinct from **PSMA**, a cell-surface target used for imaging — see [[PSMA PET-CT]].) It is the most widely used **biomarker** in prostate cancer — for screening and monitoring, and in clinical trials as an efficacy and progression endpoint.
+**PSA (prostate-specific antigen / 前列腺特异性抗原)** is a glycoprotein secreted by prostate epithelial cells. It is secreted into semen at high concentration; only a small amount leaks into the bloodstream, and clinically "PSA" means the **serum PSA** level (ng/mL) measured from a blood sample. A rising serum value reflects more PSA leaking out as prostate tissue architecture is disrupted (cancer, inflammation, BPH). Total, free, and complexed forms are reported; the free/total ratio helps separate cancer from BPH in the grey zone. (Distinct from **PSMA**, a cell-surface target used for imaging — see [[PSMA PET-CT]].) It is the most widely used **biomarker** in prostate cancer — for screening and monitoring, and in clinical trials as an efficacy and progression endpoint. A rising PSA at castrate testosterone is part of how [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)|mCRPC]] is defined.
 
 As a trial endpoint:
 
