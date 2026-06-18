@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 6
+sources: 7
 ---
 
 # Dosimetry
@@ -13,6 +13,8 @@ sources: 6
 **Dosimetry (剂量测定)** quantifies the **absorbed radiation dose** (in **Gray, Gy**) delivered to tumors and to normal/critical organs by a radioactive drug — e.g. ¹⁷⁷Lu-PSMA-617 radioligand therapy. It is the radiation analogue of [[Pharmacokinetics (PK)|PK]] exposure: instead of drug concentration over time, it tracks radioactivity and converts it to absorbed dose.
 
 **How it's done:** serial **quantitative imaging** (SPECT/PET — e.g. of ¹⁷⁷Lu, or a ⁶⁸Ga companion) ± blood sampling at several timepoints → a **time–activity curve** per organ/tumor → integrate to **cumulated activity** → convert to **absorbed dose (Gy)** using dose factors (**MIRD** methodology).
+
+**How patients receive it & post-dose precautions:** targeted radioligands (e.g. ¹⁷⁷Lu-PSMA) are given by **IV infusion** (静脉输注), not oral — the ligand must reach the circulation intact and activity must be dosed precisely. (Some radiopharmaceuticals *are* oral, e.g. radioactive iodine ¹³¹I capsule/drink for thyroid.) Because the patient is transiently radioactive, precautions follow, scaled to isotope/activity/regulations: with ¹⁷⁷Lu often **outpatient** + a few days of distancing (keep away from children/pregnant women, sleep separately, flush urine well / wash hands); a strong γ-emitter like high-dose ¹³¹I may require brief **inpatient isolation** in a shielded room until the measured dose rate drops below a release limit.
 
 **Organs at risk:** kidneys (often **dose-limiting** for PSMA/peptide radioligand therapies), salivary glands, bone marrow, liver.
 
