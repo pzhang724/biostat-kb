@@ -59,6 +59,19 @@ Addresses:
 - FDA Validator Rules + Business Rules → FDA Study Data Standards Resources: <https://www.fda.gov/industry/fda-data-standards-advisory-board/study-data-standards-resources>
 - CDISC Conformance Rules → <https://www.cdisc.org/standards/conformance-rules>
 
+### Business Rules vs Validator Rules
+
+Same intent, two altitudes:
+
+- **FDA Business Rules** (业务规则) — high-level statements of **what** FDA expects of study data and **why** (policy/requirement level). Conceptual, human-oriented, **no severity** assigned. *"Data must support meaningful review."*
+- **FDA Validator Rules** (校验规则) — the concrete, **machine-executable implementation** of those Business Rules: the specific checks a validator runs. Published by FDA for transparency; effectively the subset of Pinnacle 21 validator rules that implement the Business Rules.
+
+So **Business Rules = the "what/why" (policy); Validator Rules = the "how" (executable checks that enforce it)**. Severity (严重度): neither CDISC Conformance Rules nor FDA Business Rules carry severity, and FDA Validator Rules don't publish it either — P21 adds its own Type = Error / Warning / Notice.
+
+### Does FDA officially endorse P21?
+
+No *de-jure* endorsement and **no mandate** that sponsors use P21 — FDA guidance (Technical Conformance Guide) is written tool-agnostically. **But** FDA has licensed and used **Pinnacle 21 Enterprise internally** to screen incoming submissions for over a decade. Because FDA's own screening runs P21, it is the **de-facto standard** — sponsors run the same tool to predict the FDA result. (De-facto via FDA's own usage, not a "you must use this product" rule.)
+
 ## Relationship
 
 > Model (abstract framework) → **IG** (concrete versioned spec you implement) → **Conformance Rules** (automated checks that the implementation is valid).
