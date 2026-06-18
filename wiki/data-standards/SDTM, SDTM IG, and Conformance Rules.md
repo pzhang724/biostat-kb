@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 7
+sources: 8
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -111,7 +111,7 @@ The study-level **mapping specification** (映射规范, often an Excel workbook
    | Source dataset + variable | the raw/EDC field |
    | Mapping / Derivation logic | the algorithm/rule in words |
    | Comments | |
-3. **Codelists / Controlled Terminology** tab — each codelist: name + NCI/CDISC code, submission value, decode. Covers both CDISC CT (受控术语, see [[MedDRA]] for dictionaries) and study-/sponsor-specific codelists.
+3. **Codelists / Controlled Terminology** tab — each codelist: name + NCI/CDISC code, submission value, decode. Covers both CDISC CT (受控术语, see [[MedDRA]] for dictionaries) and study-/sponsor-specific codelists. **CT vs codelist** are not opposites: **CT (CDISC Controlled Terminology) = the standard library** (NCI-EVS-maintained, versioned, every list has an NCI **C-code**); a **codelist = the unit** (one named set of permissible values). The standard-vs-self-defined split is *within* codelists — a codelist is either a **CDISC-standard** one (has a C-code, e.g. SEX/RACE/AESEV/`--TESTCD`), a **sponsor/study self-defined** one (you author it), or a **standard-but-extended** one (CDISC marks each codelist **Extensible Yes/No** — extensible ⇒ you may add sponsor terms; non-extensible ⇒ CDISC values only). In `define.xml` each codelist is tagged accordingly.
 4. **Value-Level Metadata (VLM)** — for Findings domains keyed by `--TESTCD` (LB, VS, PC, QS…): per-test type/units/CT/derivation that vary row to row.
 5. **Computational methods / derivations** — named algorithms referenced by the mapping.
 6. **External dictionaries** — MedDRA, WHODrug versions used for coding.
