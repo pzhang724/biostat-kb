@@ -24,9 +24,10 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
+- [[MTD and RP2D]]
 
 ## Prostate cancer
 
 How treatment effect is read out in advanced/mCRPC trials: a [[PSA (Prostate-Specific Antigen)|PSA]] biomarker and [[PSMA PET-CT]] imaging measure disease; bone progression follows [[PCWG3 Criteria]], fused with soft-tissue [[RECIST 1.1]] into the [[Modified RECIST 1.1 and PCWG3 Criteria]] criterion; [[PSA (Prostate-Specific Antigen)|PSA]] response is only a [[Surrogate Endpoint]]; radioligand programs add [[Pharmacokinetics (PK)]] / [[Dosimetry]].
 
-Prostate-specific terms: [[PSA (Prostate-Specific Antigen)]] · [[PSMA PET-CT]] · [[PCWG3 Criteria]] · [[Modified RECIST 1.1 and PCWG3 Criteria]] · [[Pharmacokinetics (PK)]] · [[Dosimetry]].
+Prostate-specific terms: [[PSA (Prostate-Specific Antigen)]] · [[PSMA PET-CT]] · [[PCWG3 Criteria]] · [[Modified RECIST 1.1 and PCWG3 Criteria]] · [[Pharmacokinetics (PK)]] · [[Dosimetry]] · [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]].
