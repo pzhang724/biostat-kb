@@ -32,6 +32,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[ECOG Performance Status]]
 - [[12-Lead Resting ECG]]
 - [[Radiological Assessment]]
+- [[Xerostomia]]
 
 **Data standards**
 - [[MedDRA]]

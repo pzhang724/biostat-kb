@@ -24,6 +24,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[ECOG Performance Status]]
 - [[12-Lead Resting ECG]]
 - [[Radiological Assessment]]
+- [[Xerostomia]]
 
 **Statistics**
 - [[Intercurrent Event]]
