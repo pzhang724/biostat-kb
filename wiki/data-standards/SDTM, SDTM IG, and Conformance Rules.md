@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 6
+sources: 7
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -89,6 +89,36 @@ Mostly right in intent, with two corrections:
 - **CDISC Controlled Terminology** — the codelists the rules check against: <https://www.cdisc.org/standards/terminology/controlled-terminology>
 - Reviewer's guides — **cSDRG** (clinical SDTM) / **ADRG** (ADaM), PHUSE templates: <https://phuse.global/Deliverables>
 - **PMDA Validation Rules** (Japan): <https://www.pmda.go.jp/english/review-services/reviews/0002.html>; other regions analogous.
+
+## What's in an SDTM (mapping) spec
+
+The study-level **mapping specification** (映射规范, often an Excel workbook) is more than variable→variable — it is essentially the **human-readable source** that `define.xml` is generated from. CT / codelists **are** part of it, not optional. Typical components:
+
+1. **Datasets / Domains metadata** — per domain: name, label, class (Interventions / Events / Findings / Special-Purpose), structure (*one record per…*), key variables.
+2. **Variable-level mapping** (per domain) — the core tab. Exact columns:
+
+   | Column | Meaning |
+   |---|---|
+   | Domain | e.g. AE |
+   | Variable Name | target SDTM variable (e.g. `AESTDTC`) |
+   | Variable Label | |
+   | Type | Char / Num |
+   | Length | |
+   | Role | Identifier / Topic / Timing / Qualifier |
+   | Core | Req / Exp / Perm |
+   | Codelist / CT | which codelist the value must come from |
+   | Origin | CRF / Derived / Assigned / Protocol / eDT |
+   | Source dataset + variable | the raw/EDC field |
+   | Mapping / Derivation logic | the algorithm/rule in words |
+   | Comments | |
+3. **Codelists / Controlled Terminology** tab — each codelist: name + NCI/CDISC code, submission value, decode. Covers both CDISC CT (受控术语, see [[MedDRA]] for dictionaries) and study-/sponsor-specific codelists.
+4. **Value-Level Metadata (VLM)** — for Findings domains keyed by `--TESTCD` (LB, VS, PC, QS…): per-test type/units/CT/derivation that vary row to row.
+5. **Computational methods / derivations** — named algorithms referenced by the mapping.
+6. **External dictionaries** — MedDRA, WHODrug versions used for coding.
+7. **SUPPQUAL** (`SUPP--`) and **RELREC** relationship mapping.
+8. Comments / document & study metadata.
+
+So the "exact mapping" = the column set in #2 (target var + metadata + origin + source + logic + codelist); the CT/codelists in #3–4 are a **required companion**. Spec ≈ `define.xml` in human-readable form.
 
 ## Relationship
 
