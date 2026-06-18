@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 1
+sources: 2
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -34,6 +34,19 @@ Machine-checkable **validation rules** (校验规则) confirming a dataset confo
 - Published as CDISC **Conformance Rules**; FDA also publishes its own **Validator Rules**.
 - Run via tools like **Pinnacle 21** / CDISC Library.
 - Results: **Errors / Warnings / Notices**; FDA rejects submissions with high-severity violations.
+
+### CDISC Conformance Rules vs FDA Validator Rules
+
+Two layers of validation rules, split by **who issues them**:
+
+- **CDISC Conformance Rules** — published *by CDISC* alongside each standard version (SDTMIG, ADaMIG, SENDIG). The authoritative, vendor-neutral definition of what conforms to the standard. *"Does the data follow the standard."*
+- **FDA Validator Rules** — FDA's *own* rule set (e.g. Validator Rules v1.6, Dec 2022). Largely incorporate the CDISC Conformance Rules **plus** FDA-specific **Business Rules** (业务规则). *"Does the data follow the standard AND meet FDA submission expectations."* So roughly **FDA Validator Rules ⊇ CDISC Conformance Rules + FDA-specific checks**, and the FDA set is what gates FDA technical screening.
+
+Tools like **Pinnacle 21** run both. Reference: FDA Study Data Technical Conformance Guide, §8.
+
+Addresses:
+- FDA Validator Rules + Business Rules → FDA Study Data Standards Resources: <https://www.fda.gov/industry/fda-data-standards-advisory-board/study-data-standards-resources>
+- CDISC Conformance Rules → <https://www.cdisc.org/standards/conformance-rules>
 
 ## Relationship
 
