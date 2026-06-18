@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 2
+sources: 3
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -43,6 +43,8 @@ Two layers of validation rules, split by **who issues them**:
 - **FDA Validator Rules** — FDA's *own* rule set (e.g. Validator Rules v1.6, Dec 2022). Largely incorporate the CDISC Conformance Rules **plus** FDA-specific **Business Rules** (业务规则). *"Does the data follow the standard AND meet FDA submission expectations."* So roughly **FDA Validator Rules ⊇ CDISC Conformance Rules + FDA-specific checks**, and the FDA set is what gates FDA technical screening.
 
 Tools like **Pinnacle 21** run both. Reference: FDA Study Data Technical Conformance Guide, §8.
+
+**Rules ≠ Pinnacle 21.** The rules are the **specification** (发布的规则清单 — documents/spreadsheets of what to check). **Pinnacle 21 (P21)** is the **tool/engine** (工具/引擎) that *implements* those rule sets as executable checks, runs them against your datasets, and reports Errors/Warnings/Notices (also helps build `define.xml`). Rules = the law; P21 = the inspector. P21 is the de-facto industry + FDA validation engine (FDA uses it internally), so "run P21" is shorthand for "check conformance" — but it can lag a rule version or carry its own interpretation, so **passing P21 ≈ meeting the rules, not identical to it**.
 
 Addresses:
 - FDA Validator Rules + Business Rules → FDA Study Data Standards Resources: <https://www.fda.gov/industry/fda-data-standards-advisory-board/study-data-standards-resources>
