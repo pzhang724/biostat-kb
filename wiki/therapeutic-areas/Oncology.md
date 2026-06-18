@@ -31,6 +31,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Best Overall Response]]
 - [[MTD and RP2D]]
 - [[Anti-Tumour Activity]]
+- [[End of Treatment vs End of Study]]
 
 **Data standards**
 - [[MedDRA]]

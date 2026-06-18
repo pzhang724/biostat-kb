@@ -43,6 +43,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Best Overall Response]]
 - [[MTD and RP2D]]
 - [[Anti-Tumour Activity]]
+- [[End of Treatment vs End of Study]]
 
 ## In Progress
 

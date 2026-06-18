@@ -12,7 +12,7 @@ sources: 1
 
 An **intercurrent event (ICE)** is a core concept of the **ICH E9(R1)** estimand framework: an event occurring *after treatment initiation* that affects either the **interpretation** or the **existence** of the outcome measurement. It is not a plain covariate and not missing data — after an ICE, the quantity you intended to measure changes meaning.
 
-Typical ICEs: treatment discontinuation or switching, use of prohibited/rescue concomitant medication, **subsequent anti-cancer therapy**, and death (for non-survival endpoints).
+Typical ICEs: treatment discontinuation or switching, use of prohibited/rescue concomitant medication, **subsequent anti-cancer therapy**, and death (for non-survival endpoints). Treatment discontinuation corresponds to [[End of Treatment vs End of Study|End of Treatment]] — the patient goes off-treatment but is usually still followed to [[End of Treatment vs End of Study|End of Study]].
 
 E9(R1) requires pre-specifying, for each ICE type, one of five **handling strategies**:
 
