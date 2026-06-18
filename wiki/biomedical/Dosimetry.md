@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 9
+sources: 10
 ---
 
 # Dosimetry
@@ -22,6 +22,11 @@ sources: 9
 - Plots: a time–activity curve per organ; a table of **Gy per organ** (kidney, marrow, salivary glands, tumour).
 
 **Parallel to PK:** PK's **AUC** (concentration·time) ↔ dosimetry's **cumulated activity** (activity·time) — both integrate a time curve; PK reports exposure in concentration units, dosimetry converts the activity–time integral one step further into absorbed dose (Gy).
+
+**Gy vs GBq — two different things:**
+- **GBq (gigabecquerel, 吉贝可)** — a unit of **radioactivity / activity** (放射性活度). 1 Bq = 1 nuclear decay per second; 1 GBq = 10⁹ Bq. It is the **input / source** quantity — *how much radioactivity you administer*.
+- **Gy (gray, 戈瑞)** — a unit of **absorbed dose** (吸收剂量). 1 Gy = 1 joule deposited per kilogram of tissue (J/kg). It is the **received** quantity — *how much radiation energy a given tissue actually absorbs*.
+- **Relation:** you give activity (GBq); dosimetry converts it — via where the drug sits, how long, and isotope physics — into absorbed dose (Gy) per organ, often normalized as **Gy/GBq**. Same GBq → different Gy in different organs; computing that is exactly dosimetry's job. **In one line: GBq = how much radioactivity you gave (source); Gy = how much a tissue absorbed (received).**
 
 **How patients receive it & post-dose precautions:** targeted radioligands (e.g. ¹⁷⁷Lu-PSMA) are given by **IV infusion** (静脉输注), not oral — the ligand must reach the circulation intact and activity must be dosed precisely. (Some radiopharmaceuticals *are* oral, e.g. radioactive iodine ¹³¹I capsule/drink for thyroid.) Because the patient is transiently radioactive, precautions follow, scaled to isotope/activity/regulations: with ¹⁷⁷Lu often **outpatient** + a few days of distancing (keep away from children/pregnant women, sleep separately, flush urine well / wash hands); a strong γ-emitter like high-dose ¹³¹I may require brief **inpatient isolation** in a shielded room until the measured dose rate drops below a release limit.
 
