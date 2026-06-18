@@ -26,6 +26,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Radiological Assessment]]
 - [[Xerostomia]]
 - [[Anti-Emetic Premedication]]
+- [[Infusion-Related and Hypersensitivity Reactions]]
 
 **Statistics**
 - [[Intercurrent Event]]

@@ -46,7 +46,7 @@ No high/low direction here — these are **presence = excluded** (有则排除).
 - **PSMA-targeted radioconjugate (PSMA靶向放射偶联物)** — the therapy itself: a PSMA-binding ligand linked to a radioisotope (radioligand therapy); not a lab parameter. Same target as [[PSMA PET-CT]] (theranostic pair).
 - **Systemic anti-cancer therapy (全身性抗癌治疗)** — prior/concurrent systemic treatment; washout & exclusion. See [[Anti-Cancer Therapy Categories in Oncology Trials]].
 - **Symptomatic (spinal) cord compression (症状性脊髓压迫)** — oncologic emergency from epidural metastases; exclusion.
-- **Hypersensitivity (超敏反应)** — allergy to drug/excipients; exclusion.
+- **Hypersensitivity (超敏反应)** — allergy to drug/excipients; exclusion. See [[Infusion-Related and Hypersensitivity Reactions]].
 - **Xerostomia (口干)** — dry mouth; salivary glands express PSMA, so PSMA radioligands cause off-target salivary uptake/toxicity → xerostomia.
 - **Cardiac disease (心脏疾病)** — e.g. recent MI, heart failure, significant arrhythmia; exclusion (ties to QT/QTc above).
 - **Thromboembolic or cerebrovascular events (血栓栓塞或脑血管事件)** — recent DVT/PE/stroke/TIA; exclusion.

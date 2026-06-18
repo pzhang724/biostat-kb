@@ -34,6 +34,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Radiological Assessment]]
 - [[Xerostomia]]
 - [[Anti-Emetic Premedication]]
+- [[Infusion-Related and Hypersensitivity Reactions]]
 
 **Data standards**
 - [[MedDRA]]
