@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 4
+sources: 5
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
