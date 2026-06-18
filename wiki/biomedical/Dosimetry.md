@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 8
+sources: 9
 ---
 
 # Dosimetry
@@ -32,6 +32,8 @@ sources: 8
 - **Safety** — keep each organ under its dose-limit threshold.
 - **Efficacy** — confirm the tumor receives a meaningful absorbed dose, and relate **tumor dose → response** (dose–response).
 - Supports **personalized activity selection** in radioligand therapy.
+
+**Purpose in one line:** use radiation dose (Gy) to balance "enough dose to the tumour" against "not too much to organs" — the same dose-selection / benefit-risk goal as [[Pharmacokinetics (PK)|PK]], expressed in radiation-dose rather than concentration terms.
 
 **Theranostic link:** the same **PSMA** target imaged on [[PSMA PET-CT]] is what ¹⁷⁷Lu-PSMA binds; dosimetry quantifies the radiation that delivery actually deposits. Shared idea with PK: both answer *"how much reaches where, over time."*
 

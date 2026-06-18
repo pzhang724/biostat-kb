@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 4
+sources: 5
 ---
 
 # Pharmacokinetics (PK)
@@ -24,7 +24,7 @@ Measured by sampling blood (sometimes urine) at set times after dosing to build 
 - **Parameter dataset** — one row per (subject, profile, parameter) holding Cmax/Tmax/AUC… ; SDTM **PP** domain (PK parameters), analysis-ready as ADaM **ADPC/ADPP**.
 - **Plot** — a concentration–time curve per subject, usually shown on both linear and semi-log axes.
 
-**Why in trials:** characterize exposure, check **dose-proportionality**, select the dose/schedule, assess accumulation, evaluate **drug–drug interactions (DDI)** and special populations (renal/hepatic impairment), and drive **exposure–response (PK/PD)** analyses. Phase I is largely PK-driven.
+**Why in trials:** characterize exposure, check **dose-proportionality**, select the dose/schedule, assess accumulation, evaluate **drug–drug interactions (DDI)** and special populations (renal/hepatic impairment), and drive **exposure–response (PK/PD)** analyses. Phase I is largely PK-driven. **Purpose in one line:** get the dose/schedule right and understand its variability — the quantitative basis for dose selection and benefit-risk (the same goal as [[Dosimetry]], but in concentration rather than radiation-dose terms).
 
 For radioactive drugs the radiation analogue of PK exposure is [[Dosimetry]] (absorbed dose in Gy rather than drug concentration). See also [[PSMA PET-CT]] for the imaging side of radioligand programs.
 
