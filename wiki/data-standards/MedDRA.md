@@ -20,4 +20,4 @@ Hierarchical structure:
 - AE analysis is typically coded to the **PT** level.
 - [[CTCAE Grade]] is built on / maps to MedDRA terms.
 
-A cross-cutting data standard in [[Oncology]].
+The controlled terminology used to code AE/medical-history domains in [[SDTM, SDTM IG, and Conformance Rules]]. A cross-cutting data standard in [[Oncology]].

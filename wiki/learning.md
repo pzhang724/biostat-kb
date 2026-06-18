@@ -1,7 +1,7 @@
 ---
 title: "Learning Dashboard"
 type: meta
-updated: 2026-06-15
+updated: 2026-06-18
 ---
 
 # Learning Dashboard
@@ -35,6 +35,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 
 **Data standards**
 - [[MedDRA]]
+- [[SDTM, SDTM IG, and Conformance Rules]]
 
 **Statistics**
 - [[Intercurrent Event]]
