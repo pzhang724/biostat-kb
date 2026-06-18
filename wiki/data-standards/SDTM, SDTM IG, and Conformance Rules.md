@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 5
+sources: 6
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -71,6 +71,24 @@ So **Business Rules = the "what/why" (policy); Validator Rules = the "how" (exec
 ### Does FDA officially endorse P21?
 
 No *de-jure* endorsement and **no mandate** that sponsors use P21 — FDA guidance (Technical Conformance Guide) is written tool-agnostically. **But** FDA has licensed and used **Pinnacle 21 Enterprise internally** to screen incoming submissions for over a decade. Because FDA's own screening runs P21, it is the **de-facto standard** — sponsors run the same tool to predict the FDA result. (De-facto via FDA's own usage, not a "you must use this product" rule.)
+
+### Do the three rule sets cover "all the rules"?
+
+Mostly right in intent, with two corrections:
+
+1. **They overlap / nest — they don't add up as disjoint sets.** CDISC Conformance Rules = conformance to the CDISC standards; FDA Validator Rules already **incorporate** most of those CDISC checks **plus** FDA-specific ones (and are the executable form of the FDA Business Rules). So the union ≈ "essentially all the **automated** checks that matter for a submission," but via heavy overlap, not A + B + C.
+2. **Automated rules ≠ everything you must do.** Many requirements live in the standards/IG and guidance and are **not** encoded as any machine rule — traceability, data fitness, reviewer judgment. Automated rules are a **floor**, not the whole obligation. Other agencies also have their own sets (**PMDA Validation Rules** for Japan, NMPA for China).
+
+"Interpretation differences cause deviation" is exactly right: same rule text, different implementations (P21 vs a home engine vs FDA's internal run) interpret edge cases differently, and versions lag.
+
+**Other documents to reference** (the source-of-truth / governing layer rules *derive* from):
+
+- The **IGs** themselves — SDTMIG, ADaMIG, SENDIG, Define-XML spec.
+- **FDA Study Data Technical Conformance Guide** — the governing FDA document tying it together.
+- **FDA Data Standards Catalog** — which standard versions FDA currently supports/requires.
+- **CDISC Controlled Terminology** — the codelists the rules check against.
+- Reviewer's guides — **cSDRG** (clinical SDTM) / **ADRG** (ADaM).
+- **PMDA Validation Rules** (Japan); other regions analogous.
 
 ## Relationship
 
