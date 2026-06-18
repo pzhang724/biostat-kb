@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 11
+sources: 12
 ---
 
 # Dosimetry
@@ -15,6 +15,12 @@ sources: 11
 **How it's done:** serial **quantitative imaging** (SPECT/PET — e.g. of ¹⁷⁷Lu, or a ⁶⁸Ga companion) ± blood sampling at several timepoints → a **time–activity curve** per organ/tumor → integrate to **cumulated activity** → convert to **absorbed dose (Gy)** using dose factors (**MIRD** methodology).
 
 **What it computes, step by step:** post-dose quantitative imaging at several timepoints (e.g. 1 h / 24 h / 48 h / 96 h / 168 h) → for each organ/tumour draw a **region/volume of interest** (ROI/VOI 感兴趣区) → measure **activity** (Bq, or % injected activity) at each timepoint → a **time–activity curve (TAC, 时间-活度曲线)** per organ (the direct analogue of the PK concentration curve, but the y-axis is radioactivity) → integrate the TAC → **time-integrated / cumulated activity (累积活度)**, often summarized by an **effective half-life (有效半衰期) / residence time (驻留时间)** → convert with **dose factors (S-values, S值 / MIRD)**: organ absorbed dose = cumulated activity × S-value → **Gy per organ**.
+
+**Not only scans — blood & urine too:** alongside imaging, dosimetry typically collects **blood** and **urine** samples, each for a purpose:
+- **Imaging (SPECT/PET)** → activity in **organs / tumour**.
+- **Blood samples** → radioactivity in blood over time → mainly the **red marrow (红骨髓)** absorbed dose: marrow is hard to image directly but **myelosuppression is dose-limiting**, so blood activity is the standard surrogate (blood-based marrow dosimetry); also gives the blood clearance curve.
+- **Urine samples** → excreted activity → quantifies **renal excretion** (排泄) and its kinetics; from it the **whole-body retention** (= administered − excreted, a mass balance) and kidney/bladder exposure. ¹⁷⁷Lu-PSMA is mainly renally cleared, so urine matters.
+- Together: imaging = "how much is *in* each organ/tumour", blood = "how much the *marrow* gets", urine = "how much *left* the body / how much remains".
 
 **What the data looks like:**
 - One row per (subject, organ, timepoint) holding the measured **activity**.
