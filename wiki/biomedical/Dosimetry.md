@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 2
+sources: 4
 ---
 
 # Dosimetry
@@ -30,4 +30,12 @@ sources: 2
 - **Dosimetry** counts the **radiation dose** the radioactive payload deposits per tissue; unit **Gray (Gy)**; **only radioactive drugs** have it.
 
 They form a **relay** for radioligands: PK/biodistribution (where it sits, how long) → dosimetry (absorbed dose per organ, Gy) → safe activity (limiting organ = kidney/marrow). **Mnemonic: PK = drug molecule (ng/mL); dosimetry = radiation dose (Gy).**
+
+**What each actually measures:** PK directly measures the **drug molecule's concentration** in blood/plasma (assay → ng/mL) over time; dosimetry measures the **radioactivity (Bq) per organ** from quantitative imaging, then converts to **absorbed dose (Gy = J/kg)**.
+
+## Why a drug has radiation, and the organ effect
+
+The drug is a **radioligand / radiopharmaceutical** — a targeting ligand carrying a radioactive isotope (e.g. ¹⁷⁷Lu, ²²⁵Ac). The radiation is **intentional: it is the therapeutic mechanism** — the ligand delivers the isotope to the tumour (e.g. PSMA) and its emitted radiation kills the cells locally ("targeted radiotherapy"), unlike an ordinary small molecule that acts chemically.
+
+It **does** affect normal organs: the radioactive drug also deposits dose where it accumulates or passes through — kidney (excretion), salivary glands (PSMA), bone marrow, liver — causing off-target toxicity (see [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]: creatinine, xerostomia, MDS). Key wording: **it is the *radiation* that affects organs; *dosimetry* measures that dose** so each organ can be kept under its safe limit (kidney is usually dose-limiting). Dosimetry itself is measurement, not harm.
 

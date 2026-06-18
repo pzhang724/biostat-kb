@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 2
+sources: 3
 ---
 
 # Pharmacokinetics (PK)
@@ -31,4 +31,6 @@ Both ask "where does it go in the body over time," but measure different things:
 - **[[Dosimetry]]** counts the **radiation dose** that the radioactive payload deposits in each tissue; unit **Gray (Gy)**. **Only radioactive drugs** have it.
 
 For radioligands they are a **relay**: PK / biodistribution says where the drug sits and for how long → dosimetry converts that residence + isotope physics into absorbed dose per organ → sets the safe activity (limiting organ = kidney / marrow). **Mnemonic: PK = drug molecule (ng/mL); dosimetry = radiation dose (Gy).**
+
+**What each actually measures:** PK directly measures the **drug molecule's concentration** in blood/plasma (assay, e.g. LC-MS/MS → ng/mL) over time; dosimetry measures the **radioactivity (Bq) per organ** from quantitative imaging, then converts to **absorbed dose (Gy)**.
 
