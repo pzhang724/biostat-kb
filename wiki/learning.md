@@ -15,6 +15,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[PCWG3 Criteria]]
 - [[Modified RECIST 1.1 and PCWG3 Criteria]]
 - [[Measurable vs Non-Measurable Disease (RECIST)]]
+- [[CTCAE Grade]]
 
 **Biomedical**
 - [[PSA (Prostate-Specific Antigen)]]
@@ -25,12 +26,18 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Pre-BD and Post-BD FEV1]]
 - [[FeNO (Fractional Exhaled Nitric Oxide)]]
 - [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]
+- [[ECOG Performance Status]]
+- [[12-Lead Resting ECG]]
+
+**Data standards**
+- [[MedDRA]]
 
 **Statistics**
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
 - [[MTD and RP2D]]
+- [[Anti-Tumour Activity]]
 
 ## In Progress
 

@@ -16,15 +16,22 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 **Criteria & rules**
 - [[RECIST 1.1]]
 - [[Measurable vs Non-Measurable Disease (RECIST)]]
+- [[CTCAE Grade]]
 
 **Biomedical**
 - [[Anti-Cancer Therapy Categories in Oncology Trials]]
+- [[ECOG Performance Status]]
+- [[12-Lead Resting ECG]]
 
 **Statistics**
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
 - [[MTD and RP2D]]
+- [[Anti-Tumour Activity]]
+
+**Data standards**
+- [[MedDRA]]
 
 ## Prostate cancer
 
