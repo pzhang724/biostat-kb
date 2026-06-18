@@ -19,7 +19,7 @@ sources: 1
 - Staging of higher-risk prostate cancer.
 - Detecting/localizing **biochemical recurrence** (rising PSA after treatment) — it finds disease at far lower PSA levels than conventional imaging.
 - Much more **sensitive** than conventional imaging (CT + technetium bone scan): smaller nodal/bone/visceral lesions, earlier.
-- **Theranostics** — the same PSMA target is used for *therapy* (e.g. ¹⁷⁷Lu-PSMA-617 radioligand therapy); patients are often selected by PSMA-PET positivity, and the radiation delivered is quantified by [[Dosimetry]].
+- **Theranostics** — the same PSMA target is used for *therapy* (e.g. [[Lutetium-177 (177Lu)|¹⁷⁷Lu]]-PSMA-617 radioligand therapy); patients are often selected by PSMA-PET positivity, and the radiation delivered is quantified by [[Dosimetry]].
 
 **Caveat vs response criteria:** [[RECIST 1.1]] / [[PCWG3 Criteria]] (and the composite [[Modified RECIST 1.1 and PCWG3 Criteria]]) were built on **conventional** imaging. PSMA PET's higher sensitivity causes stage migration and can flag progression earlier or discordantly; how to fold PSMA-PET findings into formal response/progression endpoints is still **evolving** (emerging PSMA-PET response criteria such as RECIP). So PSMA PET is excellent for **detection/selection** but is not yet the standard **response-assessment** criterion. See [[Measurable vs Non-Measurable Disease (RECIST)]].
 
