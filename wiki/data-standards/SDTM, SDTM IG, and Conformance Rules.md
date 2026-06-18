@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 3
+sources: 4
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -45,6 +45,15 @@ Two layers of validation rules, split by **who issues them**:
 Tools like **Pinnacle 21** run both. Reference: FDA Study Data Technical Conformance Guide, §8.
 
 **Rules ≠ Pinnacle 21.** The rules are the **specification** (发布的规则清单 — documents/spreadsheets of what to check). **Pinnacle 21 (P21)** is the **tool/engine** (工具/引擎) that *implements* those rule sets as executable checks, runs them against your datasets, and reports Errors/Warnings/Notices (also helps build `define.xml`). Rules = the law; P21 = the inspector. P21 is the de-facto industry + FDA validation engine (FDA uses it internally), so "run P21" is shorthand for "check conformance" — but it can lag a rule version or carry its own interpretation, so **passing P21 ≈ meeting the rules, not identical to it**.
+
+**Could you build your own engine instead?** Technically yes — P21 isn't magic, just one implementation, and big sponsors/CROs do build internal validators. But the rules alone aren't enough; you'd still need:
+
+1. **Machine-precise rule definitions** — published rules are human-readable spec with ambiguity; coding each deterministically is interpretation work (edge cases, cross-domain/cross-record logic, value-level metadata, `define.xml` conformance).
+2. **Dependencies the rules reference** — versioned CDISC Controlled Terminology (受控术语), [[MedDRA]] and other dictionaries, the standard metadata (CDISC Library), `define.xml` — kept in sync.
+3. **Ongoing maintenance** — CDISC/FDA reissue rule versions regularly; each release = re-implement + re-test. This recurring burden is the main reason people license P21 over DIY.
+4. **Regulatory equivalence (the real catch)** — FDA runs P21 internally, so what gates your submission is FDA's verdict, not your engine's. You'd still benchmark against P21 to predict the FDA result; a home-grown engine doesn't free you from caring what P21/FDA says.
+
+Bottom line: a custom engine is feasible and can *complement* P21 (early/internal checks), but doesn't replace it. You're not missing a secret rule — you're missing the interpretation + dependency + maintenance stack, and above all regulatory equivalence to FDA's tool.
 
 Addresses:
 - FDA Validator Rules + Business Rules → FDA Study Data Standards Resources: <https://www.fda.gov/industry/fda-data-standards-advisory-board/study-data-standards-resources>
