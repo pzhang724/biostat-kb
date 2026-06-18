@@ -33,6 +33,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[12-Lead Resting ECG]]
 - [[Radiological Assessment]]
 - [[Xerostomia]]
+- [[Anti-Emetic Premedication]]
 
 **Data standards**
 - [[MedDRA]]
