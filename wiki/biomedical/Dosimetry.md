@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
-updated: 2026-06-11
-sources: 1
+updated: 2026-06-18
+sources: 2
 ---
 
 # Dosimetry
@@ -23,4 +23,11 @@ sources: 1
 - Supports **personalized activity selection** in radioligand therapy.
 
 **Theranostic link:** the same **PSMA** target imaged on [[PSMA PET-CT]] is what ¹⁷⁷Lu-PSMA binds; dosimetry quantifies the radiation that delivery actually deposits. Shared idea with PK: both answer *"how much reaches where, over time."*
+
+## Dosimetry vs PK (telling them apart)
+
+- **[[Pharmacokinetics (PK)]]** counts the **drug molecule** — concentration / exposure over time; unit **concentration (ng/mL)**, AUC; **any drug** has it.
+- **Dosimetry** counts the **radiation dose** the radioactive payload deposits per tissue; unit **Gray (Gy)**; **only radioactive drugs** have it.
+
+They form a **relay** for radioligands: PK/biodistribution (where it sits, how long) → dosimetry (absorbed dose per organ, Gy) → safe activity (limiting organ = kidney/marrow). **Mnemonic: PK = drug molecule (ng/mL); dosimetry = radiation dose (Gy).**
 
