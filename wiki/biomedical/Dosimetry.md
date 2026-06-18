@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 10
+sources: 11
 ---
 
 # Dosimetry
@@ -41,6 +41,10 @@ sources: 10
 **Purpose in one line:** use radiation dose (Gy) to balance "enough dose to the tumour" against "not too much to organs" — the same dose-selection / benefit-risk goal as [[Pharmacokinetics (PK)|PK]], expressed in radiation-dose rather than concentration terms.
 
 **Theranostic link:** the same **PSMA** target imaged on [[PSMA PET-CT]] is what ¹⁷⁷Lu-PSMA binds; dosimetry quantifies the radiation that delivery actually deposits. Shared idea with PK: both answer *"how much reaches where, over time."*
+
+**Does it need a separate agent?** Depends on the isotope — dosimetry needs an **imageable signal**:
+- **Self-imaging (no separate agent)** — [[Lutetium-177 (177Lu)|¹⁷⁷Lu]] emits an imageable γ alongside its therapeutic β, so SPECT of the **therapy administration itself** gives the dosimetry. This is the theranostic advantage: you image the very dose you treated with.
+- **Needs an imaging companion** — if the therapeutic nuclide is a pure β or α emitter with no imageable γ (e.g. **²²⁵Ac**), the therapy can't be imaged directly, so a separate **diagnostic imaging agent** (low activity, *not* another therapy) is used — e.g. ⁶⁸Ga on the same ligand (PET), or a ¹⁷⁷Lu surrogate. This is the **matched / theranostic pair (诊疗配对)**.
 
 ## Dosimetry vs PK (telling them apart)
 
