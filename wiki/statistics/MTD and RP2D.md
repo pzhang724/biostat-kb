@@ -12,7 +12,7 @@ sources: 3
 
 The two core outputs of Phase I oncology dose-finding (剂量探索).
 
-- **MTD (Maximum Tolerated Dose, 最大耐受剂量)** — the highest dose with still-acceptable toxicity during dose escalation (剂量递增). Defined via **DLT** (dose-limiting toxicity, 剂量限制性毒性), usually observed in the first treatment cycle; a 3+3 design or model-based method (CRM / BOIN) finds the highest dose keeping the DLT rate below a target (commonly ~33%).
+- **MTD (Maximum Tolerated Dose, 最大耐受剂量)** — the highest dose with still-acceptable toxicity during dose escalation (剂量递增). Defined via **[[Dose-Limiting Toxicity (DLT)|DLT]]** (dose-limiting toxicity, 剂量限制性毒性), usually observed in the first treatment cycle; a 3+3 design or model-based method (CRM / BOIN) finds the highest dose keeping the DLT rate below a target (commonly ~33%).
 - **RP2D (Recommended Phase 2 Dose, 推荐的二期剂量)** — the dose actually carried into Phase II. Historically RP2D = MTD ("higher is better" assumption). Now (esp. FDA **Project Optimus**) dose optimization (剂量优化) is emphasized: RP2D is often **below** MTD, chosen on efficacy, [[Pharmacokinetics (PK)|PK]]/exposure, target engagement (靶点占据), and long-term tolerability over multiple cycles — not just the maximum the patient can tolerate.
 
 **In one line:** MTD is the *toxicity ceiling*; RP2D is the *dose actually recommended for use* — the two need not be equal.
