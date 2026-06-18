@@ -35,6 +35,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Xerostomia]]
 - [[Anti-Emetic Premedication]]
 - [[Infusion-Related and Hypersensitivity Reactions]]
+- [[Physical Examination]]
 
 **Data standards**
 - [[MedDRA]]
