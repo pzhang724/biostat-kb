@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 7
+sources: 8
 ---
 
 # Dosimetry
@@ -13,6 +13,15 @@ sources: 7
 **Dosimetry (剂量测定)** quantifies the **absorbed radiation dose** (in **Gray, Gy**) delivered to tumors and to normal/critical organs by a radioactive drug — e.g. ¹⁷⁷Lu-PSMA-617 radioligand therapy. It is the radiation analogue of [[Pharmacokinetics (PK)|PK]] exposure: instead of drug concentration over time, it tracks radioactivity and converts it to absorbed dose.
 
 **How it's done:** serial **quantitative imaging** (SPECT/PET — e.g. of ¹⁷⁷Lu, or a ⁶⁸Ga companion) ± blood sampling at several timepoints → a **time–activity curve** per organ/tumor → integrate to **cumulated activity** → convert to **absorbed dose (Gy)** using dose factors (**MIRD** methodology).
+
+**What it computes, step by step:** post-dose quantitative imaging at several timepoints (e.g. 1 h / 24 h / 48 h / 96 h / 168 h) → for each organ/tumour draw a **region/volume of interest** (ROI/VOI 感兴趣区) → measure **activity** (Bq, or % injected activity) at each timepoint → a **time–activity curve (TAC, 时间-活度曲线)** per organ (the direct analogue of the PK concentration curve, but the y-axis is radioactivity) → integrate the TAC → **time-integrated / cumulated activity (累积活度)**, often summarized by an **effective half-life (有效半衰期) / residence time (驻留时间)** → convert with **dose factors (S-values, S值 / MIRD)**: organ absorbed dose = cumulated activity × S-value → **Gy per organ**.
+
+**What the data looks like:**
+- One row per (subject, organ, timepoint) holding the measured **activity**.
+- Summary: one row per (subject, organ) with **time-integrated activity, effective half-life, and absorbed dose (Gy)**, often normalized as **Gy/GBq**.
+- Plots: a time–activity curve per organ; a table of **Gy per organ** (kidney, marrow, salivary glands, tumour).
+
+**Parallel to PK:** PK's **AUC** (concentration·time) ↔ dosimetry's **cumulated activity** (activity·time) — both integrate a time curve; PK reports exposure in concentration units, dosimetry converts the activity–time integral one step further into absorbed dose (Gy).
 
 **How patients receive it & post-dose precautions:** targeted radioligands (e.g. ¹⁷⁷Lu-PSMA) are given by **IV infusion** (静脉输注), not oral — the ligand must reach the circulation intact and activity must be dosed precisely. (Some radiopharmaceuticals *are* oral, e.g. radioactive iodine ¹³¹I capsule/drink for thyroid.) Because the patient is transiently radioactive, precautions follow, scaled to isotope/activity/regulations: with ¹⁷⁷Lu often **outpatient** + a few days of distancing (keep away from children/pregnant women, sleep separately, flush urine well / wash hands); a strong γ-emitter like high-dose ¹³¹I may require brief **inpatient isolation** in a shielded room until the measured dose rate drops below a release limit.
 
