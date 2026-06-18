@@ -5,7 +5,7 @@ status: learned
 tags: [medical, trial-conduct]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 3
+sources: 4
 ---
 
 # Radiological Assessment
@@ -16,6 +16,8 @@ sources: 3
 - Performed at protocol-scheduled timepoints (scan schedule).
 - Often read by **BICR** (blinded independent central review, 独立中心盲态阅片) rather than only the local investigator, to reduce bias.
 - **Radiological progression (影像学进展)** is the imaging-defined progression event — the basis of **rPFS** (radiographic progression-free survival).
+
+**Why one criterion still gives different reads** — the standard is a rule, but applying it needs human **judgment calls** that aren't fully deterministic, so the same rule read by different people varies. In tumour imaging (RECIST): which lesions to pick as **target lesions** (up to 5), where to draw the diameter (which slice, caliper placement, partial-volume effect), and whether something is a **new lesion** or **progression** at the borderline (~20% growth, image quality, artifact). In **ECG/QTc**: where to place the **T-wave offset** (notoriously reader-dependent), manual vs algorithm, which leads/beats, baseline noise. On top of this **variability** there is **bias** — a local reader is often unblinded (knows the arm, has real-time treatment incentives), whereas central is blinded, standardized, and works from the complete dataset. **This applies wherever a human read/measurement sits between raw data and the categorical result** — tumour imaging, ECG, also central pathology, bone scans, echo, photographs; the more objective/automated the measure, the smaller the gap.
 
 **When local and central disagree** — discordance is common and expected. Note it is **one criterion, two independent reads** (local and central apply the *same* rules, e.g. RECIST 1.1 / the same QTc threshold — what differs is *who reads*), not two competing standards. Both coexist in the dataset; the protocol pre-specifies which is primary, and the two serve different purposes:
 
