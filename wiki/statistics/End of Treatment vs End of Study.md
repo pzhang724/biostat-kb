@@ -51,4 +51,4 @@ Long-term / survival follow-up (survival status, subsequent anti-cancer therapy)
 On-treatment │←—— EOT ——→│ off-treatment but still ON-STUDY │←—— EOS ——→│ off-study
 ```
 
-A trial-conduct concept feeding survival analysis in [[Oncology]].
+A trial-conduct concept feeding survival analysis in [[Oncology]]; the visit/period structure is laid out in the [[Schedule of Assessments]].
