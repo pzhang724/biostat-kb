@@ -83,12 +83,12 @@ Mostly right in intent, with two corrections:
 
 **Other documents to reference** (the source-of-truth / governing layer rules *derive* from):
 
-- The **IGs** themselves — SDTMIG, ADaMIG, SENDIG, Define-XML spec.
-- **FDA Study Data Technical Conformance Guide** — the governing FDA document tying it together.
-- **FDA Data Standards Catalog** — which standard versions FDA currently supports/requires.
-- **CDISC Controlled Terminology** — the codelists the rules check against.
-- Reviewer's guides — **cSDRG** (clinical SDTM) / **ADRG** (ADaM).
-- **PMDA Validation Rules** (Japan); other regions analogous.
+- The **IGs** themselves — [SDTM/SDTMIG](https://www.cdisc.org/standards/foundational/sdtm) · [ADaM/ADaMIG](https://www.cdisc.org/standards/foundational/adam) · [SENDIG](https://www.cdisc.org/standards/foundational/send) · [Define-XML](https://www.cdisc.org/standards/data-exchange/define-xml).
+- **FDA Study Data Technical Conformance Guide** — the governing FDA document tying it together: <https://www.fda.gov/regulatory-information/search-fda-guidance-documents/study-data-technical-conformance-guide-technical-specifications-document>
+- **FDA Data Standards Catalog** — which standard versions FDA supports/requires (on the [FDA Study Data Standards Resources](https://www.fda.gov/industry/fda-data-standards-advisory-board/study-data-standards-resources) page).
+- **CDISC Controlled Terminology** — the codelists the rules check against: <https://www.cdisc.org/standards/terminology/controlled-terminology>
+- Reviewer's guides — **cSDRG** (clinical SDTM) / **ADRG** (ADaM), PHUSE templates: <https://phuse.global/Deliverables>
+- **PMDA Validation Rules** (Japan): <https://www.pmda.go.jp/english/review-services/reviews/0002.html>; other regions analogous.
 
 ## Relationship
 
