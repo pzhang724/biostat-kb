@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, trial-conduct]
 created: 2026-06-11
 updated: 2026-06-18
-sources: 5
+sources: 6
 ---
 
 # Dosimetry
@@ -38,6 +38,8 @@ They form a **relay** for radioligands: PK/biodistribution (where it sits, how l
 The drug is a **radioligand / radiopharmaceutical** — a targeting ligand carrying a radioactive isotope (e.g. ¹⁷⁷Lu, ²²⁵Ac). The radiation is **intentional: it is the therapeutic mechanism** — the ligand delivers the isotope to the tumour (e.g. PSMA) and its emitted radiation kills the cells locally ("targeted radiotherapy"), unlike an ordinary small molecule that acts chemically.
 
 **What "radiation" means here:** radiation (辐射) is energy emitted as waves or particles. The relevant kind is **ionizing radiation** (电离辐射) — energetic enough to strip electrons off atoms and so damage DNA / kill cells: the α particles, β particles, and γ rays emitted by radioactive isotopes (contrast **non-ionizing radiation** 非电离辐射 like light or radio waves). That cell-killing is both the therapeutic effect and the source of organ toxicity, and is what dosimetry quantifies (as absorbed dose, Gy).
+
+**Yes — literally radioactive.** The molecule has a **radionuclide** (放射性核素, e.g. ¹⁷⁷Lu, ²²⁵Ac) chemically attached; that atom is unstable and **spontaneously decays inside the body**, emitting radiation until it decays away (set by its **half-life** 半衰期). It is genuine nuclear decay, not a metaphor. Consequences: dosing is by **radioactivity / activity** (放射性活度, in becquerel Bq — clinically MBq/GBq) rather than mass; it's prepared with shielding in a **hot lab**; and the patient is transiently radioactive after administration.
 
 It **does** affect normal organs: the radioactive drug also deposits dose where it accumulates or passes through — kidney (excretion), salivary glands (PSMA), bone marrow, liver — causing off-target toxicity (see [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]: creatinine, xerostomia, MDS). Key wording: **it is the *radiation* that affects organs; *dosimetry* measures that dose** so each organ can be kept under its safe limit (kidney is usually dose-limiting). Dosimetry itself is measurement, not harm.
 
