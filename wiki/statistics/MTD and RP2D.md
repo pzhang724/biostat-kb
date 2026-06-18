@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, trial-conduct, medical]
 created: 2026-06-18
 updated: 2026-06-18
-sources: 3
+sources: 4
 ---
 
 # MTD and RP2D
@@ -25,5 +25,17 @@ A Bayesian adaptive dose-finding design (贝叶斯自适应设计), in the same 
 - **vs CRM** — CRM symmetrically picks the dose with toxicity rate *closest* to target; EWOC is **asymmetric**: it explicitly penalizes overdosing, selecting the **α-quantile of the posterior MTD distribution** (后验 MTD 分布的 α 分位数) — more conservative about exceeding the MTD.
 - α can be **relaxed (increased) as the trial proceeds**: conservative early to protect patients, faster approach to the MTD later.
 - **MTD here is an unknown true parameter** (未知真值参数), not a known number — the model holds a *posterior distribution* (后验分布) over it. "Overdose" means falling to the right of that unknown true MTD, hence the probabilistic statement. As data accumulate the posterior narrows, so the dose can be pushed closer to the true MTD while still honoring the α constraint.
+
+## A worked MTD definition (BLRM + EWOC)
+
+A typical protocol wording: *"MTD = highest dose where the posterior probability of the true DLT rate being in the target interval [0.16–0.33] is above 0.50, with less than 25% risk of the true DLT rate being above 33%."* Unpacking it (Bayesian logistic regression model, **BLRM** 贝叶斯逻辑回归模型):
+
+- **true DLT rate (真实 DLT 发生率)** — the unknown probability of a [[Dose-Limiting Toxicity (DLT)|DLT]] at that dose; the model holds a posterior over it.
+- **target interval [0.16–0.33] (目标区间)** — splits the DLT-rate axis into under-dosing [0, 0.16), **target** [0.16, 0.33], and over-dosing (0.33, 1]. The target band is the "effective yet acceptably toxic" range.
+- **"posterior probability … in the target interval … above 0.50"** — for a candidate dose, P(true DLT rate ∈ [0.16, 0.33] | data) > 0.50: more likely than not the dose's toxicity sits in the target window.
+- **"less than 25% risk … above 33%"** — the **EWOC overdose-control** constraint: P(true DLT rate > 0.33 | data) < 0.25 (the α = 0.25 feasibility bound).
+- **"highest dose where …"** — among doses meeting *both* conditions, the MTD is the **highest**.
+
+So **MTD = highest dose with P(rate∈[0.16,0.33]) > 0.5 AND P(rate>0.33) < 0.25** — condition 1 keeps it in the target toxicity band, condition 2 keeps the overdose risk low.
 
 Part of [[Oncology]].
