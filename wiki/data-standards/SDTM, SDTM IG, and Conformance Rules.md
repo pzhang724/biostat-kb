@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 15
+sources: 16
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -150,6 +150,17 @@ Same **metadata backbone**, different sides of the build:
 - `define.xml` is itself a **standardized, conformance-checked submission artifact** (P21 validates it); the spec format is sponsor-defined and not submitted.
 
 **One line:** spec = the build instructions (with source + logic); `define.xml` = the standardized, submittable description of the finished datasets generated from that spec.
+
+#### XML vs YAML format — which is "better"?
+
+Not an either/or; they win at different layers, and for the deliverable you **don't get to choose**:
+
+- **As the submission deliverable → XML wins (no choice).** FDA/PMDA **mandate CDISC Define-XML** — it's what regulators accept and P21 validates. XML's edge here: an official **schema** to validate against, **namespaces/extensibility**, mature tooling, and it **renders to human-readable HTML via an XSL stylesheet**. Cost: verbose, painful to hand-write.
+- **As a human authoring/source format → YAML is nicer.** Concise, readable, **git-diff-friendly**, easy to hand-edit. But it has **no regulatory standing**, **no official define schema**, weaker validation, no native rendering, and whitespace-sensitivity gets error-prone at scale.
+
+So the practical pattern is **both**: author in a friendly source (YAML or the Excel spec) → **generate the required `define.xml`**. (Aside: CDISC is moving the *data* format toward **Dataset-JSON**, but **Define stays XML** — there's no YAML define standard.)
+
+**One line:** for submission, `define.xml` is mandated and wins; YAML only beats it as a human-editable source you'd compile down to `define.xml`.
 
 ## Visit numbering: VISITNUM (SDTM) vs AVISITN (ADaM)
 
