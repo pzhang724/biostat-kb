@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [statistics, medical]
 created: 2026-06-11
-updated: 2026-06-11
-sources: 1
+updated: 2026-06-19
+sources: 2
 ---
 
 # Best Overall Response
@@ -14,6 +14,19 @@ The key framing: **however complex the criterion is, at a single timepoint a pat
 
 - **Timepoint (visit) response** — at each assessment the criterion (e.g. [[Modified RECIST 1.1 and PCWG3 Criteria]], or plain [[RECIST 1.1]]) collapses everything — target, non-target, new lesions, bone — into **one** status: **CR / PR / SD / PD / NE**.
 - **Best Overall Response (BOR, 最佳总体缓解)** — the single **best** status recorded across **all** timepoints from baseline until progression/death/end of follow-up. Ordering **CR > PR > SD > PD** (NE handled separately). "Best is among all these" = take the max over the visit sequence.
+
+## Ordering, best → worst
+
+By tumour burden / favorability:
+
+> **CR ≈ NED  >  PR  >  SD  >  PD**  — and **NE sits outside the ordering**.
+
+- **CR** (Complete Response 完全缓解) — all known disease gone (best).
+- **NED** (No Evidence of Disease 无疾病证据) — no detectable disease; ranks **alongside CR**. But it's a **clinical / post-surgical** term (patient rendered disease-free after resection, or entered with no measurable disease), **not** a standard [[RECIST 1.1]] timepoint category — RECIST uses **CR**. It surfaces in CDISC response controlled terminology / adjuvant settings.
+- **PR** (Partial Response 部分缓解) — substantial shrinkage (≥30% in SoD).
+- **SD** (Stable Disease 疾病稳定) — neither PR nor PD.
+- **PD** (Progressive Disease 疾病进展) — growth / new lesions (worst).
+- **NE** (Not Evaluable 不可评估) — assessment couldn't be made (missing/inadequate). **Not** better or worse — it's "unknown", so it is **off** the favorability scale (handled separately below).
 
 Rules that constrain the max:
 
