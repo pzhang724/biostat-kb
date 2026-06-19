@@ -5,7 +5,7 @@ status: learned
 tags: [data-management, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 1
+sources: 2
 ---
 
 # eCRF Forms (Prostate Cancer Trial)
@@ -45,5 +45,13 @@ The set of [[CRF vs Non-CRF (External) Data|eCRF]] forms for a (mCRPC) prostate 
 
 - **[[Serious Adverse Event (SAE)|SAE]] report** · **Death** (date + cause) · **Skeletal-related event (SSE/SRE)** — prostate bone mets ([[Clinical Progression]])
 - New anti-cancer therapy · **Unscheduled visit** ([[Schedule of Assessments]]) · Protocol deviation · Partner pregnancy (if applicable)
+
+## Gating ("gate") questions
+
+A **gate** = a **gating / gatekeeper / trigger question** on a form — usually a **Yes/No** that controls whether a downstream section/log must be filled.
+
+- e.g. "**Any adverse events? Y/N**" — **No** → the AE log stays empty; **Yes** → the detailed fields open (conditional display).
+- CDASH implements these as the **`--YN`** header questions: `AEYN`, `CMYN`, `MHYN`, `PRYN`…
+- **Why it matters:** a **"No" is positive confirmation that nothing occurred** — it distinguishes "nothing to report" from a **blank = missing/not asked**. It also drives **EDC edit checks** (e.g. `AEYN=Yes` but no AE records → query). So the gate turns *absence of records* into recorded, verifiable data and conditionally reveals the rest of the form.
 
 Prostate-specific emphasis: **PSA + testosterone** (castrate confirm); **bone scan (PCWG3 2+2)** fused with soft-tissue RECIST; **pain/opioid + SSE**; **FACT-P/BPI** PROs. The visit grid these forms hang on is the [[Schedule of Assessments]]; a cross-cutting data concept in [[Oncology]].
