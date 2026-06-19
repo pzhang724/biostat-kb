@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, standards]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 7
+sources: 8
 ---
 
 # RECIST 1.1
@@ -71,6 +71,8 @@ Bottom-up pipeline: **lesion measurements → per-channel response → overall t
 - **RS** (Disease Response) = the per-visit **overall response verdict** (`RSTESTCD = OVRLRESP`, often derived).
 
 Mnemonic: **TU = which lesions** (identity, set once) · **TR = how big / what state** (results, per visit) · **RS = what response** (verdict).
+
+Watch the "baseline vs post-baseline" trap: it's tempting to read TU as baseline and TR as post-baseline, but that's not clean — **TR carries baseline measurements too** (the baseline SoD comes from TR rows at screening), and **TU gains NEW-lesion rows at later visits**. So the split is **identity (TU) vs measurement-over-time-including-baseline (TR) vs verdict (RS)**, not baseline vs post-baseline.
 
 **Step 0 — Baseline lesion setup** (TU + TR) — four sub-steps, all **fixed at baseline**:
 
