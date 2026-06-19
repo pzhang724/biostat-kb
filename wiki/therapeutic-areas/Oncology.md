@@ -4,7 +4,7 @@ type: therapeutic-area
 status: learning
 tags: [medical, statistics]
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-06-19
 ---
 
 # Oncology
@@ -55,6 +55,12 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[IRB and IEC (Ethics Committees)]]
 - [[Protocol Amendment]]
 - [[Financial Disclosure (Clinical Investigators)]]
+
+## Tumour assessment data flow
+
+How an imaging read becomes an efficacy endpoint, end to end:
+
+**Imaging** ([[Radiological Assessment]]) → criterion: [[RECIST 1.1]] for soft-tissue/nodal, fused with bone [[PCWG3 Criteria]] into [[Modified RECIST 1.1 and PCWG3 Criteria]] for mCRPC → recorded in SDTM **[[RECIST 1.1#Step-by-step derivation (for a programmer)|TU → TR → RS]]** (identity → measurements → response verdict), with **local vs central** reads kept as parallel rows ([[Local (Investigator) vs Central (BICR) Tumour Assessment]]; central arrives as a [[CRF vs Non-CRF (External) Data|non-CRF feed]]) → per-visit response collapses to the per-patient [[Best Overall Response]] → endpoints **ORR / DCR / DoR** and the time-to-event [[Progression-Free Survival (PFS) and Overall Survival (OS)|PFS / OS]] (rPFS in prostate). Criterion and evaluator are **category axes inside one set of domains**, not separate domains.
 
 ## Prostate cancer
 
