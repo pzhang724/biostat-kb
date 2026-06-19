@@ -5,7 +5,7 @@ status: learned
 tags: [regulatory, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 2
+sources: 3
 ---
 
 # IRB and IEC (Ethics Committees)
@@ -28,6 +28,18 @@ Per ICH E6 GCP / FDA **21 CFR 56.107**:
 - Diversity (gender, cultural/community background); for **vulnerable populations** (弱势人群), a member with relevant expertise.
 - Typical roles: clinicians, a scientist/methodologist (sometimes a **statistician**), a **pharmacist** (药剂师), an ethicist, a legal expert, a lay/community member, often a **patient advocate** (患者代表).
 - **Conflict of interest** (利益冲突): a member with a conflict on a given study **recuses** from its vote.
+
+## The questions they answer
+
+One overarching question — **"is it ethical to enroll humans in this study?"** — mapped onto the three **Belmont** principles:
+
+- **Respect for persons → informed consent** — is the consent process / ICF adequate, complete, understandable (risks, alternatives, voluntary, right to withdraw) and properly documented? Is recruitment **non-coercive** and any payment reasonable (no **undue inducement** 不当诱导)?
+- **Beneficence → risk-benefit + safety** — are risks **minimized** and **reasonable** vs anticipated benefit and knowledge gained? Adequate **safety monitoring** (DSMB, stopping rules)? Is the science **sound enough to justify** exposing humans (a worthless study can't be ethical)?
+- **Justice → fair selection** — is subject selection **equitable**? Extra **safeguards for vulnerable populations** (children, pregnant, cognitively impaired, prisoners, economically disadvantaged)?
+
+Plus: are **privacy / confidentiality** protected? Are investigators and site qualified? Any **conflicts of interest**?
+
+**Boundary:** they focus on **subject protection**, not on optimizing the science/statistics (that's the sponsor/regulator). Scientific validity matters only insofar as a study too flawed to yield useful knowledge can't justify the risk — they don't redesign the SAP.
 
 ## Why their authority is binding
 
