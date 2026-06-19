@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [medical, statistics, regulatory]
 created: 2026-06-11
-updated: 2026-06-11
-sources: 1
+updated: 2026-06-19
+sources: 2
 ---
 
 # Modified RECIST 1.1 and PCWG3 Criteria
@@ -42,6 +42,17 @@ Read it as: **any confirmed-2+2 column → PD**; **any RECIST-PD row → PD**; e
 This matrix gives the **one status per timepoint**; the best status across all timepoints is the [[Best Overall Response]], from which ORR is derived.
 
 Primary use: defines **rPFS** in mCRPC trials (the composite radiographic progression endpoint); **OS** remains the ultimate endpoint, and [[PSA (Prostate-Specific Antigen)|PSA]] response is reported only as a [[Surrogate Endpoint|surrogate]].
+
+## SDTM data model — one domain, criterion is a category
+
+Using both criteria does **not** split the SDTM domains. You still have **one [[RECIST 1.1#Step-by-step derivation (for a programmer)|TU, one TR, one RS]]** — the criterion is a **qualifier/category** within the domain, not a new domain (same principle as evaluator: investigator vs BICR are `--EVAL` within one domain).
+
+- **`TUMETHOD`** — `CT`/`MRI` for soft-tissue/nodal (RECIST), `BONE SCAN`/scintigraphy for bone (PCWG3); `TULOC` separates bone vs soft-tissue lesions.
+- **`RSCAT`/`RSSCAT`** — the response-criteria category (e.g. "RECIST 1.1", "PCWG3", and the composite). So **RS holds several response rows per visit** — a RECIST one, a bone/PCWG3 one, and the fused composite — each also **per evaluator**. Per visit you can have `#criteria × #evaluators` RS rows, all in the one RS domain.
+- **PSA is not in TU/TR** — it's a lab, in **`LB`**.
+- The composite **modified-RECIST + PCWG3** overall response and **rPFS** are a **derivation** downstream (ADaM **ADRS**), fusing soft-tissue RECIST + bone 2+2 (union for progression) into the single per-timepoint status above.
+
+Rule of thumb: **SDTM splits by topic** (what is measured), **not by analysis flavor** — criterion and evaluator are extra category axes inside TU/TR/RS, never extra domains. See [[Local (Investigator) vs Central (BICR) Tumour Assessment]].
 
 ## Official references
 
