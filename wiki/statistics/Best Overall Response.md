@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 2
+sources: 3
 ---
 
 # Best Overall Response
@@ -27,6 +27,8 @@ By tumour burden / favorability:
 - **SD** (Stable Disease 疾病稳定) — neither PR nor PD.
 - **PD** (Progressive Disease 疾病进展) — growth / new lesions (worst).
 - **NE** (Not Evaluable 不可评估) — assessment couldn't be made (missing/inadequate). **Not** better or worse — it's "unknown", so it is **off** the favorability scale (handled separately below).
+
+**Why NED exists as its own category:** because some patients have **no measurable disease to respond**, so CR can't apply. CR means measurable disease you *had* disappeared (a treatment response); if there were no lesions to begin with, "CR" is logically impossible — the state is "still no detectable disease" = NED. Two settings drive it: (1) **adjuvant trials** — after curative surgery the patient is disease-free but at recurrence risk, the drug prevents recurrence; there's no measurable target, so no ORR/CR, and the endpoint is **DFS** (disease-free survival, baseline = NED, event = recurrence); (2) **surgical conversion** — a patient rendered NED by resecting metastases; that's not a drug-induced imaging response, so calling it CR would wrongly credit the drug. So NED separates "no disease to assess / disease-free by other means" from genuine response (CR/PR) — counting surgically-achieved NED as a response would inflate/confound ORR.
 
 Rules that constrain the max:
 
