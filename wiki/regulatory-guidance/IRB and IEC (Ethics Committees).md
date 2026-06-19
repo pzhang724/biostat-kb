@@ -5,7 +5,7 @@ status: learned
 tags: [regulatory, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 4
+sources: 5
 ---
 
 # IRB and IEC (Ethics Committees)
@@ -27,7 +27,7 @@ Per ICH E6 GCP / FDA **21 CFR 56.107**:
 - **≥1 member independent** of / unaffiliated with the institution or site — a **community / lay** (社区/非专业) representative.
 - Diversity (gender, cultural/community background); for **vulnerable populations** (弱势人群), a member with relevant expertise.
 - Typical roles: clinicians, a scientist/methodologist (sometimes a **statistician**), a **pharmacist** (药剂师), an ethicist, a legal expert, a lay/community member, often a **patient advocate** (患者代表).
-- **Conflict of interest** (利益冲突): a member with a conflict on a given study **recuses** from its vote.
+- **Conflict of interest** (利益冲突): a member with a conflict on a given study **recuses** from its vote. Two buckets: **financial** (money/equity/proprietary interest — also the [[Financial Disclosure (Clinical Investigators)|21 CFR 54]] axis) and **non-financial / competing-professional-interest** (e.g. the member **runs another trial of the same type / a rival program** — competing for the same patients, plus a **confidentiality** risk from seeing a competitor's protocol; also personal relationships, intellectual stake). A same-type/competing trial lands in the **non-financial** bucket → **disclose + recuse** (it becomes financial too only if they also hold equity / outcome-linked payment in the rival product).
 
 ## The questions they answer
 
