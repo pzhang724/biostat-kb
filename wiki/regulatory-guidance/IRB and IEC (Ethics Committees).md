@@ -15,7 +15,7 @@ sources: 2
 ## What they do
 
 - **Before start** — review and **approve** the protocol, the **informed consent form (ICF)**, the [[Investigator's Brochure (IB)]], recruitment materials, and investigator qualifications; weigh **risk-benefit**; ensure informed consent is adequate.
-- **Ongoing** — **continuing review** (≥ annually), review of amendments, receipt of **safety reports** ([[Serious Adverse Event (SAE)#SUSAR — the reportable subset|SUSARs]] / expedited) and progress reports; can **suspend or terminate** approval.
+- **Ongoing** — **continuing review** (≥ annually), review of [[Protocol Amendment|amendments]], receipt of **safety reports** ([[Serious Adverse Event (SAE)#SUSAR — the reportable subset|SUSARs]] / expedited) and progress reports; can **suspend or terminate** approval.
 - **Composition** — independent members, including **scientific and non-scientific / lay** community members (detail below).
 
 ## Who's on it

@@ -54,6 +54,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 **Regulatory**
 - [[Investigator's Brochure (IB)]]
 - [[IRB and IEC (Ethics Committees)]]
+- [[Protocol Amendment]]
 
 **Statistics**
 - [[Adverse Event Ascertainment]]
