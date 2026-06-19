@@ -5,7 +5,7 @@ status: learned
 tags: [regulatory, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 1
+sources: 2
 ---
 
 # IRB and IEC (Ethics Committees)
@@ -16,7 +16,25 @@ sources: 1
 
 - **Before start** — review and **approve** the protocol, the **informed consent form (ICF)**, the [[Investigator's Brochure (IB)]], recruitment materials, and investigator qualifications; weigh **risk-benefit**; ensure informed consent is adequate.
 - **Ongoing** — **continuing review** (≥ annually), review of amendments, receipt of **safety reports** ([[Serious Adverse Event (SAE)#SUSAR — the reportable subset|SUSARs]] / expedited) and progress reports; can **suspend or terminate** approval.
-- **Composition** — independent members, including **scientific and non-scientific / lay** community members.
+- **Composition** — independent members, including **scientific and non-scientific / lay** community members (detail below).
+
+## Who's on it
+
+Per ICH E6 GCP / FDA **21 CFR 56.107**:
+
+- **At least 5 members**, of **mixed backgrounds** — scientific **and** non-scientific.
+- **≥1 non-scientific** member (e.g. ethicist 伦理学家, lawyer 律师, clergy 神职人员).
+- **≥1 member independent** of / unaffiliated with the institution or site — a **community / lay** (社区/非专业) representative.
+- Diversity (gender, cultural/community background); for **vulnerable populations** (弱势人群), a member with relevant expertise.
+- Typical roles: clinicians, a scientist/methodologist (sometimes a **statistician**), a **pharmacist** (药剂师), an ethicist, a legal expert, a lay/community member, often a **patient advocate** (患者代表).
+- **Conflict of interest** (利益冲突): a member with a conflict on a given study **recuses** from its vote.
+
+## Why their authority is binding
+
+- **Ethical foundation built on past abuses** — Nuremberg Code (纽伦堡守则) → Declaration of Helsinki (赫尔辛基宣言) → Belmont Report (respect for persons, beneficence, justice). The lesson: research on humans needs **independent prior review**.
+- **It counters a built-in conflict of interest** — investigators and sponsors have scientific ambition and funding at stake, so an **independent** body (not the people running the trial) must protect the subjects.
+- **Mandated by law, not advisory** — no FDA-regulated trial may proceed without IRB approval (21 CFR 56); ICH GCP and the Declaration of Helsinki require IEC approval. Their decisions — **approve, require modifications, disapprove, suspend/terminate** — are **binding**.
+- **Independence + binding power is the point** — being able to say **no** is what makes subject protection enforceable. They are the **gate** between the protocol and any human being enrolled.
 
 ## Two separate gates
 
