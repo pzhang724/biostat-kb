@@ -41,6 +41,16 @@ Outside the three classes: **special-purpose** datasets (e.g. DM Demographics �
 
 The concrete, **versioned** spec you actually build to. Names specific **domains** (DM, AE, CM, EX, LB, VS, PC, PP, …), their variables and metadata, expected **controlled terminology** (受控术语), and assembly conventions. "Submit SDTM datasets" = datasets built per a given IG version. Model is stable; the IG is what gets implemented and versioned.
 
+### One IG for everyone — not one per therapeutic area
+
+The SDTMIG is **single and therapeutic-area-agnostic** (one foundational document, versioned v3.x). It is **not** forked per disease. What *is* TA-specific is a separate CDISC product line — **Therapeutic Area User Guides (TAUGs, 治疗领域用户指南)**:
+
+- A TAUG is a **User Guide, not an Implementation Guide** — it does **not** replace or fork the SDTMIG. It **sits on top of** SDTM + SDTMIG (+ CDASH, controlled terminology) and shows how to represent the data concepts specific to **one disease/area** — which domains to use, how to model disease-specific assessments, often introducing new **test codes / variables / examples** for that area.
+- CDISC has published **40+ TAUGs** (oncology, Alzheimer's, diabetes, COPD/asthma, Parkinson's, prostate cancer, virology, cardiovascular, vaccines, …).
+- TAUGs are **guidance / examples**; the foundational, conformance-checked spec you build to is still the **one SDTMIG**. Where a TAUG introduces something not yet in the IG, it may flow into a **future IG version or a supplement**.
+
+**One line:** one SDTMIG for everyone; therapeutic-area specificity lives in the separate **TAUG (user-guide) layer**, not in multiple IGs.
+
 ## SDTM Conformance Rules — 符合性规则
 
 Machine-checkable **validation rules** (校验规则) confirming a dataset conforms to SDTM + the IG (and to controlled terminology / `define.xml`).
