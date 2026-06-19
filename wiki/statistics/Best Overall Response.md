@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 5
+sources: 6
 ---
 
 # Best Overall Response
@@ -13,7 +13,7 @@ sources: 5
 The key framing: **however complex the criterion is, at a single timepoint a patient has exactly ONE response status — and the "best" is the best among all those timepoint statuses.** This is the two-level structure behind response endpoints.
 
 - **Timepoint (visit) response** — at each assessment the criterion (e.g. [[Modified RECIST 1.1 and PCWG3 Criteria]], or plain [[RECIST 1.1]]) collapses everything — target, non-target, new lesions, bone — into **one** status: **CR / PR / SD / PD / NE**.
-- **Best Overall Response (BOR, 最佳总体缓解)** — the single **best** status recorded across **all** timepoints from baseline until progression/death/end of follow-up. Ordering **CR > PR > SD > PD** (NE handled separately). "Best is among all these" = take the max over the visit sequence.
+- **Best Overall Response (BOR, 最佳总体缓解)** — the single **best** status recorded across **all** timepoints from baseline until progression/death/end of follow-up. Ordering **CR > PR > SD > PD** (NE handled separately). "Best is among all these" = take the max over the visit sequence. **Yes, it's the running best-so-far** — at any visit, BOR = the best among that visit + all previous ones; the final reported BOR is that cumulative best over the whole **baseline → first PD** window (you can't pick up a better response after progression), subject to the confirmation / SD-duration rules below.
 
 ## Ordering, best → worst
 
