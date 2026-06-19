@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, standards]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 9
+sources: 10
 ---
 
 # RECIST 1.1
@@ -72,6 +72,13 @@ Bottom-up pipeline: **lesion measurements → per-channel response → overall t
 - **RS** (Disease Response) = the per-visit **overall response verdict** (`RSTESTCD = OVRLRESP`, often derived).
 
 Mnemonic: **TU = which lesions** (identity, set once) · **TR = how big / what state** (results, per visit) · **RS = what response** (verdict).
+
+**Row cardinality per patient** (key: TU is set **once per lesion**; TR & RS **repeat per visit**):
+
+- **TU** ≈ `#lesions × #evaluators` — one row per lesion per reader (new lesions appended when they appear).
+- **TR** ≈ `#lesions × #visits × #evaluators` — one row per lesion **per visit** per reader. So "same count as TU" holds **only per-visit**; the **total** is TU × #visits — TR is the **largest** domain.
+- **RS** ≈ `#response-params × #visits × #evaluators` (+ a BOR record) — the overall (and often target/non-target/new) response **each visit** per reader; **not** a small fixed 1–3.
+- **Evaluators** multiplier ≈ ×1–4: investigator + central reader 1 + reader 2 + adjudicator-when-discordant (see [[Local (Investigator) vs Central (BICR) Tumour Assessment]]).
 
 Watch the "baseline vs post-baseline" trap: it's tempting to read TU as baseline and TR as post-baseline, but that's not clean — **TR carries baseline measurements too** (the baseline SoD comes from TR rows at screening), and **TU gains NEW-lesion rows at later visits**. So the split is **identity (TU) vs measurement-over-time-including-baseline (TR) vs verdict (RS)**, not baseline vs post-baseline.
 
