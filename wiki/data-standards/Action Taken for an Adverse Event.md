@@ -5,7 +5,7 @@ status: learned
 tags: [data-management, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 3
+sources: 4
 ---
 
 # Action Taken for an Adverse Event
@@ -36,7 +36,7 @@ Action taken is the treating **site investigator's** (a physician) real-time cli
 
 Action taken is independent of:
 
-- **Outcome** — `AEOUT`: recovered/resolved, recovering/resolving, not recovered, recovered with sequelae, fatal, unknown.
+- **Outcome** — [[Adverse Event Outcome|`AEOUT`]]: recovered/resolved, recovering/resolving, not recovered, recovered with sequelae, fatal, unknown.
 - **Severity** — the [[CTCAE Grade]] (intensity).
 - **Seriousness** — the [[Serious Adverse Event (SAE)]] criteria.
 - **Causality** — related vs not.

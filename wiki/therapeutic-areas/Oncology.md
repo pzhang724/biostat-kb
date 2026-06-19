@@ -44,6 +44,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[MedDRA]]
 - [[SDTM, SDTM IG, and Conformance Rules]]
 - [[Action Taken for an Adverse Event]]
+- [[Adverse Event Outcome]]
 
 **Regulatory & trial conduct**
 - [[Investigator's Brochure (IB)]]
