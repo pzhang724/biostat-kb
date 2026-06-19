@@ -5,7 +5,7 @@ status: learned
 tags: [medical, trial-conduct]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 5
+sources: 6
 ---
 
 # 12-Lead Resting ECG
@@ -24,6 +24,8 @@ Standard electrocardiogram (12导联静息心电图) recording the heart's elect
 - **CTCAE grading** (see [[CTCAE Grade]]): G1 450–480 ms · G2 481–500 ms · **G3 ≥501 ms or >60 ms change from baseline** · G4 torsades / polymorphic VT / serious-arrhythmia signs. So **"Grade 3 QTc"** = reached ≥501 ms (or jumped >60 ms) but **without** the arrhythmia event that defines G4 — the "severe / must act" line: dose interruption, repeat ECG, check K/Mg/Ca, review QT-prolonging con-meds. The **QTc entry cap** (e.g. QTcF ≤480 ms) on [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]] is the screen that keeps such patients out; on-study it can count toward a [[Dose-Limiting Toxicity (DLT)|DLT]].
 
 **Triplicate ECG (三次重复心电图):** taking **three** 12-lead ECGs in quick succession (~1–2 min apart, patient resting) at the *same* nominal timepoint and **averaging** the QT/QTc across them. QTc has beat-to-beat and minute-to-minute biological + measurement variability, so averaging 3 yields a more precise, reproducible value. Standard for QT cardiac-safety / **ICH E14** assessment; protocols often specify triplicates at each ECG timepoint, frequently **time-matched to [[Pharmacokinetics (PK)|PK]] sampling** so QTc can be related to drug concentration (exposure–response / concentration–QTc).
+
+**Do vital signs need triplicate too?** Not routinely — triplicate is canonical for **ECG**. Among vitals, **blood pressure** is the one sometimes taken in duplicate/triplicate (3 readings after rest, averaged) to cut variability, especially for drugs with BP effects or when BP is a focus; other vitals (HR, temp, RR, SpO₂) are usually **single**. It's **protocol-specified**, not universal. Each repeat is captured with a **replicate number** (`VSREPNUM` for VS, `EGREPNUM` for EG) and averaged in ADaM.
 
 **Local vs central reading:** like imaging, trial ECGs can be read **locally** (本地判读 — by the site/investigator, for immediate safety and the screening eligibility check: arrhythmia present? QTc over the entry cap?) or sent to a **central ECG core lab** (中心心电图核心实验室) for standardized, blinded, often computer-assisted interval measurement — especially QT/QTc. Central reading reduces inter-site variability and bias; since QTc is a regulated cardiac-safety endpoint, the formal analysis typically uses the central read. Same idea as **BICR** for imaging (see [[Radiological Assessment]]); many trials use both — local for real-time safety, central for the analysis dataset.
 
