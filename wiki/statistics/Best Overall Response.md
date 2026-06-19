@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 7
+sources: 8
 ---
 
 # Best Overall Response
@@ -39,6 +39,7 @@ Rules that constrain the max:
 - **Confirmation** — in ORR-primary / non-randomized trials a CR or PR must be **confirmed** by a repeat assessment ≥4 weeks later, or it doesn't count as BOR.
 - **Minimum SD duration** — SD only qualifies after a protocol-defined minimum interval from baseline (e.g. ≥6–8 weeks); an earlier "SD" may be NE/non-qualifying.
 - **Up to first PD only** — BOR is assessed until the first progression; you cannot recover a better response afterward.
+- **Once earned, a response is locked in** — because BOR takes the best-so-far, a **confirmed** CR/PR achieved **before** first PD makes the patient a **permanent responder**; later progression does **not** remove them from the ORR numerator. The asymmetry: BOR only moves **up**, never down — a later PD just **stops the window**, it doesn't downgrade an already-achieved response. (The gate is **confirmation** — a single unconfirmed CR/PR doesn't count.)
 - **NE** if there is no evaluable post-baseline assessment.
 
 Downstream endpoints derive from BOR:
