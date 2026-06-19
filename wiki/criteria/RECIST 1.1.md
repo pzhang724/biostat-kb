@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, standards]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 5
+sources: 6
 ---
 
 # RECIST 1.1
@@ -72,6 +72,36 @@ Bottom-up pipeline: **lesion measurements → per-channel response → overall t
 4. **Record non-target** — all other lesions (incl. pathological nodes 10–<15 mm) qualitatively as present; may be grouped (e.g. "multiple liver mets").
 
 *SDTM view:* **TU** = `TULOC` location, `TUSTRESC` = TARGET/NON-TARGET/NEW, lesion link id, `TREVAL` evaluator (**INVESTIGATOR** vs **INDEPENDENT ASSESSOR / BICR**); **TR** = per-lesion-per-visit measurement (`TRLNKID`→TU, `TRTESTCD`=LDIAM…, `TRSTRESN`). Compute baseline SoD only over **TARGET**-flagged lesions. *Data checks:* ≤5 target, ≤2/organ (by location), each target measurable at baseline, no lesion both target & non-target, lesion ids consistent across visits, **investigator vs BICR derived separately**.
+
+### Step 0 mapping example (SDTM TU/TR)
+
+Same lesions (T01 liver / T02 lung TARGET, NT01 bone / NT02 pleura NON-TARGET), baseline `VISIT=SCREENING`.
+
+**TU** — one row per lesion, identifies & classifies it:
+
+| USUBJID | TUSEQ | TULNKID | TUTESTCD | TUSTRESC | TULOC | TUMETHOD | TUEVAL | VISIT |
+|---|---|---|---|---|---|---|---|---|
+| 01-001 | 1 | T01 | TUMIDENT | TARGET | LIVER | CT | INVESTIGATOR | SCREENING |
+| 01-001 | 2 | T02 | TUMIDENT | TARGET | LUNG | CT | INVESTIGATOR | SCREENING |
+| 01-001 | 3 | NT01 | TUMIDENT | NON-TARGET | BONE | CT | INVESTIGATOR | SCREENING |
+| 01-001 | 4 | NT02 | TUMIDENT | NON-TARGET | PLEURA | CT | INVESTIGATOR | SCREENING |
+
+**TR** — measurements, joined back to TU by `TRLNKID = TULNKID`:
+
+| USUBJID | TRSEQ | TRLNKID | TRTESTCD | TRORRES | TRSTRESN | TRSTRESU | TREVAL | VISIT |
+|---|---|---|---|---|---|---|---|---|
+| 01-001 | 1 | T01 | LDIAM | 50 | 50 | mm | INVESTIGATOR | SCREENING |
+| 01-001 | 2 | T02 | LDIAM | 30 | 30 | mm | INVESTIGATOR | SCREENING |
+| 01-001 | 3 | NT01 | TUMSTATE | PRESENT | · | · | INVESTIGATOR | SCREENING |
+| 01-001 | 4 | NT02 | TUMSTATE | PRESENT | · | · | INVESTIGATOR | SCREENING |
+
+Mapping notes:
+
+- **`TULNKID` is the lesion key**; TR joins to TU via `TRLNKID = TULNKID` — classification lives **once** in TU, measurements repeat per visit in TR.
+- **Target** → numeric `TRTESTCD = LDIAM` (longest diameter). **Non-target** → `TRTESTCD = TUMSTATE = PRESENT` (qualitative, no number).
+- If T02 were a **lymph node**, `TRTESTCD = SAXIS` (short axis) and only the short axis feeds the sum.
+- **`TUEVAL`/`TREVAL = INVESTIGATOR`** here; a **BICR** read is a **parallel** set of rows with `TREVAL = INDEPENDENT ASSESSOR`, derived separately.
+- **Baseline SoD (50 + 30 = 80 mm) is NOT a raw TR row** — it's **derived** downstream (ADaM ADTR/ADRS, `PARAMCD` like `SUMDIAM`), summing only TARGET lesions. **RS** holds the per-visit overall response (Step 2), e.g. `RSTESTCD = OVRLRESP`.
 
 **Step 1 — At each post-baseline visit, evaluate three channels separately:**
 
