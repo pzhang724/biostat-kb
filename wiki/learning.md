@@ -46,6 +46,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 
 **Data standards**
 - [[MedDRA]]
+- [[Action Taken for an Adverse Event]]
 - [[SDTM, SDTM IG, and Conformance Rules]]
 
 **Regulatory**
