@@ -12,7 +12,7 @@ sources: 1
 
 **PSMA = Prostate-Specific Membrane Antigen (前列腺特异性膜抗原)** — a protein highly expressed on the **surface** of most prostate-cancer cells. (Distinct from [[PSA (Prostate-Specific Antigen)|PSA]], which is a *secreted* antigen measured in blood; PSMA is a *membrane* target you image.)
 
-**PSMA PET/CT** is a molecular imaging scan: a radioactive tracer that binds PSMA is injected, a **PET** scanner detects where it concentrates (i.e. where prostate-cancer cells are), and **CT** supplies the anatomical map — functional + anatomical, fused. Common tracers: **⁶⁸Ga-PSMA-11, ¹⁸F-DCFPyL (piflufolastat), ¹⁸F-PSMA-1007**.
+**PSMA PET/CT** is a molecular imaging scan: a radioactive tracer that binds PSMA is injected, a **[[PET (Positron Emission Tomography)|PET]]** scanner detects where it concentrates (i.e. where prostate-cancer cells are), and **CT** supplies the anatomical map — functional + anatomical, fused. Common tracers: **⁶⁸Ga-PSMA-11, ¹⁸F-DCFPyL (piflufolastat), ¹⁸F-PSMA-1007**.
 
 **Uses:**
 
