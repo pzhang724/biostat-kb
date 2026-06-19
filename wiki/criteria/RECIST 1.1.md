@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, standards]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 8
+sources: 9
 ---
 
 # RECIST 1.1
@@ -67,6 +67,7 @@ Bottom-up pipeline: **lesion measurements → per-channel response → overall t
 **What each domain records** (linked by the lesion id `TULNKID`/`TRLNKID` + RELREC):
 
 - **TU** (Tumor/Lesion Identification) = the lesion **identity / roster** — one row per lesion: location (`TULOC`), method (`TUMETHOD`), classification `TUSTRESC` = **TARGET / NON-TARGET / NEW** (`TUTESTCD = TUMIDENT`). **No measurements.** Target/non-target set at baseline; new lesions added when they appear.
+  - **`TUMIDENT`** = "**Tumor Identification**" (TUMor IDENTification) — the single topic test of TU, so essentially **every** TU row carries it; the *answer* (what kind of lesion) is in `TUSTRESC`. Contrast **TR**, where `TRTESTCD` **varies** (LDIAM / SAXIS / TUMSTATE…) because TR records different measurements.
 - **TR** (Tumor/Lesion Results) = the **measurements / state** of those lesions over time — one row per lesion **per visit**: numeric for targets (`TRTESTCD = LDIAM` longest diameter, or `SAXIS` short axis for nodes), qualitative for non-targets (`TUMSTATE = PRESENT/ABSENT`).
 - **RS** (Disease Response) = the per-visit **overall response verdict** (`RSTESTCD = OVRLRESP`, often derived).
 
