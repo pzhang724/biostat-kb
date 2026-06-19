@@ -60,4 +60,16 @@ The protocol-defined window in which AEs/SAEs must be collected and reported. Ex
 
 So collection runs consent/first-dose → last-dose + ~30 days, but a *related* SAE stays reportable indefinitely. The grid of when assessments happen lives in the [[Schedule of Assessments]].
 
-Distinct from an [[Adverse Event of Special Interest (AESI)]] (pre-specified interest-based watch) and from a [[Dose-Limiting Toxicity (DLT)]] (dose-finding threshold). AE terms come from [[MedDRA]]. A cross-cutting safety concept in [[Oncology]].
+## The AE lifecycle (related pages)
+
+Seriousness is one node in the path an AE travels — the cluster, in order:
+
+1. **Found** — [[Adverse Event Ascertainment]] (solicited vs spontaneous, multi-source).
+2. **Coded** — the term comes from [[MedDRA]].
+3. **Characterized** on independent axes — severity = [[CTCAE Grade]] · **seriousness** = this page · causality (related?) · expectedness vs the RSI in the [[Investigator's Brochure (IB)]].
+4. **Managed** — [[Action Taken for an Adverse Event]] (study-drug action + other treatment).
+5. **Tracked** — [[Follow-up of Adverse Events]] → final [[Adverse Event Outcome]].
+6. **Timed & stored** — onset/end dates, event-driven, in [[SDTM, SDTM IG, and Conformance Rules#Events vs Findings timing — how an AE's occurrence is timed|SDTM (Events vs Findings)]].
+7. **Reported** — serious → seriousness/causality/expectedness filter to SUSAR → [[Serious Adverse Event (SAE)#Reporting flow to the regulatory authority|expedited reporting]], all within the [[Serious Adverse Event (SAE)#Safety reporting period|safety reporting period]].
+
+Distinct from an [[Adverse Event of Special Interest (AESI)]] (pre-specified interest-based watch) and from a [[Dose-Limiting Toxicity (DLT)]] (dose-finding threshold). A cross-cutting safety concept in [[Oncology]].
