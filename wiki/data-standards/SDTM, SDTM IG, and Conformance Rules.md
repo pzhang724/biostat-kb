@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 14
+sources: 15
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -131,6 +131,25 @@ The study-level **mapping specification** (映射规范, often an Excel workbook
 8. Comments / document & study metadata.
 
 So the "exact mapping" = the column set in #2 (target var + metadata + origin + source + logic + codelist); the CT/codelists in #3–4 are a **required companion**. Spec ≈ `define.xml` in human-readable form.
+
+### Spec ↔ define.xml
+
+Same **metadata backbone**, different sides of the build:
+
+- **SDTM spec** = the **human-authored blueprint** (Excel) programmers build *to* — the **"how to build it."** Beyond dataset/variable metadata it carries the **source dataset+variable** and the **derivation/mapping logic in words** (raw/EDC → SDTM instructions).
+- **`define.xml`** = the **machine-readable metadata deliverable** (CDISC **Define-XML** standard, v2.0/2.1) submitted to FDA *with* the datasets — the **"data guide"** describing the **final datasets** ("what the data is," not how it was built).
+
+**Direction:** the spec is the **source**; `define.xml` is **generated from it** (and must match the actual datasets) — hence "spec ≈ define.xml in human-readable form."
+
+**Shared:** datasets/domains, variables (type/length/role/core), codelists/CT, [[#What's in an SDTM (mapping) spec|VLM]], computational methods/derivations, origins, comments.
+
+**Differences:**
+- **Audience/format** — spec = internal, Excel, human; `define.xml` = external/regulatory, XML, machine-readable.
+- The spec keeps the **source→target mapping + full programming logic**; `define.xml` **drops the raw source-field path** (it records **Origin**, and computational methods for derivations, but not "which EDC variable").
+- **Timing** — spec written *first* to build the data; `define.xml` produced *at the end* to describe what was built.
+- `define.xml` is itself a **standardized, conformance-checked submission artifact** (P21 validates it); the spec format is sponsor-defined and not submitted.
+
+**One line:** spec = the build instructions (with source + logic); `define.xml` = the standardized, submittable description of the finished datasets generated from that spec.
 
 ## Visit numbering: VISITNUM (SDTM) vs AVISITN (ADaM)
 
