@@ -36,6 +36,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Anti-Emetic Premedication]]
 - [[Infusion-Related and Hypersensitivity Reactions]]
 - [[Physical Examination]]
+- [[Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)]]
 
 **Data standards**
 - [[MedDRA]]

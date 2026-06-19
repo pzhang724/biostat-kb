@@ -14,7 +14,7 @@ The **Schedule of Assessments / Activities (SoA, 评估计划表 / 流程表)** 
 
 ## Layout (a grid)
 
-- **Rows = assessments/procedures**: informed consent, eligibility, demographics, medical history, vital signs, physical exam, labs (heme/chem), [[12-Lead Resting ECG|ECG]], tumor imaging ([[RECIST 1.1]]/[[PCWG3 Criteria]]), [[Pharmacokinetics (PK)|PK]] sampling, dosing, AE & concomitant-med collection, PRO/QoL, survival follow-up…
+- **Rows = assessments/procedures**: informed consent, eligibility, demographics, medical history, vital signs, [[Physical Examination|physical exam]], [[Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)|labs (heme/chem)]], [[12-Lead Resting ECG|ECG]], tumor imaging ([[RECIST 1.1]]/[[PCWG3 Criteria]]), [[Pharmacokinetics (PK)|PK]] sampling, dosing, AE & concomitant-med collection, PRO/QoL, survival follow-up…
 - **Columns = visits/timepoints**, grouped by study period: Screening → Treatment (by cycle/day, e.g. C1D1, C1D8…) → EOT → Safety follow-up → Long-term/survival follow-up → EOS.
 - **Cells = "X"** where an assessment occurs at that visit; **footnotes** carry **visit windows** (±days), conditions, and details.
 
