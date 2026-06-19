@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, standards]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 4
+sources: 5
 ---
 
 # RECIST 1.1
@@ -89,6 +89,35 @@ Bottom-up pipeline: **lesion measurements → per-channel response → overall t
 **Step 4 — BOR per patient → endpoints:** best overall timepoint response across **baseline → first PD** (with confirmation + SD-min-duration rules) → responder flag (BOR ∈ CR/PR) → **ORR**; DoR/PFS derived alongside.
 
 **Practical note:** often the investigator or **BICR** provides target/non-target/overall responses directly in **RS** (collected), and the programmer derives **BOR** from those; whether you **re-derive** timepoint responses from TR measurements or **consume RS as collected** is a **SAP** decision. Nadir is computed across the patient's own history.
+
+## Worked example (sample data)
+
+One patient, 2 target + 2 non-target lesions, four visits.
+
+**TU** (lesion identification): T1 Liver TARGET · T2 Lung TARGET · NT1 Bone NON-TARGET · NT2 Pleura NON-TARGET.
+
+**TR** (longest diameter, mm), `SoD = T1 + T2`:
+
+| Lesion | Wk0 | Wk8 | Wk16 | Wk24 |
+|---|---|---|---|---|
+| T1 (liver) | 50 | 30 | 28 | 40 |
+| T2 (lung) | 30 | 20 | 17 | 25 |
+| **SoD** | **80** | **50** | **45** | **65** |
+
+**Derived per visit:**
+
+| Visit | SoD | nadir | vs baseline | vs nadir | Target | Overall |
+|---|---|---|---|---|---|---|
+| Wk0 | 80 | 80 | — | — | baseline | baseline |
+| Wk8 | 50 | 50 | −37.5% | — | **PR** | PR (unconfirmed) |
+| Wk16 | 45 | 45 | −43.8% | — | **PR** | **PR — confirms Wk8** |
+| Wk24 | 65 | 45 | −18.8% | **+44.4%, +20 mm** | **PD** | **PD** |
+
+(non-target Non-CR/Non-PD throughout; no new lesions.)
+
+**BOR = PR** (confirmed at Wk16), achieved before first PD (Wk24) → **responder = yes**, counts toward [[Best Overall Response|ORR]].
+
+What it shows: PR is judged vs **baseline** (80), PD vs **nadir** (45) — different reference points; **nadir** ratchets down 80→50→45 then holds; a single Wk8 PR isn't enough until Wk16 **confirms** it; after PD the window **closes**.
 
 ## Official reference
 
