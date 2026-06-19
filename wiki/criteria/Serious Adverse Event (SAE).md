@@ -5,7 +5,7 @@ status: learned
 tags: [regulatory, trial-conduct, medical]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 2
+sources: 3
 ---
 
 # Serious Adverse Event (SAE)
@@ -48,5 +48,16 @@ The **sponsor (申办方) is the hub** — sites don't report to authorities dir
 - **Aggregate / periodic:** all SAEs roll into the annual **DSUR** (Development Safety Update Report) to authorities — so non-SUSAR SAEs are still reported, just periodically, not expedited.
 
 In one line: sites send SAEs in → sponsor filters to SUSARs → those go to the authority expedited, everything else aggregated in the DSUR.
+
+## Safety reporting period
+
+The protocol-defined window in which AEs/SAEs must be collected and reported. Exact dates are per protocol, but the standard shape:
+
+- **Start** — usually at **informed consent** (知情同意) for SAEs (so events between consent and first dose are captured); routine AE collection often starts at first dose.
+- **End** — a defined tail after the **last dose**, commonly **~28–30 days** (longer for long-half-life biologics, radioligands, etc.). The "+30 days" catches delayed toxicity.
+- **Key exception** — a **related** SAE has **no cut-off**: an SAE the investigator assesses as causally related to study drug is reportable **whenever** it surfaces, even long after the period ends. Causality, not the calendar, governs.
+- **Always-report items** — some events (pregnancy, death, secondary malignancy) are reported irrespective of period, per protocol.
+
+So collection runs consent/first-dose → last-dose + ~30 days, but a *related* SAE stays reportable indefinitely. The grid of when assessments happen lives in the [[Schedule of Assessments]].
 
 Distinct from an [[Adverse Event of Special Interest (AESI)]] (pre-specified interest-based watch) and from a [[Dose-Limiting Toxicity (DLT)]] (dose-finding threshold). AE terms come from [[MedDRA]]. A cross-cutting safety concept in [[Oncology]].
