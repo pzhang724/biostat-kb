@@ -31,7 +31,7 @@ The two don't compete — each governs a **different compartment**, and they fol
 
 **Combination logic is OR / earliest-event:** radiographic progression is declared when **either** soft-tissue PD (RECIST) **or** bone PD (2+2) occurs, whichever comes first; death is also an rPFS event. Date nuance: when the bone 2+2 rule is met, the progression date is **back-dated to the first scan** showing the initial 2 new lesions, not the confirmation scan.
 
-**PSA and symptoms stay separate** — PSA progression (≥25% & ≥2 ng/mL above nadir, confirmed) and symptomatic endpoints are reported on their own; you do **not** declare progression on rising PSA alone. The split exists because bone, soft tissue, PSA, and symptoms can move independently (mixed response, flare). **OS** (overall survival) remains the ultimate endpoint.
+**PSA and symptoms stay separate** — PSA progression (≥25% & ≥2 ng/mL above nadir, confirmed) and symptomatic endpoints ([[Clinical Progression]]) are reported on their own; you do **not** declare progression on rising PSA alone. The split exists because bone, soft tissue, PSA, and symptoms can move independently (mixed response, flare). **OS** (overall survival) remains the ultimate endpoint.
 
 When a protocol fuses soft-tissue RECIST and bone PCWG3 into a **single named composite criterion**, that criterion (with its fused timepoint matrix) is documented at [[Modified RECIST 1.1 and PCWG3 Criteria]].
 

@@ -18,6 +18,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[CTCAE Grade]]
 - [[Dose-Limiting Toxicity (DLT)]]
 - [[Adverse Event of Special Interest (AESI)]]
+- [[Clinical Progression]]
 
 **Biomedical**
 - [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)]]
