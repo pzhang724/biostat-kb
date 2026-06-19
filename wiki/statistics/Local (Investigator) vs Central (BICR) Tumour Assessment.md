@@ -5,7 +5,7 @@ status: learned
 tags: [trial-conduct, statistics]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 1
+sources: 2
 ---
 
 # Local (Investigator) vs Central (BICR) Tumour Assessment
@@ -24,6 +24,12 @@ The **site investigator** or local radiologist selects target lesions at baselin
 
 - **Who + where** — local = treating investigator at the site; central = independent blinded radiologists at a core lab.
 - **Purpose** — local drives patient management in real time; central provides the **unbiased endpoint for regulators**, especially **ORR / [[Progression-Free Survival (PFS) and Overall Survival (OS)|PFS]]** as primary or key secondary in **open-label** trials, where investigator assessment of progression timing is bias-prone.
-- **Data** — `TREVAL`/`RSEVAL` (INVESTIGATOR vs INDEPENDENT ASSESSOR) distinguishes the two **parallel** record sets; they may pick different lesions and reach different responses. The **SAP** says which read drives the primary endpoint, and **local-vs-central concordance** is itself analyzed. Central-read data arrives as a **non-CRF external feed** — see [[CRF vs Non-CRF (External) Data]].
+- **Data** — `TREVAL`/`RSEVAL` (INVESTIGATOR vs INDEPENDENT ASSESSOR) distinguishes the two **parallel** record sets; they may pick different lesions and reach different responses. The **SAP** says which read drives the primary endpoint, and **local-vs-central concordance** is itself analyzed.
+
+## Two parallel TU/TR/RS sets — and where each comes from
+
+- **Same domains, doubled rows.** There aren't separate central/local domains — the **same TU/TR/RS** hold both reads, distinguished by the **evaluator** variable (`TUEVAL`/`TREVAL`/`RSEVAL` = INVESTIGATOR vs INDEPENDENT ASSESSOR). `--EVALID` further separates **multiple central readers** (Reader 1, Reader 2, Adjudicator). So one lesion can have an investigator TR row **and** an independent-assessor TR row.
+- **They do NOT both go through the eCRF.** **Local/investigator** read → entered into the **eCRF/EDC** by the site (CRF data). **Central/BICR** read → a **non-CRF external feed** from the imaging core-lab vendor (like central lab), loaded directly + reconciled — the site does **not** key it in. Both converge into the same SDTM TU/TR/RS, tagged by `--EVAL`. See [[CRF vs Non-CRF (External) Data]].
+- **Scope can differ:** the investigator read is sometimes only the **overall response** (RS) on the eCRF, while the **BICR** vendor usually supplies **full** TU/TR/RS (their own lesion selection + measurements + response) — a protocol/SAP decision.
 
 The underlying imaging is [[Radiological Assessment]]; a cross-cutting efficacy-integrity concept in [[Oncology]].
