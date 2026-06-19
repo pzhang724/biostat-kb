@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 13
+sources: 14
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -14,14 +14,26 @@ Three tiers of the same CDISC tabulation (制表) standard — the **submission 
 
 ## SDTM — Study Data Tabulation Model (研究数据制表模型)
 
-The abstract **model / framework** (框架), not a list of tables. Defines:
+The abstract **model / framework** (框架), study-agnostic — the **"grammar."** It gives a **kit of parts, not named tables** (naming concrete domains is the IG's job), and is **separately versioned** from the IG (Model v1.x / v2.0 vs SDTMIG v3.x). Three pillars:
 
-- Data organized as **observations** in **domains** (域 — one table per topic).
-- **Classes** (类别): Interventions (干预)、Events (事件)、Findings (发现), plus special-purpose (e.g. DM Demographics).
-- Standard **variable roles** (变量角色): Identifier (标识)、Topic (主题)、Timing (时间)、Qualifier (限定).
-- Rules like one record = one observation.
+**1. General observation classes (一般观测类)** — every domain is built from one of three, each with its own Topic variable:
 
-It is the "grammar," stable across studies.
+- **Interventions** (干预) — substances/treatments **given to or taken by** the subject; Topic = the treatment (`--TRT`).
+- **Events** (事件) — things that **happen to** the subject; Topic = the event term (`--TERM`).
+- **Findings** (发现) — results of a **planned measurement/evaluation**; Topic = the test (`--TESTCD`). Plus a **Findings About** variant.
+
+Outside the three classes: **special-purpose** datasets (e.g. DM Demographics 人口学), **trial design**, and **relationship** datasets.
+
+**2. Variable roles (变量角色)** — every variable plays exactly one role:
+
+- **Identifier** (标识) — `STUDYID`, `DOMAIN`, `USUBJID`, `--SEQ`.
+- **Topic** (主题) — the focus of the observation.
+- **Timing** (时间) — `--DTC`, `--STDTC`/`--ENDTC`, `VISITNUM`, `--DY`.
+- **Qualifier** (限定) — everything else describing the observation, subdivided into **Grouping** (`--CAT`/`--SCAT`), **Result** (`--ORRES`/`--STRESC`/`--STRESN`), **Synonym** (`--DECOD`/`--MODIFY`), **Record** (`--SEV`, `--SER`), and **Variable** (`--ORRESU` units) qualifiers.
+
+**3. Naming + general rules** — the **`--` two-letter domain-prefix convention** (`--TESTCD`, `--ORRES`, `--STDTC`) makes variables predictable across domains; core rules like **one record = one observation** and use of controlled terminology.
+
+**Model = parts + grammar (stable); the IG** names concrete domains (DM/AE/LB…) by picking a class and filling in the role variables. Model = the kit; IG = the assembled, versioned sentence.
 
 ## SDTM IG — Implementation Guide (实施指南)
 
