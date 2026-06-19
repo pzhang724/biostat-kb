@@ -51,6 +51,12 @@ The SDTMIG is **single and therapeutic-area-agnostic** (one foundational documen
 
 **One line:** one SDTMIG for everyone; therapeutic-area specificity lives in the separate **TAUG (user-guide) layer**, not in multiple IGs.
 
+**TAUGs mapping to this wiki's TAs** ([[Oncology]] / prostate, [[Asthma]]) — verified against cdisc.org/standards/therapeutic-areas:
+
+- **No single generic "Oncology" TAUG exists.** Oncology TAUGs are **per cancer type**: Breast Cancer, Lung Cancer, **Prostate Cancer**, Colorectal Cancer, Pancreatic Cancer. The cross-cutting oncology machinery — **tumour identification / results / response (TU / TR / RS** domains, RECIST modeling) — lives in the **SDTMIG itself**, not a TAUG.
+- **Respiratory:** **Asthma**, COPD.
+- **Directly relevant here:** **Prostate Cancer TAUG** (the prostate-cancer indication under [[Oncology]]) and **Asthma TAUG** (the [[Asthma]] TA). Sibling/umbrella context only: the other oncology TAUGs (Breast/Lung/Colorectal/Pancreatic) sit under the Oncology umbrella but aren't this wiki's indication; **COPD** is the respiratory sibling to Asthma.
+
 ## SDTM Conformance Rules — 符合性规则
 
 Machine-checkable **validation rules** (校验规则) confirming a dataset conforms to SDTM + the IG (and to controlled terminology / `define.xml`).

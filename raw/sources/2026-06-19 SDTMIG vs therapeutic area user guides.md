@@ -12,3 +12,19 @@ What is TA-specific is a separate CDISC product line: **Therapeutic Area User Gu
 - TAUGs are guidance/examples; the foundational, conformance-checked spec you build to is still the one SDTMIG. Where a TAUG introduces something not yet in the IG, it may flow into a future IG version or a supplement.
 
 So: one SDTMIG for everyone; therapeutic-area specificity lives in the separate TAUG layer (user guides), not in multiple IGs.
+
+---
+
+Follow-up: which TAUGs map to this wiki's TAs (Oncology/prostate, Asthma)?
+
+Verified against cdisc.org/standards/therapeutic-areas (June 2026):
+
+- There is NO single generic "Oncology" TAUG. Oncology TAUGs are per cancer type: Breast Cancer, Lung Cancer, **Prostate Cancer**, Colorectal Cancer, Pancreatic Cancer. The cross-cutting oncology machinery (tumor identification/results/response — TU / TR / RS domains, RECIST modeling) lives in the SDTMIG itself, not a TAUG.
+- Respiratory: **Asthma**, COPD.
+
+Directly relevant to this wiki:
+- **Prostate Cancer TAUG** — matches the prostate-cancer indication under Oncology.
+- **Asthma TAUG** — matches the Asthma TA.
+- Sibling/umbrella context: other oncology TAUGs (Breast/Lung/Colorectal/Pancreatic) sit under the Oncology umbrella but aren't this wiki's indication; COPD is the respiratory sibling to Asthma.
+
+The page itself (SDTMIG) is still one TA-agnostic doc; these TAUGs are the separate user-guide layer for those areas.
