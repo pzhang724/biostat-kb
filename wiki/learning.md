@@ -47,6 +47,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 
 **Data standards**
 - [[MedDRA]]
+- [[WHODrug]]
 - [[Action Taken for an Adverse Event]]
 - [[Adverse Event Outcome]]
 - [[CRF vs Non-CRF (External) Data]]

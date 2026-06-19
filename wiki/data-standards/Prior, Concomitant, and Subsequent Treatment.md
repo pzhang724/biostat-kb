@@ -14,7 +14,7 @@ It feels like many things, but it's **two axes crossed** — not a long list. On
 
 ## Axis 1 — type (= the domain)
 
-- **Medication / drug** → **`CM`** (Concomitant/Prior Medications) — all **non-study** drugs.
+- **Medication / drug** → **`CM`** (Concomitant/Prior Medications) — all **non-study** drugs; coded with [[WHODrug]].
 - **Procedure / surgery / radiotherapy / biopsy** → **`PR`** (Procedures).
 - The **study drug itself** → **`EX`** (Exposure), **not** CM. CM = everything else.
 - **"Anti-cancer therapy"** is *not* a separate domain — it's a **cancer-directed cut** spanning CM (systemic drugs) + PR (surgery / radiotherapy). See [[Anti-Cancer Therapy Categories in Oncology Trials]].
