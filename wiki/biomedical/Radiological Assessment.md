@@ -10,7 +10,7 @@ sources: 4
 
 # Radiological Assessment
 
-**Radiological assessment (影像学评估)** — evaluating disease with medical **imaging** (CT, MRI, bone scan, [[PSMA PET-CT]], etc.): measuring tumour burden, detecting/measuring lesions, and judging response or progression. In oncology trials it is the imaging-based read of disease status that **feeds the response criteria** ([[RECIST 1.1]], [[PCWG3 Criteria]], the [[Modified RECIST 1.1 and PCWG3 Criteria]]) → [[Best Overall Response|overall response]], progression, rPFS.
+**Radiological assessment (影像学评估)** — evaluating disease with medical **imaging** (CT, [[MRI (Magnetic Resonance Imaging)|MRI]], bone scan, [[PET (Positron Emission Tomography)|PET]] / [[PSMA PET-CT]], etc.): measuring tumour burden, detecting/measuring lesions, and judging response or progression. In oncology trials it is the imaging-based read of disease status that **feeds the response criteria** ([[RECIST 1.1]], [[PCWG3 Criteria]], the [[Modified RECIST 1.1 and PCWG3 Criteria]]) → [[Best Overall Response|overall response]], progression, rPFS.
 
 - One of three assessment types — distinct from **clinical** (symptoms/exam) and **lab / biomarker** assessment (e.g. [[PSA (Prostate-Specific Antigen)|PSA]]). Radiological means imaging specifically.
 - Performed at protocol-scheduled timepoints (scan schedule).
