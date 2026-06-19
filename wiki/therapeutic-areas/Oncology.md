@@ -31,6 +31,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Physical Examination]]
 
 **Statistics**
+- [[Adverse Event Ascertainment]]
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]

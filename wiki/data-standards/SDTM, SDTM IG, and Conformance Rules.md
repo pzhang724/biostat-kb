@@ -145,7 +145,7 @@ A scheduled lab and an AE are timed completely differently because they sit in d
 
 **Ascertainment (how it's found) vs timing (what's recorded)** are separate:
 
-- AEs are collected **continuously** across the whole [[Serious Adverse Event (SAE)#Safety reporting period|safety reporting period]] — patient-reported (between or at visits), investigator-observed, or **triggered by a scheduled assessment** (a scheduled lab returns abnormal → can become an AE). So scheduled labs *feed* AE detection.
+- AEs are collected **continuously** across the whole [[Serious Adverse Event (SAE)#Safety reporting period|safety reporting period]] — patient-reported (between or at visits), investigator-observed, or **triggered by a scheduled assessment** (a scheduled lab returns abnormal → can become an AE). So scheduled labs *feed* AE detection. How AEs are found (solicited vs spontaneous, multi-source) is [[Adverse Event Ascertainment]].
 - At every visit the investigator **solicits** AEs ("anything new since last visit?"); off-schedule events arrive via [[Schedule of Assessments#Why there are unscheduled visits|unscheduled visits]] / phone calls.
 - But however it's found, the **recorded time is the AE's own onset date `AESTDTC`**, not the visit it was captured at. **Partial/unknown dates** are allowed when exact onset isn't known.
 

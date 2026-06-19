@@ -5,7 +5,7 @@ status: learned
 tags: [data-management, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 2
+sources: 3
 ---
 
 # Action Taken for an Adverse Event
@@ -30,7 +30,7 @@ Everything done **besides** adjusting the study drug: concomitant medication / t
 
 ## Who decides — the site investigator, in real time
 
-Action taken is the treating **site investigator's** (a physician) real-time clinical decision at the point of care — they manage the patient and choose hold / reduce / withdraw + any other treatment, then record it on the eCRF. The protocol's **dose-modification rules** are guardrails (and some actions, e.g. permanent discontinuation for a defined event, may be protocol-mandated), but applying them to the patient in front of them is the investigator's judgment — not the sponsor's or statistician's. The sponsor / medical monitor may be consulted for serious cases, but the bedside call is the investigator's.
+Action taken is the treating **site investigator's** (a physician) real-time clinical decision at the point of care — they manage the patient and choose hold / reduce / withdraw + any other treatment, then record it on the eCRF. The protocol's **dose-modification rules** are guardrails (and some actions, e.g. permanent discontinuation for a defined event, may be protocol-mandated), but applying them to the patient in front of them is the investigator's judgment — not the sponsor's or statistician's. The sponsor / medical monitor may be consulted for serious cases, but the bedside call is the investigator's. (How the AE got onto the record in the first place is [[Adverse Event Ascertainment]].)
 
 ## Separate from other AE axes
 

@@ -53,6 +53,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Investigator's Brochure (IB)]]
 
 **Statistics**
+- [[Adverse Event Ascertainment]]
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
