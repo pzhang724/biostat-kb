@@ -5,12 +5,21 @@ status: learned
 tags: [medical]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 1
+sources: 2
 ---
 
 # Prostate Cancer Diagnosis, Staging, and Grading
 
 The disease-history vocabulary captured at baseline for a prostate trial (the [[eCRF Forms (Prostate Cancer Trial)|disease-history eCRF]]).
+
+## Disease history vs medical history
+
+Same kind of data (past/concurrent conditions), split by whether it's the **disease under study** or **everything else**:
+
+- **Disease history / characteristics** ("prostate cancer history") = the **index disease** the trial treats — diagnosis date, histology, Gleason/grade, TNM/stage, metastatic sites, prior prostate-cancer treatments, PSA/castration status. Drives **eligibility, staging, line of therapy, stratification, efficacy baseline**.
+- **Medical history (`MH`)** = the patient's **general** past/concurrent conditions / comorbidities **not** the study disease — hypertension, diabetes, prior MI, other surgeries, allergies. **Background health** for safety context and contraindications.
+
+Dividing line: *"is it the cancer we're treating, or background health?"* SDTM: both commonly live in the **`MH`** domain, distinguished by **`MHCAT`/`MHSCAT`** (e.g. "PROSTATE CANCER" vs "GENERAL MEDICAL HISTORY"); disease characteristics are often a **separate CRF** even when they map back to MH.
 
 ## Histologic vs cytologic (how it was confirmed)
 
