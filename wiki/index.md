@@ -2,7 +2,7 @@
 title: "Wiki Index"
 type: meta
 updated: 2026-06-19
-total_pages: 41
+total_pages: 42
 ---
 
 # Wiki Index
@@ -11,7 +11,7 @@ Master catalog, organized by layer. See [[learning|Learning Dashboard]] for lear
 
 A **therapeutic area** is the main narrative (a MOC that strings terms together; Oncology at top, indications as sections within it). Every other page is a **concept** filed by its nature — criteria/rules, biomedical, statistical, data-standard, or regulatory.
 
-**Quick stats**: 2 therapeutic-area maps · 39 concept pages · last updated 2026-06-19
+**Quick stats**: 2 therapeutic-area maps · 40 concept pages · last updated 2026-06-19
 
 ---
 
@@ -73,4 +73,4 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 
 ## Regulatory Guidance
 
-_None yet._
+- [[Investigator's Brochure (IB)]]

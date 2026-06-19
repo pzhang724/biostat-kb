@@ -48,6 +48,9 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[MedDRA]]
 - [[SDTM, SDTM IG, and Conformance Rules]]
 
+**Regulatory**
+- [[Investigator's Brochure (IB)]]
+
 **Statistics**
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
