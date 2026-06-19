@@ -59,6 +59,8 @@ Cheap screen; **reflex to microscopic examination (镜检) only if the dipstick 
 - **Protein** (尿蛋白) — proteinuria = glomerular/renal damage.
 - **Leucocyte test** (白细胞酯酶) — UTI / inflammation.
 
+Note: urinalysis parameters generally have **no [[CTCAE Grade]] term**, so unlike chemistry/hematology analytes they can't be CTCAE-graded.
+
 ## Radioligand tie-in
 
 Marrow (hematology + reticulocyte), kidney (creatinine/CrCl/BUN + urine protein/blood), and bladder (urine blood → cystitis) are the dose-deposit organs — see [[Xerostomia]], [[Dosimetry]], [[Pharmacokinetics (PK)]]. TSH, electrolytes, pancreas, and CK are generic safety. Part of [[Oncology]]; collected per the [[Schedule of Assessments]] grid.

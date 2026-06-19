@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [medical, regulatory, trial-conduct]
 created: 2026-06-18
-updated: 2026-06-18
-sources: 2
+updated: 2026-06-19
+sources: 3
 ---
 
 # CTCAE Grade
@@ -31,5 +31,13 @@ Drives **safety summaries, dose modifications, and DLT definitions** (e.g. a gra
 - It is a **standardized, comparable cutoff** (via CTCAE), so "grade ≥3 rate" is a clean safety metric — tables often split *all grades* vs *grade ≥3*, the latter being the headline.
 
 **In one line:** grade 3 is the line from "uncomfortable but tolerable" to "severe, must act" — so it governs dose changes, safety reporting, and toxicity comparisons.
+
+## Grading lab tests — three cases
+
+When grading a lab result (检验值) against CTCAE, a lab analyte maps to a CTCAE term in one of three ways:
+
+- **One-sided / direct** — a single CTCAE term exists, e.g. ALT (谷丙转氨酶) → *Alanine aminotransferase increased*, AST (谷草转氨酶) → *Aspartate aminotransferase increased*. Look up the value, read off the grade.
+- **Two-sided** — one analyte maps to **two** CTCAE terms, one per direction. E.g. calcium (钙, CA) → *Hypocalcemia* (低钙血症) and *Hypercalcemia* (高钙血症); which term applies depends on whether the value is below or above range.
+- **No term** — some lab tests have **no** CTCAE record at all, e.g. the urine (尿) parameters in [[Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)|urinalysis]] — they cannot be CTCAE-graded.
 
 Distinct from an [[Adverse Event of Special Interest (AESI)]] (interest-based pre-specified watch) — AESIs are still graded with CTCAE. A cross-cutting grading standard in [[Oncology]].
