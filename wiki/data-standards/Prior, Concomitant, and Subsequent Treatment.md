@@ -5,7 +5,7 @@ status: learned
 tags: [data-management, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 1
+sources: 2
 ---
 
 # Prior, Concomitant, and Subsequent Treatment
@@ -19,13 +19,21 @@ It feels like many things, but it's **two axes crossed** — not a long list. On
 - The **study drug itself** → **`EX`** (Exposure), **not** CM. CM = everything else.
 - **"Anti-cancer therapy"** is *not* a separate domain — it's a **cancer-directed cut** spanning CM (systemic drugs) + PR (surgery / radiotherapy). See [[Anti-Cancer Therapy Categories in Oncology Trials]].
 
+**Medication vs procedure vs therapy — different *levels*, not three parallel buckets:**
+
+- **Medication** = a **drug / substance** given (a compound) → the *thing* is a chemical/biologic (`CM`).
+- **Procedure** = an **action / intervention** done to the patient — surgery, radiotherapy, biopsy (`PR`); the *thing* is an act on the body.
+- **Therapy** = an **umbrella** word for a **course of treatment** aimed at the disease — **delivered through** medications and/or procedures, not a recordable atom of its own. "First-line chemotherapy" is *one therapy* realized as several drug administrations; "anti-cancer therapy" spans drugs (CM) + RT/surgery (PR).
+
+So **medication & procedure are the concrete data atoms; therapy is the course/intent realized through them.**
+
 ## Axis 2 — timing (relative to the study-treatment window)
 
-Derived from dates vs the `EX` window (a flag/derivation, **not** a new domain):
+Derived from dates vs the `EX` window (a flag/derivation, **not** a new domain). The reference is the **whole treatment period**, *not* a single dose:
 
 - **Prior** — started/stopped **before** first study dose.
-- **Concomitant** — taken **during** treatment (overlaps the study-drug window) → "con meds".
-- **Post-treatment / Subsequent** — after last dose / in follow-up.
+- **Concomitant** — taken **during** the treatment period (between first and last dose) → "con meds". A med between two study-drug doses is **concomitant, not subsequent**.
+- **Post-treatment / Subsequent** — after the **whole treatment ends** (after the **last dose / EOT**), in follow-up. "Subsequent anti-cancer therapy" = the **next line** started after coming off study drug (e.g. after progression). Exact cutoff (last dose, or +X days, or discontinuation date) is **SAP/protocol-defined**.
 
 ## The grid (type × timing)
 
