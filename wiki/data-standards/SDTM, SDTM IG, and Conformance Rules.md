@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 11
+sources: 12
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -124,11 +124,17 @@ So the "exact mapping" = the column set in #2 (target var + metadata + origin + 
 
 How [[Schedule of Assessments#Why there are unscheduled visits|unscheduled visits]] get numbered:
 
-- **`VISITNUM` (SDTM)** is just a **numeric sort key** for visit chronology — not a date, and the IG mandates no single scheme (sponsor convention, fixed in the SDTM spec). Dominant convention for unscheduled = **decimal insert**: integer of the most recent scheduled visit + a decimal, so it sorts into the right slot — e.g. unscheduled after VISITNUM 5 → **5.1, 5.2, 5.3…**. `VISIT` label = **"UNSCHEDULED"**; `VISITDY`/`SVSTDTC` carry actual timing.
-  - *Tension:* validators often expect **`VISIT`↔`VISITNUM` one-to-one**; if every unscheduled record is `VISIT="UNSCHEDULED"` with different `VISITNUM`, that breaks → either give each a distinct label or justify the check. (Some sponsors instead reserve a high block, e.g. 500, 501… — groups them but loses the chronological insert.)
+- **How the SDTM IG frames it:** **planned** visits live in the **`TV` (Trial Visits)** domain — TV holds *scheduled visits only*. The IG rule: `VISIT`+`VISITNUM` in subject-level domains must **match TV, *except* for unscheduled / unplanned visits** (the IG explicitly carves out that exception). So unscheduled visits simply don't appear in TV; they're recorded in **`SV`** and the data domains with sponsor-assigned numbers.
+- **`VISITNUM` (SDTM)** is a **numeric sort key** for chronology — not a date; the IG gives a *convention* but not a mandated scheme (sponsor-defined, documented in `define.xml` / cSDRG). The convention:
+  - **Decimal insert** between bracketing scheduled visits, preserving chronological order — two unscheduled between visit 3 and 4 → **3.1, 3.2**.
+  - **Same date as a planned visit** → planned `VISITNUM` **+ 0.01**.
+  - `VISIT` for unplanned is often **left null** (or "UNSCHEDULED") per sponsor; `VISITDY`/`SVSTDTC` carry actual timing.
+  - *Tension:* validators (Pinnacle 21 checks e.g. **SD1023 / SD1060**) police visit consistency; the `VISIT`↔`VISITNUM` match is enforced *against TV with the unscheduled exception*, so the unscheduled scheme must be done the expected way or justified in the cSDRG.
 - **`AVISITN` (ADaM)** is a **different, derived** thing: ADaM BDS has its own analysis-visit pair **`AVISIT` (char) + `AVISITN` (numeric sort)**, derived via **visit windowing** per the SAP — independent of `VISITNUM`, need not equal it (e.g. Baseline=0, Week 4=4, Week 8=8). Unscheduled SDTM records either get **windowed into the nearest nominal analysis visit** (feeding by-visit tables, with "closest-to-target"/"worst-case" rules picking the winning record) or are flagged **`AVISIT="Unscheduled"`** / excluded if the SAP only summarizes scheduled timepoints.
 
 **Mental model:** `VISITNUM` = collection/sort order of what *actually happened* (SDTM keeps raw truth incl. unscheduled); `AVISITN` = analysis order *after windowing* (ADaM decides how unscheduled folds into the planned grid).
+
+**Whose decision — and where it's written:** whether an unscheduled record can contribute to a given `AVISIT` is an **analysis** decision, defined in the **SAP** (and operationalized in the ADaM spec / `define.xml`), **not** in SDTM or the IG. The **protocol** specifies the SoA's *operational* visit windows (acceptable timing for conduct); the **SAP** specifies the *analysis* visit-windowing algorithm — which actual/unscheduled assessments map to which analysis visit, and the tie-break when several fall in one window (e.g. closest-to-nominal-day, or last/worst). **If the protocol is silent (the usual case), the SAP must define it** — it is the statistician's responsibility, and it has to be explicit or the derivation isn't reproducible. Protocol = conduct windows; SAP = analysis windows + unscheduled handling.
 
 ## Relationship
 
