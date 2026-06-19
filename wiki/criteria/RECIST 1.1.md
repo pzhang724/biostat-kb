@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, standards]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 6
+sources: 7
 ---
 
 # RECIST 1.1
@@ -62,7 +62,15 @@ Limitation that motivates [[PCWG3 Criteria]]: RECIST needs measurable disease, s
 
 ## Step-by-step derivation (for a programmer)
 
-Bottom-up pipeline: **lesion measurements → per-channel response → overall timepoint response → confirmation → [[Best Overall Response|BOR]]**. CDISC homes: SDTM **TU** (lesion identification), **TR** (lesion measurements), **RS** (response assessments); ADaM **ADTR** / **ADRS** (BDS).
+Bottom-up pipeline: **lesion measurements → per-channel response → overall timepoint response → confirmation → [[Best Overall Response|BOR]]**. CDISC homes: SDTM **TU**, **TR**, **RS**; ADaM **ADTR** / **ADRS** (BDS).
+
+**What each domain records** (linked by the lesion id `TULNKID`/`TRLNKID` + RELREC):
+
+- **TU** (Tumor/Lesion Identification) = the lesion **identity / roster** — one row per lesion: location (`TULOC`), method (`TUMETHOD`), classification `TUSTRESC` = **TARGET / NON-TARGET / NEW** (`TUTESTCD = TUMIDENT`). **No measurements.** Target/non-target set at baseline; new lesions added when they appear.
+- **TR** (Tumor/Lesion Results) = the **measurements / state** of those lesions over time — one row per lesion **per visit**: numeric for targets (`TRTESTCD = LDIAM` longest diameter, or `SAXIS` short axis for nodes), qualitative for non-targets (`TUMSTATE = PRESENT/ABSENT`).
+- **RS** (Disease Response) = the per-visit **overall response verdict** (`RSTESTCD = OVRLRESP`, often derived).
+
+Mnemonic: **TU = which lesions** (identity, set once) · **TR = how big / what state** (results, per visit) · **RS = what response** (verdict).
 
 **Step 0 — Baseline lesion setup** (TU + TR) — four sub-steps, all **fixed at baseline**:
 
