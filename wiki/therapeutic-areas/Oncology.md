@@ -37,6 +37,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
 - [[Progression-Free Survival (PFS) and Overall Survival (OS)]]
+- [[Local (Investigator) vs Central (BICR) Tumour Assessment]]
 - [[MTD and RP2D]]
 - [[Anti-Tumour Activity]]
 - [[End of Treatment vs End of Study]]

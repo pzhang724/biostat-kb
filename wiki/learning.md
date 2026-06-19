@@ -64,6 +64,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
 - [[Progression-Free Survival (PFS) and Overall Survival (OS)]]
+- [[Local (Investigator) vs Central (BICR) Tumour Assessment]]
 - [[MTD and RP2D]]
 - [[Anti-Tumour Activity]]
 - [[End of Treatment vs End of Study]]
