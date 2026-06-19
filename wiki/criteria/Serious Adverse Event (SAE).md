@@ -44,7 +44,7 @@ The **sponsor (申办方) is the hub** — sites don't report to authorities dir
 
 - **Investigator → Sponsor:** site reports every SAE to the sponsor promptly (typically ≤24 h), with a causality opinion.
 - **Sponsor evaluates** each SAE for causality + expectedness (against the RSI). Only the ones that come out **SUSAR** get the single-case expedited channel.
-- **Sponsor → Regulatory authority** (+ ethics committees/IRBs + all participating investigators): SUSARs reported **expedited — 7 days** fatal/life-threatening, **15 days** other. US = **IND safety report** (21 CFR 312.32); EU = via **EudraVigilance (EVCTM)**.
+- **Sponsor → Regulatory authority** (+ ethics committees / [[IRB and IEC (Ethics Committees)|IRBs/IECs]] + all participating investigators): SUSARs reported **expedited — 7 days** fatal/life-threatening, **15 days** other. US = **IND safety report** (21 CFR 312.32); EU = via **EudraVigilance (EVCTM)**. The single-case report travels on a **CIOMS Form** (the de-facto ICSR form) or its **ICH E2B** electronic equivalent.
 - **Aggregate / periodic:** all SAEs roll into the annual **DSUR** (Development Safety Update Report) to authorities — so non-SUSAR SAEs are still reported, just periodically, not expedited.
 
 In one line: sites send SAEs in → sponsor filters to SUSARs → those go to the authority expedited, everything else aggregated in the DSUR.
