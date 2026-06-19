@@ -5,7 +5,7 @@ status: learned
 tags: [regulatory, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 3
+sources: 4
 ---
 
 # IRB and IEC (Ethics Committees)
@@ -37,7 +37,7 @@ One overarching question — **"is it ethical to enroll humans in this study?"**
 - **Beneficence → risk-benefit + safety** — are risks **minimized** and **reasonable** vs anticipated benefit and knowledge gained? Adequate **safety monitoring** (DSMB, stopping rules)? Is the science **sound enough to justify** exposing humans (a worthless study can't be ethical)?
 - **Justice → fair selection** — is subject selection **equitable**? Extra **safeguards for vulnerable populations** (children, pregnant, cognitively impaired, prisoners, economically disadvantaged)?
 
-Plus: are **privacy / confidentiality** protected? Are investigators and site qualified? Any **conflicts of interest**?
+Plus: are **privacy / confidentiality** protected? Are investigators and site qualified? Any **conflicts of interest**? (A separate, regulator-facing COI lens is [[Financial Disclosure (Clinical Investigators)]].)
 
 **Boundary:** they focus on **subject protection**, not on optimizing the science/statistics (that's the sponsor/regulator). Scientific validity matters only insofar as a study too flawed to yield useful knowledge can't justify the risk — they don't redesign the SAP.
 
