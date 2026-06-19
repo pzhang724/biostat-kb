@@ -2,7 +2,7 @@
 title: "Wiki Index"
 type: meta
 updated: 2026-06-19
-total_pages: 55
+total_pages: 56
 ---
 
 # Wiki Index
@@ -80,6 +80,7 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[eCRF Forms (Prostate Cancer Trial)]]
 - [[Prior, Concomitant, and Subsequent Treatment]]
 - [[SDTM, SDTM IG, and Conformance Rules]]
+- [[SDTMIG Fundamentals (Chapter 2)]]
 
 ## Regulatory Guidance
 

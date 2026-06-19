@@ -79,6 +79,9 @@ Therapeutic-area maps (main narratives that string the terms together):
 - [[Oncology]] (prostate cancer is a section within it)
 - [[Asthma]]
 
+Reading through the SDTMIG v3.4 (chapter by chapter):
+- [[SDTMIG Fundamentals (Chapter 2)]]
+
 ## To Learn
 
 _None yet — add `- [ ]` items here (grouped by layer) as they come up._
