@@ -5,7 +5,7 @@ status: learned
 tags: [medical, regulatory, trial-conduct]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 3
+sources: 4
 ---
 
 # CTCAE Grade
@@ -39,5 +39,9 @@ When grading a lab result (检验值) against CTCAE, a lab analyte maps to a CTC
 - **One-sided / direct** — a single CTCAE term exists, e.g. ALT (谷丙转氨酶) → *Alanine aminotransferase increased*, AST (谷草转氨酶) → *Aspartate aminotransferase increased*. Look up the value, read off the grade.
 - **Two-sided** — one analyte maps to **two** CTCAE terms, one per direction. E.g. calcium (钙, CA) → *Hypocalcemia* (低钙血症) and *Hypercalcemia* (高钙血症); which term applies depends on whether the value is below or above range.
 - **No term** — some lab tests have **no** CTCAE record at all, e.g. the urine (尿) parameters in [[Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)|urinalysis]] — they cannot be CTCAE-graded.
+
+### Handling the no-term case
+
+A parameter with no CTCAE term simply gets **no grade** — don't force one. In ADaM **ADLB** the toxicity-grade variable (`ATOXGR` / `ATOXGRL` / `ATOXGRH`) is left **null** for it. You still analyze the value, just by **reference-range flag** instead of grade — `LBNRIND` NORMAL / LOW / HIGH, shift tables, and the investigator's clinically-significant flag. If an abnormal ungraded lab is genuinely clinically significant, the investigator records it as an **adverse event** (AE domain); that AE term then carries its own CTCAE grade — the grade lives on the reported AE, not derived from the lab value. (Note: calcium *does* have terms — *Hypocalcemia* / *Hypercalcemia*; the real no-term case is things like urinalysis.)
 
 Distinct from an [[Adverse Event of Special Interest (AESI)]] (interest-based pre-specified watch) — AESIs are still graded with CTCAE. A cross-cutting grading standard in [[Oncology]].
