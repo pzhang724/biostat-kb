@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
-updated: 2026-06-18
-sources: 10
+updated: 2026-06-19
+sources: 11
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -119,6 +119,16 @@ The study-level **mapping specification** (映射规范, often an Excel workbook
 8. Comments / document & study metadata.
 
 So the "exact mapping" = the column set in #2 (target var + metadata + origin + source + logic + codelist); the CT/codelists in #3–4 are a **required companion**. Spec ≈ `define.xml` in human-readable form.
+
+## Visit numbering: VISITNUM (SDTM) vs AVISITN (ADaM)
+
+How [[Schedule of Assessments#Why there are unscheduled visits|unscheduled visits]] get numbered:
+
+- **`VISITNUM` (SDTM)** is just a **numeric sort key** for visit chronology — not a date, and the IG mandates no single scheme (sponsor convention, fixed in the SDTM spec). Dominant convention for unscheduled = **decimal insert**: integer of the most recent scheduled visit + a decimal, so it sorts into the right slot — e.g. unscheduled after VISITNUM 5 → **5.1, 5.2, 5.3…**. `VISIT` label = **"UNSCHEDULED"**; `VISITDY`/`SVSTDTC` carry actual timing.
+  - *Tension:* validators often expect **`VISIT`↔`VISITNUM` one-to-one**; if every unscheduled record is `VISIT="UNSCHEDULED"` with different `VISITNUM`, that breaks → either give each a distinct label or justify the check. (Some sponsors instead reserve a high block, e.g. 500, 501… — groups them but loses the chronological insert.)
+- **`AVISITN` (ADaM)** is a **different, derived** thing: ADaM BDS has its own analysis-visit pair **`AVISIT` (char) + `AVISITN` (numeric sort)**, derived via **visit windowing** per the SAP — independent of `VISITNUM`, need not equal it (e.g. Baseline=0, Week 4=4, Week 8=8). Unscheduled SDTM records either get **windowed into the nearest nominal analysis visit** (feeding by-visit tables, with "closest-to-target"/"worst-case" rules picking the winning record) or are flagged **`AVISIT="Unscheduled"`** / excluded if the SAP only summarizes scheduled timepoints.
+
+**Mental model:** `VISITNUM` = collection/sort order of what *actually happened* (SDTM keeps raw truth incl. unscheduled); `AVISITN` = analysis order *after windowing* (ADaM decides how unscheduled folds into the planned grid).
 
 ## Relationship
 
