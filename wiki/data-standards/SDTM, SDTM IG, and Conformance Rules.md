@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 12
+sources: 13
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -135,6 +135,19 @@ How [[Schedule of Assessments#Why there are unscheduled visits|unscheduled visit
 **Mental model:** `VISITNUM` = collection/sort order of what *actually happened* (SDTM keeps raw truth incl. unscheduled); `AVISITN` = analysis order *after windowing* (ADaM decides how unscheduled folds into the planned grid).
 
 **Whose decision — and where it's written:** whether an unscheduled record can contribute to a given `AVISIT` is an **analysis** decision, defined in the **SAP** (and operationalized in the ADaM spec / `define.xml`), **not** in SDTM or the IG. The **protocol** specifies the SoA's *operational* visit windows (acceptable timing for conduct); the **SAP** specifies the *analysis* visit-windowing algorithm — which actual/unscheduled assessments map to which analysis visit, and the tie-break when several fall in one window (e.g. closest-to-nominal-day, or last/worst). **If the protocol is silent (the usual case), the SAP must define it** — it is the statistician's responsibility, and it has to be explicit or the derivation isn't reproducible. Protocol = conduct windows; SAP = analysis windows + unscheduled handling.
+
+## Events vs Findings timing — how an AE's occurrence is timed
+
+A scheduled lab and an AE are timed completely differently because they sit in different SDTM **observation classes**:
+
+- A scheduled lab (`LB`) is a **Finding** — taken at a planned timepoint, tagged with `VISIT`/`VISITNUM` + collection date (`--DTC`). Its timing **is** the [[Schedule of Assessments]] grid.
+- An AE (`AE`) is an **Event** — it is **event-driven, not visit-driven**. It carries its **own onset date/time `AESTDTC`** (and end `AEENDTC`) — the actual calendar date the event started, independent of any visit. There is no fixed timepoint slot for it.
+
+**Ascertainment (how it's found) vs timing (what's recorded)** are separate:
+
+- AEs are collected **continuously** across the whole [[Serious Adverse Event (SAE)#Safety reporting period|safety reporting period]] — patient-reported (between or at visits), investigator-observed, or **triggered by a scheduled assessment** (a scheduled lab returns abnormal → can become an AE). So scheduled labs *feed* AE detection.
+- At every visit the investigator **solicits** AEs ("anything new since last visit?"); off-schedule events arrive via [[Schedule of Assessments#Why there are unscheduled visits|unscheduled visits]] / phone calls.
+- But however it's found, the **recorded time is the AE's own onset date `AESTDTC`**, not the visit it was captured at. **Partial/unknown dates** are allowed when exact onset isn't known.
 
 ## Relationship
 

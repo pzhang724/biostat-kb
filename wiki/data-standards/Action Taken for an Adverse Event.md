@@ -5,7 +5,7 @@ status: learned
 tags: [data-management, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 1
+sources: 2
 ---
 
 # Action Taken for an Adverse Event
@@ -27,6 +27,10 @@ What was done to the **study drug** because of the AE. Controlled-terminology va
 ## 2. Other action taken — `AEACNOTH`
 
 Everything done **besides** adjusting the study drug: concomitant medication / treatment given for the AE (合并用药), non-drug therapy, a procedure / surgery, hospitalization, etc. This is the supportive/corrective management.
+
+## Who decides — the site investigator, in real time
+
+Action taken is the treating **site investigator's** (a physician) real-time clinical decision at the point of care — they manage the patient and choose hold / reduce / withdraw + any other treatment, then record it on the eCRF. The protocol's **dose-modification rules** are guardrails (and some actions, e.g. permanent discontinuation for a defined event, may be protocol-mandated), but applying them to the patient in front of them is the investigator's judgment — not the sponsor's or statistician's. The sponsor / medical monitor may be consulted for serious cases, but the bedside call is the investigator's.
 
 ## Separate from other AE axes
 

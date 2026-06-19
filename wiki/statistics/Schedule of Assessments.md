@@ -18,6 +18,8 @@ The **Schedule of Assessments / Activities (SoA, 评估计划表 / 流程表)** 
 - **Columns = visits/timepoints**, grouped by study period: Screening → Treatment (by cycle/day, e.g. C1D1, C1D8…) → EOT → Safety follow-up → Long-term/survival follow-up → EOS.
 - **Cells = "X"** where an assessment occurs at that visit; **footnotes** carry **visit windows** (±days), conditions, and details.
 
+Note: the grid times **scheduled findings** (labs, ECG, imaging — taken at a fixed timepoint). **AEs are not on the grid** — they are event-driven and carry their own onset date, even though they're *solicited* at every visit. See [[SDTM, SDTM IG, and Conformance Rules#Events vs Findings timing — how an AE's occurrence is timed|Events vs Findings timing]].
+
 ```
 Assessment        │ Screen │ C1D1 │ C1D8 │ … │ EOT │ F/U │ EOS
 Informed consent  │   X    │      │      │   │     │     │
