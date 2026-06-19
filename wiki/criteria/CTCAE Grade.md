@@ -5,7 +5,7 @@ status: learned
 tags: [medical, regulatory, trial-conduct]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 4
+sources: 5
 ---
 
 # CTCAE Grade
@@ -43,5 +43,16 @@ When grading a lab result (检验值) against CTCAE, a lab analyte maps to a CTC
 ### Handling the no-term case
 
 A parameter with no CTCAE term simply gets **no grade** — don't force one. In ADaM **ADLB** the toxicity-grade variable (`ATOXGR` / `ATOXGRL` / `ATOXGRH`) is left **null** for it. You still analyze the value, just by **reference-range flag** instead of grade — `LBNRIND` NORMAL / LOW / HIGH, shift tables, and the investigator's clinically-significant flag. If an abnormal ungraded lab is genuinely clinically significant, the investigator records it as an **adverse event** (AE domain); that AE term then carries its own CTCAE grade — the grade lives on the reported AE, not derived from the lab value. (Note: calcium *does* have terms — *Hypocalcemia* / *Hypercalcemia*; the real no-term case is things like urinalysis.)
+
+## Is CTCAE only on central-lab data?
+
+**No** — CTCAE grades *adverse events*, and AEs arrive by two routes, only one being the central lab:
+
+- **Clinical / symptomatic AEs** — graded by the **investigator at the site** (nausea 恶心, fatigue 乏力, pain 疼痛…), entered in the AE eCRF (CRF data). Independent of any lab. This is the **bulk** of CTCAE grading.
+- **Lab-derived toxicity grades** — here the central lab is the natural source: the value maps to its CTCAE term/threshold → `ATOXGR` in ADaM **ADLB**, usually **derived programmatically in ADaM** from the value (some central labs also deliver the grade/flag in the feed).
+
+Why central lab *feels* like the CTCAE source: it gives one standardized assay + reference range + full quantitative panel across sites, so systematic lab grading is built off that feed (see [[CRF vs Non-CRF (External) Data]]). **Local lab** values (entered in the eCRF) are often captured only when abnormal/clinically significant and aren't systematically graded — if clinically significant, the value becomes an **AE with its own investigator CTCAE grade**.
+
+**One line:** clinical AEs are CTCAE-graded by the investigator regardless of any lab; the central lab is just the prime source for *lab* toxicity grades, not the only place CTCAE lives.
 
 Severity (this grade) is independent of **seriousness** — see [[Serious Adverse Event (SAE)]] (serious ≠ severe). Distinct from an [[Adverse Event of Special Interest (AESI)]] (interest-based pre-specified watch) — AESIs are still graded with CTCAE. A cross-cutting grading standard in [[Oncology]].
