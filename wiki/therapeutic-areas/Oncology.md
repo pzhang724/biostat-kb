@@ -43,6 +43,9 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[MedDRA]]
 - [[SDTM, SDTM IG, and Conformance Rules]]
 
+**Regulatory & trial conduct**
+- [[Investigator's Brochure (IB)]]
+
 ## Prostate cancer
 
 The disease state is [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)|mCRPC]] (metastatic, progressing despite castrate testosterone). How treatment effect is read out in advanced/mCRPC trials: a [[PSA (Prostate-Specific Antigen)|PSA]] biomarker and [[PSMA PET-CT]] imaging measure disease; bone progression follows [[PCWG3 Criteria]], fused with soft-tissue [[RECIST 1.1]] into the [[Modified RECIST 1.1 and PCWG3 Criteria]] criterion; [[PSA (Prostate-Specific Antigen)|PSA]] response is only a [[Surrogate Endpoint]]; radioligand programs add [[Pharmacokinetics (PK)]] / [[Dosimetry]].
