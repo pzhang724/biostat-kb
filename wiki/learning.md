@@ -48,6 +48,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[MedDRA]]
 - [[Action Taken for an Adverse Event]]
 - [[Adverse Event Outcome]]
+- [[CRF vs Non-CRF (External) Data]]
 - [[SDTM, SDTM IG, and Conformance Rules]]
 
 **Regulatory**

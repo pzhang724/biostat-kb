@@ -46,6 +46,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[SDTM, SDTM IG, and Conformance Rules]]
 - [[Action Taken for an Adverse Event]]
 - [[Adverse Event Outcome]]
+- [[CRF vs Non-CRF (External) Data]]
 
 **Regulatory & trial conduct**
 - [[Investigator's Brochure (IB)]]

@@ -10,7 +10,7 @@ sources: 1
 
 # Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)
 
-The full lab list from the trial's [[Schedule of Assessments]]. Four panels: **hematology** (marrow output), **blood chemistry** (organ function + electrolytes + metabolic), **coagulation** (bleeding risk + liver synthesis), **urinalysis** (cheap kidney/bladder/infection screen). In a PSMA radioligand trial these are mostly **safety-monitoring** labs repeated each cycle — and three groups (marrow, kidney, bladder) are exactly where the radioligand deposits dose. The entry-threshold *direction* logic (which want high vs low) lives in [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]; this page is the per-parameter catalog.
+The full lab list from the trial's [[Schedule of Assessments]]. Four panels: **hematology** (marrow output), **blood chemistry** (organ function + electrolytes + metabolic), **coagulation** (bleeding risk + liver synthesis), **urinalysis** (cheap kidney/bladder/infection screen). In a PSMA radioligand trial these are mostly **safety-monitoring** labs repeated each cycle — and three groups (marrow, kidney, bladder) are exactly where the radioligand deposits dose. The entry-threshold *direction* logic (which want high vs low) lives in [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]; this page is the per-parameter catalog. Whether each lab is run at a central lab (electronic feed) or locally (entered in the eCRF) is [[CRF vs Non-CRF (External) Data]].
 
 ## Hematology Panel (marrow output)
 
