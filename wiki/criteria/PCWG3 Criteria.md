@@ -46,6 +46,8 @@ A progression-tracking table/CRF typically has four columns — **Date Progressi
 | Timing for confirmation | **when** the confirmatory scan is due (interval later) | the **delay** is what lets transient **flare** / pseudoprogression resolve |
 | Criteria on confirmatory scan | **what** confirms it (e.g. ≥2 *additional* new lesions = the second "2") | only a **confirmed** event becomes the rPFS progression |
 
+**Why two scans (来两次):** one snapshot can't separate "growing because the cancer is winning" from a fake-out — bone-scan **flare** (healing osteoblasts light up *more* early when treatment works), immunotherapy **pseudoprogression**, or measurement noise. The only way to tell is the **direction of change over time**: scan again after a delay — keeps worsening → real (confirmed); stabilizes/improves → it was flare/pseudo, keep treating. The second visit is the control that filters the transient phenomena (and the delay must be long enough for flare to resolve).
+
 **Why this way:** a single scan can show *apparent* progression that isn't real — bone-scan **flare**, immunotherapy **pseudoprogression**, measurement noise. Calling PD on the first scan would wrongly pull patients who are actually benefiting. So progression is split into **initial detection → confirmatory scan after an interval**, and because the scored date (initial) differs from the confirmation date, both are captured. It is the CRF form of the **2+2 rule** (same shape as iRECIST **iUPD → iCPD**) and feeds rPFS. See [[Radiological Assessment]] and the fused [[Modified RECIST 1.1 and PCWG3 Criteria]].
 
 ## Official reference
