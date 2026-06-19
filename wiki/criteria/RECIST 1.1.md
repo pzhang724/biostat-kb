@@ -5,7 +5,7 @@ status: learned
 tags: [medical, statistics, standards]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 3
+sources: 4
 ---
 
 # RECIST 1.1
@@ -64,7 +64,14 @@ Limitation that motivates [[PCWG3 Criteria]]: RECIST needs measurable disease, s
 
 Bottom-up pipeline: **lesion measurements → per-channel response → overall timepoint response → confirmation → [[Best Overall Response|BOR]]**. CDISC homes: SDTM **TU** (lesion identification), **TR** (lesion measurements), **RS** (response assessments); ADaM **ADTR** / **ADRS** (BDS).
 
-**Step 0 — Baseline lesion setup** (TU + TR): classify each lesion **target / non-target** (later **new**); target = measurable, **≤5 total, ≤2/organ**, non-nodal by longest diameter, node by **short axis**. Compute **baseline SoD** = sum of target measurements. Non-target recorded qualitatively. (Data checks: ≤5 target, ≤2/organ, measurable at baseline.)
+**Step 0 — Baseline lesion setup** (TU + TR) — four sub-steps, all **fixed at baseline**:
+
+1. **Measurability of each lesion.** Non-nodal: longest diameter **≥10 mm** on CT/MRI (slice ≤5 mm, else ≥2× slice; chest X-ray ≥20 mm; caliper ≥10 mm). Lymph node: by **short axis** — **≥15 mm** = measurable (can be target), **10–<15 mm** = pathological **non-target**, **<10 mm** = normal, not recorded. Non-measurable = lesions <10 mm, nodes 10–<15 mm, and truly non-measurable disease (leptomeningeal, ascites, effusions, inflammatory breast, lymphangitic spread, cystic, bone with no soft-tissue component, previously irradiated lesions unless later progressed).
+2. **Select target lesions** — up to **5 total, max 2/organ**; pick the **largest** (longest diameter, or short axis for nodes) **but also reproducible** on repeat imaging (skip a big lesion you can't reliably re-measure). The target set is **fixed at baseline** — follow the **same** lesions every visit, never re-select.
+3. **Measurement convention** — non-nodal target → longest diameter; nodal target → **short axis**. **Baseline SoD** = sum of (non-nodal longest diameters + nodal short axes) — this is the **PR reference**.
+4. **Record non-target** — all other lesions (incl. pathological nodes 10–<15 mm) qualitatively as present; may be grouped (e.g. "multiple liver mets").
+
+*SDTM view:* **TU** = `TULOC` location, `TUSTRESC` = TARGET/NON-TARGET/NEW, lesion link id, `TREVAL` evaluator (**INVESTIGATOR** vs **INDEPENDENT ASSESSOR / BICR**); **TR** = per-lesion-per-visit measurement (`TRLNKID`→TU, `TRTESTCD`=LDIAM…, `TRSTRESN`). Compute baseline SoD only over **TARGET**-flagged lesions. *Data checks:* ≤5 target, ≤2/organ (by location), each target measurable at baseline, no lesion both target & non-target, lesion ids consistent across visits, **investigator vs BICR derived separately**.
 
 **Step 1 — At each post-baseline visit, evaluate three channels separately:**
 
