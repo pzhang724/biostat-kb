@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 6
+sources: 7
 ---
 
 # Best Overall Response
@@ -44,6 +44,7 @@ Rules that constrain the max:
 Downstream endpoints derive from BOR:
 
 - **ORR (objective response rate)** = proportion of patients whose BOR is CR or PR — see [[PSA (Prostate-Specific Antigen)|ORR / PSA50]] for the PSA-based analogue.
+  - **Why ORR is built on BOR:** ORR asks a per-patient yes/no — "did this tumour **ever** objectively shrink to PR/CR (up to progression)?" — and BOR is exactly the "best ever achieved" status. A **fixed-timepoint** snapshot would miss responders who responded **earlier** (already progressed by that visit) or **later** (not yet at that visit), because responses occur at different times and are **transient** (shrink then regrow). Taking the best over time captures "ever responded" regardless of *when*. The built-in rules keep it honest — **confirmed** CR/PR, SD min-duration, only up to **first PD** — so "BOR = CR/PR" is a rigorous, schedule-independent responder definition. (ORR tells you *whether*, not *how long* — durability is the separate **DoR**, duration of response.)
 - **DCR (disease control rate)** = proportion with BOR of CR, PR, or SD.
 
 So the per-patient pipeline is: **timepoint statuses → BOR (best, with confirmation/duration rules) → 1/0 responder flag → ORR across patients**.
