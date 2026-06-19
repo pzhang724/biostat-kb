@@ -53,6 +53,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Investigator's Brochure (IB)]]
 - [[IRB and IEC (Ethics Committees)]]
 - [[Protocol Amendment]]
+- [[Financial Disclosure (Clinical Investigators)]]
 
 ## Prostate cancer
 
