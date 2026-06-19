@@ -5,7 +5,7 @@ status: learned
 tags: [standards, regulatory, data-management]
 created: 2026-06-18
 updated: 2026-06-19
-sources: 16
+sources: 17
 ---
 
 # SDTM, SDTM IG, and Conformance Rules
@@ -34,6 +34,8 @@ Outside the three classes: **special-purpose** datasets (e.g. DM Demographics �
 **3. Naming + general rules** — the **`--` two-letter domain-prefix convention** (`--TESTCD`, `--ORRES`, `--STDTC`) makes variables predictable across domains; core rules like **one record = one observation** and use of controlled terminology.
 
 **Model = parts + grammar (stable); the IG** names concrete domains (DM/AE/LB…) by picking a class and filling in the role variables. Model = the kit; IG = the assembled, versioned sentence.
+
+**Who actually reads the Model?** Mostly **no one on a study team day-to-day** — the **IG is the working document** (concrete domains, variables, examples, assembly conventions answer almost every implementation question). You reach back to the **Model** mainly when (1) **building a custom / non-standard domain** the IG doesn't cover — fall back to the three general observation classes + role rules to construct it right; or (2) you want the **why** behind a rule. The people who live in the Model are **CDISC standards developers / governance** (and tool/validator builders). *Read the IG to do the work; consult the Model when the IG runs out.*
 
 ## SDTM IG — Implementation Guide (实施指南)
 
