@@ -4,7 +4,7 @@ type: concept
 status: learned
 tags: [statistics, regulatory]
 created: 2026-06-11
-updated: 2026-06-11
+updated: 2026-06-19
 sources: 1
 ---
 
@@ -20,7 +20,7 @@ Worked example — **[[PSA (Prostate-Specific Antigen)|PSA]] response (PSA50)** 
 
 - Used heavily because bone-predominant / [[Measurable vs Non-Measurable Disease (RECIST)|non-measurable disease]] makes RECIST ORR non-evaluable.
 - A PSA decline only **correlates** with tumor-burden reduction — it does not measure tumor size, can fall disproportionately, and can show early "PSA flare". So it is an *indirect* readout.
-- It is a **weak / not-fully-validated** surrogate for **OS**: PSA changes have repeatedly failed to reliably predict survival benefit. Regulators therefore don't accept PSA response alone; **rPFS** (radiographic progression-free survival) and **OS** carry the weight, and PCWG3 says report PSA but don't make it the primary efficacy basis.
+- It is a **weak / not-fully-validated** surrogate for **OS**: PSA changes have repeatedly failed to reliably predict survival benefit. Regulators therefore don't accept PSA response alone; **rPFS** (radiographic progression-free survival) and **OS** carry the weight (see [[Progression-Free Survival (PFS) and Overall Survival (OS)]]), and PCWG3 says report PSA but don't make it the primary efficacy basis.
 
 Related: a surrogate that gets contaminated after the fact (e.g. by subsequent therapy) ties back to the [[Intercurrent Event]] / estimand framing.
 

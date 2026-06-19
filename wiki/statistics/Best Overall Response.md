@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 8
+sources: 9
 ---
 
 # Best Overall Response
@@ -46,7 +46,10 @@ Downstream endpoints derive from BOR:
 
 - **ORR (objective response rate)** = proportion of patients whose BOR is CR or PR — see [[PSA (Prostate-Specific Antigen)|ORR / PSA50]] for the PSA-based analogue.
   - **Why ORR is built on BOR:** ORR asks a per-patient yes/no — "did this tumour **ever** objectively shrink to PR/CR (up to progression)?" — and BOR is exactly the "best ever achieved" status. A **fixed-timepoint** snapshot would miss responders who responded **earlier** (already progressed by that visit) or **later** (not yet at that visit), because responses occur at different times and are **transient** (shrink then regrow). Taking the best over time captures "ever responded" regardless of *when*. The built-in rules keep it honest — **confirmed** CR/PR, SD min-duration, only up to **first PD** — so "BOR = CR/PR" is a rigorous, schedule-independent responder definition. (ORR tells you *whether*, not *how long* — durability is the separate **DoR**, duration of response.)
-- **DCR (disease control rate)** = proportion with BOR of CR, PR, or SD.
+- **DCR (disease control rate)** = proportion with BOR of CR, PR, **or SD** — adds stable disease to ORR's CR/PR, i.e. "the disease **did not progress**". A **softer/weaker** signal than ORR, useful for **cytostatic** drugs that halt rather than shrink; when SD must last a minimum duration it's often called **CBR** (clinical benefit rate). SD is ambiguous without a control arm (could be indolent disease, not drug effect), so DCR is read cautiously.
+- **DoR (duration of response, 缓解持续时间)** = among **responders only** (BOR CR/PR), time from **first documented CR/PR** until **progression or death** — how **long** the response lasts (durability), summarized by Kaplan–Meier median. Pairs with ORR: **ORR = whether** it responded, **DoR = how long**.
 
 So the per-patient pipeline is: **timepoint statuses → BOR (best, with confirmation/duration rules) → 1/0 responder flag → ORR across patients**.
+
+These **response-based** endpoints (ORR, DCR, DoR) are distinct from the **time-to-event** ones — see [[Progression-Free Survival (PFS) and Overall Survival (OS)]] — and all are earlier [[Surrogate Endpoint|surrogates]] for **OS**.
 
