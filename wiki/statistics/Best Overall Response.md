@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 4
+sources: 5
 ---
 
 # Best Overall Response
@@ -27,6 +27,8 @@ By tumour burden / favorability:
 - **SD** (Stable Disease 疾病稳定) — neither PR nor PD.
 - **PD** (Progressive Disease 疾病进展) — growth / new lesions (worst).
 - **NE** (Not Evaluable 不可评估) — assessment couldn't be made (missing/inadequate). **Not** better or worse — it's "unknown", so it is **off** the favorability scale (handled separately below).
+
+**Non-CR/Non-PD** (often shortened "Non-PD") is the **SD-equivalent for non-target / non-measurable disease**. Non-target lesions are judged **qualitatively** (present / absent / unequivocally worse), not by the ≥30% / ≥20% size thresholds, so you can't legitimately call PR or SD on them — the in-between state is "**not CR** (lesion / tumour marker still present) **and not PD** (no unequivocal progression)". Ordering: **CR > Non-CR/Non-PD (≈ SD) > PD**. For a patient whose baseline disease is **non-measurable only**, the timepoint response set becomes **CR / Non-CR/Non-PD / PD / NE** — no PR, no SD (both need measurable change); Non-CR/Non-PD takes SD's place. See [[RECIST 1.1]].
 
 **Why NED exists as its own category:** because some patients have **no measurable disease to respond**, so CR can't apply. CR means measurable disease you *had* disappeared (a treatment response); if there were no lesions to begin with, "CR" is logically impossible — the state is "still no detectable disease" = NED. Two settings drive it: (1) **adjuvant trials** — after curative surgery the patient is disease-free but at recurrence risk, the drug prevents recurrence; there's no measurable target, so no ORR/CR, and the endpoint is **DFS** (disease-free survival, baseline = NED, event = recurrence); (2) **surgical conversion** — a patient rendered NED by resecting metastases; that's not a drug-induced imaging response, so calling it CR would wrongly credit the drug. So NED separates "no disease to assess / disease-free by other means" from genuine response (CR/PR) — counting surgically-achieved NED as a response would inflate/confound ORR.
 
