@@ -1,7 +1,7 @@
 ---
 title: "Learning Dashboard"
 type: meta
-updated: 2026-06-18
+updated: 2026-06-19
 ---
 
 # Learning Dashboard
@@ -16,6 +16,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Modified RECIST 1.1 and PCWG3 Criteria]]
 - [[Measurable vs Non-Measurable Disease (RECIST)]]
 - [[CTCAE Grade]]
+- [[Serious Adverse Event (SAE)]]
 - [[Dose-Limiting Toxicity (DLT)]]
 - [[Adverse Event of Special Interest (AESI)]]
 - [[Clinical Progression]]

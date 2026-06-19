@@ -2,7 +2,7 @@
 title: "Wiki Index"
 type: meta
 updated: 2026-06-19
-total_pages: 40
+total_pages: 41
 ---
 
 # Wiki Index
@@ -11,7 +11,7 @@ Master catalog, organized by layer. See [[learning|Learning Dashboard]] for lear
 
 A **therapeutic area** is the main narrative (a MOC that strings terms together; Oncology at top, indications as sections within it). Every other page is a **concept** filed by its nature — criteria/rules, biomedical, statistical, data-standard, or regulatory.
 
-**Quick stats**: 2 therapeutic-area maps · 38 concept pages · last updated 2026-06-19
+**Quick stats**: 2 therapeutic-area maps · 39 concept pages · last updated 2026-06-19
 
 ---
 
@@ -27,6 +27,7 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[Modified RECIST 1.1 and PCWG3 Criteria]]
 - [[Measurable vs Non-Measurable Disease (RECIST)]]
 - [[CTCAE Grade]]
+- [[Serious Adverse Event (SAE)]]
 - [[Dose-Limiting Toxicity (DLT)]]
 - [[Adverse Event of Special Interest (AESI)]]
 - [[Clinical Progression]]
