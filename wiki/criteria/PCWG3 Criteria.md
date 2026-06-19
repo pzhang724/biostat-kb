@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [medical, statistics, regulatory]
 created: 2026-06-11
-updated: 2026-06-11
-sources: 3
+updated: 2026-06-19
+sources: 4
 ---
 
 # PCWG3 Criteria
@@ -34,6 +34,19 @@ The two don't compete — each governs a **different compartment**, and they fol
 **PSA and symptoms stay separate** — PSA progression (≥25% & ≥2 ng/mL above nadir, confirmed) and symptomatic endpoints are reported on their own; you do **not** declare progression on rising PSA alone. The split exists because bone, soft tissue, PSA, and symptoms can move independently (mixed response, flare). **OS** (overall survival) remains the ultimate endpoint.
 
 When a protocol fuses soft-tissue RECIST and bone PCWG3 into a **single named composite criterion**, that criterion (with its fused timepoint matrix) is documented at [[Modified RECIST 1.1 and PCWG3 Criteria]].
+
+## Why progression capture is split (initial vs confirmation)
+
+A progression-tracking table/CRF typically has four columns — **Date Progression Detected (Visit)** · **Criteria for Initial Progression** · **Timing for Confirmation** · **Criteria for Documentation on Confirmatory Scan**. They are the **two-step** confirmed-progression paradigm × (**when / what**):
+
+| Column | Question | Why separate |
+|---|---|---|
+| Date detected (visit) | **when** first seen | rPFS date is **back-dated to this first scan**, not the confirmation — so it must be recorded distinctly |
+| Criteria for initial progression | **what** triggered the first call (e.g. ≥2 new bone lesions; RECIST PD) | progression must be **criteria-based & mode-specific**, not gestalt |
+| Timing for confirmation | **when** the confirmatory scan is due (interval later) | the **delay** is what lets transient **flare** / pseudoprogression resolve |
+| Criteria on confirmatory scan | **what** confirms it (e.g. ≥2 *additional* new lesions = the second "2") | only a **confirmed** event becomes the rPFS progression |
+
+**Why this way:** a single scan can show *apparent* progression that isn't real — bone-scan **flare**, immunotherapy **pseudoprogression**, measurement noise. Calling PD on the first scan would wrongly pull patients who are actually benefiting. So progression is split into **initial detection → confirmatory scan after an interval**, and because the scored date (initial) differs from the confirmation date, both are captured. It is the CRF form of the **2+2 rule** (same shape as iRECIST **iUPD → iCPD**) and feeds rPFS. See [[Radiological Assessment]] and the fused [[Modified RECIST 1.1 and PCWG3 Criteria]].
 
 ## Official reference
 
