@@ -5,7 +5,7 @@ status: learned
 tags: [medical]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 2
+sources: 3
 ---
 
 # Prostate Cancer Diagnosis, Staging, and Grading
@@ -50,6 +50,11 @@ Histologic **grade** of prostate adenocarcinoma by **glandular architecture**. T
 
 ## Castration
 
-Lowering testosterone to **castrate level** (typically **<50 ng/dL**). Prostate cancer is **androgen-driven**, so this slows it. **Surgical** castration = orchiectomy; **medical** castration = ADT (LHRH agonist/antagonist) — see [[Anti-Cancer Therapy Categories in Oncology Trials|systemic therapy]]. **Castration-sensitive** vs **castration-resistant** (CRPC = progresses despite castrate testosterone); **mCRPC** = metastatic CRPC.
+Two senses:
+
+1. **The intervention** — reducing/eliminating **testosterone** (androgen) so it can no longer fuel the cancer. **Surgical** = orchiectomy (remove the testes, which make ~90–95% of testosterone); **medical** = ADT — **LHRH/GnRH agonists** (leuprolide, goserelin) or **antagonists** (degarelix) that suppress the hypothalamic-pituitary-gonadal axis so the testes stop producing testosterone (a [[Anti-Cancer Therapy Categories in Oncology Trials|systemic therapy]]).
+2. **The state/level** — serum testosterone below a **castrate level**: conventional **<50 ng/dL** (1.7 nmol/L); stricter/modern **<20 ng/dL** (0.7 nmol/L, since true post-orchiectomy is ~15). The **protocol specifies** the threshold.
+
+Prostate cancer is **androgen-driven**, so castrate testosterone slows it — the backbone of advanced disease. **Castration-sensitive** vs **castration-resistant**: **CRPC** = disease **progresses while testosterone is confirmed at castrate level** (so castrate T must be ongoing to call it CRPC); **mCRPC** = metastatic CRPC.
 
 Disease is then tracked by [[PSA (Prostate-Specific Antigen)|PSA]] + imaging via [[Modified RECIST 1.1 and PCWG3 Criteria]]; part of [[Oncology]].
