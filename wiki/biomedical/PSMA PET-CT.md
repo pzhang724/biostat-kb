@@ -5,7 +5,7 @@ status: learned
 tags: [medical, biology]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 2
+sources: 3
 ---
 
 # PSMA PET-CT
@@ -22,6 +22,13 @@ sources: 2
 - **Theranostics** — the same PSMA target is used for *therapy* (e.g. [[Lutetium-177 (177Lu)|¹⁷⁷Lu]]-PSMA-617 radioligand therapy); patients are often selected by PSMA-PET positivity, and the radiation delivered is quantified by [[Dosimetry]].
 
 **The scan, step by step:** inject a radiolabeled PSMA ligand → **uptake wait (~60 min)** while it binds PSMA on the cancer-cell surface and unbound tracer clears → [[PET (Positron Emission Tomography)|PET]] detects the positron-annihilation photons (coincidence) → CT gives anatomy, images fused, uptake quantified as **SUV**. PSMA-expressing disease (primary, nodes, bone, visceral) "lights up." Confirming the tumour expresses PSMA is exactly the selection step before [[Lutetium-177 (177Lu)|¹⁷⁷Lu]]-PSMA therapy.
+
+**What high vs low PSMA means:** "high/low PSMA" = how much of the **target** the tumour displays, read off the scan as **uptake / SUV**.
+
+- **High PSMA** (high uptake) = the lesion **strongly expresses** PSMA → **lights up** brightly → lots of target.
+- **Low / negative PSMA** = little/no expression → **doesn't light up**.
+
+Why it matters: (1) **diagnostic** — high uptake = PSMA-avid disease, confirms/detects lesions; (2) **therapeutic selection** — PSMA is the **target** for [[Lutetium-177 (177Lu)|¹⁷⁷Lu]]-PSMA therapy, so **high PSMA → more target → more delivered dose → good candidate, more likely to respond** (PSMA-PET is the eligibility scan; need enough uptake to qualify), while **low/negative → too little target → poor candidate / excluded**, and such disease can progress without lighting up; (3) **biology** — expression runs higher in higher-grade/advanced disease but is **heterogeneous** (a patient can have both PSMA+ and PSMA− lesions). One line: **high = lots of target** (avid + good for radioligand), **low = little target** (doesn't light up + poor radioligand candidate).
 
 **Specificity caveats:** PSMA is **not 100% prostate-specific** — physiologic uptake in salivary/lacrimal glands, kidneys, liver, bowel, and some benign/other tumours → possible **false positives** (needs expert read). And **not all prostate cancer is PSMA-positive** (PSMA-low/negative disease exists), so a negative scan doesn't fully exclude.
 
