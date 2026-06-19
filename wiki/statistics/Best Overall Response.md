@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, medical]
 created: 2026-06-11
 updated: 2026-06-19
-sources: 3
+sources: 4
 ---
 
 # Best Overall Response
@@ -29,6 +29,8 @@ By tumour burden / favorability:
 - **NE** (Not Evaluable 不可评估) — assessment couldn't be made (missing/inadequate). **Not** better or worse — it's "unknown", so it is **off** the favorability scale (handled separately below).
 
 **Why NED exists as its own category:** because some patients have **no measurable disease to respond**, so CR can't apply. CR means measurable disease you *had* disappeared (a treatment response); if there were no lesions to begin with, "CR" is logically impossible — the state is "still no detectable disease" = NED. Two settings drive it: (1) **adjuvant trials** — after curative surgery the patient is disease-free but at recurrence risk, the drug prevents recurrence; there's no measurable target, so no ORR/CR, and the endpoint is **DFS** (disease-free survival, baseline = NED, event = recurrence); (2) **surgical conversion** — a patient rendered NED by resecting metastases; that's not a drug-induced imaging response, so calling it CR would wrongly credit the drug. So NED separates "no disease to assess / disease-free by other means" from genuine response (CR/PR) — counting surgically-achieved NED as a response would inflate/confound ORR.
+
+**Why such patients are *included* at all** — two routes: (1) **by design** — in an adjuvant trial the disease-free patients **are** the target population (the question is recurrence prevention, not shrinkage), so inclusion is the whole point and NED just labels their state through the study; (2) **by ITT** — in a measurable-disease trial a patient who becomes NED mid-study (e.g. surgery removes the disease) was validly enrolled at baseline, and **intention-to-treat** keeps you tracking them to the end rather than deleting them, so that timepoint is recorded NED. (Whether they still count toward the strict ORR / response-evaluable set is governed separately by the baseline-measurable-disease rule.)
 
 Rules that constrain the max:
 
