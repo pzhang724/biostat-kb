@@ -41,7 +41,7 @@ The full lab list from the trial's [[Schedule of Assessments]]. Four panels: **h
 
 **Muscle / cardiac** — Creatine kinase / CK (肌酸激酶); if elevated, **fractionate isoenzymes** to separate skeletal muscle (CK-MM) from heart (CK-MB).
 
-**Endocrine / metabolic** — TSH (促甲状腺激素, thyroid screen) · Glucose, non-fasted (血糖，非空腹).
+**Endocrine / metabolic** — TSH (促甲状腺激素, thyroid screen — on the panel because hyper-/hypothyroidism is a radiation [[Adverse Event of Special Interest (AESI)]]) · Glucose, non-fasted (血糖，非空腹).
 
 ## Coagulation
 

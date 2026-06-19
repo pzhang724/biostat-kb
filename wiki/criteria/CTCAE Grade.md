@@ -32,4 +32,4 @@ Drives **safety summaries, dose modifications, and DLT definitions** (e.g. a gra
 
 **In one line:** grade 3 is the line from "uncomfortable but tolerable" to "severe, must act" — so it governs dose changes, safety reporting, and toxicity comparisons.
 
-A cross-cutting grading standard in [[Oncology]].
+Distinct from an [[Adverse Event of Special Interest (AESI)]] (interest-based pre-specified watch) — AESIs are still graded with CTCAE. A cross-cutting grading standard in [[Oncology]].

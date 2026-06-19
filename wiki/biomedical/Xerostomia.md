@@ -17,4 +17,4 @@ In the radioligand context it is a **hallmark / common toxicity of PSMA-targeted
 - Tends to be **worse and more dose-limiting** with alpha emitters (225Ac) than with 177Lu.
 - Severity graded by [[CTCAE Grade]]; affects quality of life, eating, dental health, and can drive dose reduction / discontinuation.
 
-A toxicity of radioligand therapy in [[Oncology]].
+Listed as "prolonged xerostomia," an [[Adverse Event of Special Interest (AESI)]] in the radioligand trial. A toxicity of radioligand therapy in [[Oncology]].
