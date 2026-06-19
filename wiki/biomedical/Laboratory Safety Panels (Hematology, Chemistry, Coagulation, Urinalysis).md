@@ -5,7 +5,7 @@ status: learned
 tags: [medical, trial-conduct]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 1
+sources: 2
 ---
 
 # Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)
@@ -43,12 +43,16 @@ The full lab list from the trial's [[Schedule of Assessments]]. Four panels: **h
 
 **Endocrine / metabolic** — TSH (促甲状腺激素, thyroid screen — on the panel because hyper-/hypothyroidism is a radiation [[Adverse Event of Special Interest (AESI)]]) · Glucose, non-fasted (血糖，非空腹).
 
+**Thyroid, in more depth:** the thyroid gland makes **T4 / T3** (set metabolic rate); the pituitary makes **TSH** to tell it to produce. Feedback makes **TSH inverse** to thyroid hormone — **high TSH → hypothyroid** (underactive), **low TSH → hyperthyroid** (overactive). TSH is the **screen**; **free T4/T3** confirm. Immunotherapy, TKIs, and radiation/radioligand can cause thyroid dysfunction → monitored, sometimes an AESI.
+
 ## Coagulation
 
-- **INR** (国际标准化比值) — standardized PT; **extrinsic** pathway, sensitive to warfarin and to liver synthesis (clotting factors are made in the liver).
-- **PTT / aPTT** (部分凝血活酶时间) — **intrinsic** pathway, sensitive to heparin.
+The **clotting cascade** — how blood forms a clot to stop bleeding; the tests measure clotting **time**, which reads out **bleeding risk**.
 
-Together a bleeding-risk + liver-function check.
+- **INR** (国际标准化比值) — standardized PT (凝血酶原时间); **extrinsic** + common pathway, sensitive to **warfarin** and to **liver synthesis** (clotting factors are made in the liver, several vitamin-K dependent). INR standardizes PT across labs.
+- **PTT / aPTT** (部分凝血活酶时间) — **intrinsic** + common pathway, sensitive to **heparin** and to factor deficiencies (e.g. hemophilia 血友病).
+
+So coagulation doubles as **(1) a bleeding-risk** check and **(2) a liver-function** readout (the liver makes the factors). Fibrinogen / D-dimer / platelet count round it out (platelets sit in hematology). Used for baseline bleeding risk, anticoagulant monitoring, safety before biopsies/procedures, and signals like DIC.
 
 ## Urinalysis (Dip Stick)
 
