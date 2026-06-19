@@ -5,7 +5,7 @@ status: learned
 tags: [regulatory, trial-conduct, medical]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 3
+sources: 4
 ---
 
 # Serious Adverse Event (SAE)
@@ -33,7 +33,7 @@ So an event carries a grade (intensity), a seriousness flag (these criteria), an
 **SUSAR** = Suspected Unexpected Serious Adverse Reaction (可疑且非预期的严重不良反应) — a **subset of SAE** made by stacking two more filters on "serious". Nesting: **AE ⊃ SAE ⊃ SAR ⊃ SUSAR**.
 
 1. Start from an **SAE** (a serious AE).
-2. **+ Suspected / related** (causality 因果关系) — at least a reasonable possibility the study drug caused it. An SAE judged related = **SAR** (Serious Adverse Reaction); SAEs judged unrelated are not SARs.
+2. **+ Suspected / related** (causality 因果关系) — at least a reasonable possibility the study drug caused it. An SAE judged related = **SAR** (Serious Adverse Reaction); SAEs judged unrelated are not SARs. The **event vs reaction** wording is the tell: an adverse **event** assumes *nothing* about cause, while an adverse **reaction** implies a causal link to the drug — so SAR = SAE + causality, nothing else.
 3. **+ Unexpected** (非预期) — its nature / severity / frequency is **not** already documented in the **Reference Safety Information (RSI)** — the Investigator's Brochure (研究者手册) for an IMP, or the label/SmPC. Already-listed reactions are "expected".
 
 So **SUSAR = SAE that is both related AND unexpected**.
