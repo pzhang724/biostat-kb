@@ -5,7 +5,7 @@ status: learned
 tags: [medical]
 created: 2026-06-19
 updated: 2026-06-19
-sources: 3
+sources: 4
 ---
 
 # Prostate Cancer Diagnosis, Staging, and Grading
@@ -28,10 +28,13 @@ Dividing line: *"is it the cancer we're treating, or background health?"* SDTM: 
 
 ## TNM — the staging framework
 
-**T** = primary **Tumour** extent · **N** = regional **Nodes** · **M** = distant **Metastasis**.
+**T** = primary **Tumour** extent · **N** = regional **Nodes** · **M** = distant **Metastasis** — the three sorted by **how far the cancer has spread from its origin**:
 
-- **T**: T1 not palpable/incidental · T2 confined to prostate · T3 beyond capsule / seminal vesicle · T4 invades adjacent structures.
-- **N**: N0 none · N1 regional node mets. **M**: M0 none · M1 distant (M1a non-regional nodes, M1b **bone**, M1c other).
+- **Primary tumour** (T, 原发肿瘤) = the **original** tumour where the cancer arose — for prostate, in the gland itself. T = its local extent/invasion: T1 not palpable/incidental · T2 confined to prostate · T3 beyond capsule / seminal vesicle · T4 invades adjacent structures.
+- **Regional lymph nodes** (N, 区域淋巴结) = the nodes that **drain** the primary site (first lymphatic spread) — for prostate the **pelvic** nodes (below the aortic bifurcation). N0 none · N1 regional involvement. Still **locoregional**.
+- **Distant metastases** (M, 远处转移) = spread to **faraway** organs beyond the drainage region, usually **hematogenous** — M0 none · M1 distant: M1a non-regional/distant **nodes**, M1b **bone** (dominant in prostate), M1c viscera. **M1 = metastatic = stage IV.**
+
+**Key nuance:** a lymph node is **N or M by location** — pelvic (regional) = **N1**; non-regional nodes (para-aortic above the bifurcation, supraclavicular) = **distant = M1a**. So "node spread" isn't automatically N. Prostate pattern: prostate (T) → pelvic nodes (N) → bone / distant nodes / viscera (M).
 
 ## Clinical vs pathological TNM
 
