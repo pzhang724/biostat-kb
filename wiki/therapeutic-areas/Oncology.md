@@ -57,6 +57,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[IRB and IEC (Ethics Committees)]]
 - [[Protocol Amendment]]
 - [[Financial Disclosure (Clinical Investigators)]]
+- [[Oncology Therapeutic Radiopharmaceuticals — Dosage Optimization (FDA Draft Guidance)]]
 
 ## Tumour assessment data flow
 

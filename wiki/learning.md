@@ -1,7 +1,7 @@
 ---
 title: "Learning Dashboard"
 type: meta
-updated: 2026-06-19
+updated: 2026-06-20
 ---
 
 # Learning Dashboard
@@ -60,6 +60,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[IRB and IEC (Ethics Committees)]]
 - [[Protocol Amendment]]
 - [[Financial Disclosure (Clinical Investigators)]]
+- [[Oncology Therapeutic Radiopharmaceuticals — Dosage Optimization (FDA Draft Guidance)]]
 
 **Statistics**
 - [[Adverse Event Ascertainment]]
