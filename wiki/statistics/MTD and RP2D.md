@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [statistics, trial-conduct, medical]
 created: 2026-06-18
-updated: 2026-06-18
-sources: 4
+updated: 2026-06-20
+sources: 5
 ---
 
 # MTD and RP2D
@@ -37,5 +37,13 @@ A typical protocol wording: *"MTD = highest dose where the posterior probability
 - **"highest dose where …"** — among doses meeting *both* conditions, the MTD is the **highest**.
 
 So **MTD = highest dose with P(rate∈[0.16,0.33]) > 0.5 AND P(rate>0.33) < 0.25** — condition 1 keeps it in the target toxicity band, condition 2 keeps the overdose risk low.
+
+## Optimal treatment regimen
+
+A **treatment regimen (治疗方案)** is the complete *how* of giving a therapy: which drug(s), the **dose (剂量)**, **route (给药途径)**, **schedule/frequency (给药时间表/频率)**, cycle length, total duration, and any combination or sequence — not a single number, the whole plan.
+
+- **Optimal treatment regimen (最优治疗方案)** — the regimen that best balances **efficacy (疗效)** and **safety/tolerability (安全性/耐受性)**, i.e. best **benefit-risk (获益-风险)** — *not necessarily* the maximum tolerated dose.
+- This is the core idea of FDA **Project Optimus**: shift from the old "MTD = more is better" mindset toward deliberately choosing an optimal **dose AND schedule** before the pivotal trial. Ideally the **[[MTD and RP2D|RP2D]]** *is* the optimal regimen, not just the toxicity ceiling.
+- Identified by comparing multiple dose/schedule arms on efficacy, [[Pharmacokinetics (PK)|PK]]/PD and exposure–response, safety, long-term tolerability over many cycles, and sometimes patient-reported outcomes.
 
 Part of [[Oncology]].
