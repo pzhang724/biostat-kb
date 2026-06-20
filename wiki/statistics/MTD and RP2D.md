@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, trial-conduct, medical]
 created: 2026-06-18
 updated: 2026-06-20
-sources: 5
+sources: 6
 ---
 
 # MTD and RP2D
@@ -45,5 +45,19 @@ A **treatment regimen (治疗方案)** is the complete *how* of giving a therapy
 - **Optimal treatment regimen (最优治疗方案)** — the regimen that best balances **efficacy (疗效)** and **safety/tolerability (安全性/耐受性)**, i.e. best **benefit-risk (获益-风险)** — *not necessarily* the maximum tolerated dose.
 - This is the core idea of FDA **Project Optimus**: shift from the old "MTD = more is better" mindset toward deliberately choosing an optimal **dose AND schedule** before the pivotal trial. Ideally the **[[MTD and RP2D|RP2D]]** *is* the optimal regimen, not just the toxicity ceiling.
 - Identified by comparing multiple dose/schedule arms on efficacy, [[Pharmacokinetics (PK)|PK]]/PD and exposure–response, safety, long-term tolerability over many cycles, and sometimes patient-reported outcomes.
+
+## BOIN (Bayesian Optimal Interval) design
+
+A phase I dose-finding design (剂量探索设计) to find the MTD, in the **model-assisted (模型辅助)** family — it sits *between* algorithm-based designs (3+3) and fully model-based designs ([[#EWOC (Escalation With Overdose Control)|EWOC]] / CRM).
+
+- **Core rule (interval-based up-and-down)** — pre-specify a **target DLT rate φ (目标 DLT 发生率)** (e.g. 0.25). From φ two **fixed boundaries** are derived: **λ_e (escalation, 递增边界)** and **λ_d (de-escalation, 递减边界)** (for φ=0.25, ≈ 0.197 and 0.298). At the current dose compute the observed rate **p̂ = #DLTs / #patients**, then:
+  - **p̂ ≤ λ_e → escalate** to the next higher dose;
+  - **p̂ ≥ λ_d → de-escalate**;
+  - **in between → stay** at the current dose.
+  Plus a safety rule to drop overly toxic doses. The interval is "**optimal**" because λ_e, λ_d are derived to **minimize the probability of incorrect escalation/de-escalation decisions**.
+- **Why attractive** — combines the **simplicity/transparency** of algorithm-based designs (decisions can be **pre-tabulated** into a chart the team follows; no real-time modeling or software during conduct) with **operating characteristics comparable to CRM**. Each decision depends only on the current dose's data, φ, and the fixed boundaries.
+- **vs 3+3** — targets a *specified* DLT rate, allows any cohort size, better operating characteristics. **vs CRM/[[#EWOC (Escalation With Overdose Control)|EWOC]]** — those fit/update a dose-toxicity curve continuously (model-based); BOIN is *model-assisted* — a likelihood/Bayesian argument produces the boundaries, but the trial rule is a plain interval comparison, **no curve fitting**.
+- **MTD selection at the end** — after stopping (max sample size, etc.), estimate toxicity rates by **isotonic regression (保序回归)** and pick the dose with rate closest to φ.
+- **Extensions** — **TITE-BOIN** (time-to-event; handles **late-onset toxicity (迟发毒性)** — relevant to long/delayed toxicities like [[Radiopharmaceutical Therapy (RPT) and External Beam Radiation Therapy (EBRT)|radioligands]]); **BOIN12** (utility-based, jointly uses toxicity + efficacy for **dose optimization** — see [[#Optimal treatment regimen]], Project Optimus); drug-combination BOIN.
 
 Part of [[Oncology]].
