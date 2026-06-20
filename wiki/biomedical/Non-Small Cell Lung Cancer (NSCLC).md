@@ -33,4 +33,4 @@ c-Met-overexpressing non-squamous NSCLC is the **enrollment biomarker** for MET-
 
 **Putting the phrase together:** non-small-cell (not SCLC) · non-squamous histology (adenocarcinoma-type) · tumors overexpressing the c-Met protein — i.e. the patients a MET-targeted drug is tested in.
 
-Part of [[Oncology]] (lung cancer indication). See [[Anti-Cancer Therapy Categories in Oncology Trials]], [[RECIST 1.1]] (response criterion for NSCLC), [[PSMA PET-CT]] (parallel target-selection biomarker).
+Part of [[Oncology]] (lung cancer indication). See [[Targeted Therapy and Tissue-Agnostic Biomarkers]] (same target-selection strategy across cancers), [[Anti-Cancer Therapy Categories in Oncology Trials]], [[RECIST 1.1]] (response criterion for NSCLC), [[PSMA PET-CT]] (parallel target-selection biomarker).
