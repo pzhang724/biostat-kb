@@ -40,6 +40,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Progression-Free Survival (PFS) and Overall Survival (OS)]]
 - [[Local (Investigator) vs Central (BICR) Tumour Assessment]]
 - [[MTD and RP2D]]
+- [[Simon's Two-Stage Design]]
 - [[Anti-Tumour Activity]]
 - [[End of Treatment vs End of Study]]
 - [[Schedule of Assessments]]
