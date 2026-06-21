@@ -17,4 +17,4 @@ Two ways to deliver **ionizing radiation (电离辐射)** to kill cancer, differ
 
 **Key contrast:** external source + local target (EBRT) vs internal source + systemic distribution (RPT). This is exactly why the [[Oncology Therapeutic Radiopharmaceuticals — Dosage Optimization (FDA Draft Guidance)|FDA RPT dosage-optimization guidance]] warns that **EBRT-derived organ dose limits don't simply transfer to RPTs** — the **dose rate** and the **distribution of radiation** differ.
 
-Part of [[Oncology]]. See [[Dosimetry]] (how absorbed dose is measured), [[Anti-Cancer Therapy Categories in Oncology Trials]] (systemic vs EBRT vs surgery modalities), [[Lutetium-177 (177Lu)]], [[PSMA PET-CT]].
+Part of [[Oncology]]. See [[Dosimetry]] (how absorbed dose is measured), [[Anti-Cancer Therapy Categories in Oncology Trials]] (systemic vs EBRT vs surgery modalities), [[Lutetium-177 (177Lu)]], [[Peptide Receptor Radionuclide Therapy (PRRT)]] (a receptor-targeted RPT subtype), [[PSMA PET-CT]].
