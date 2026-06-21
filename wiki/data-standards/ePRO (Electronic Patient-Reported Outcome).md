@@ -5,12 +5,23 @@ status: learned
 tags: [data-management, statistics]
 created: 2026-06-21
 updated: 2026-06-21
-sources: 1
+sources: 2
 ---
 
 # ePRO (Electronic Patient-Reported Outcome)
 
 **PRO（患者报告结局）** = any outcome reported **directly by the patient**, without clinician interpretation — symptoms, pain, function, quality of life. **ePRO** = a PRO **captured electronically** (app / tablet / web / handheld device; sometimes **BYOD（自带设备）**). It sits under **eCOA（electronic clinical outcome assessment）**, the umbrella also covering clinician-reported (ClinRO), observer-reported (ObsRO), and performance (PerfO) outcomes.
+
+## The "e" is just the mode
+
+The defining thing is **PRO, not the electronics**. A **paper** patient diary / questionnaire is still a PRO; ePRO only changes the **capture medium** (and improves data quality) — it does not change *whether* something is a PRO. The test for a PRO = the **source is the patient**, reported **without clinician / observer interpretation**.
+
+**Is a questionnaire a PRO?** Only if the patient is the respondent:
+- **Patient-completed** (ACQ-6, AQLQ, EQ-5D, FACT-P, BPI) = **PRO**.
+- **Clinician-rated / judged** (e.g. [[ECOG Performance Status]]) = **ClinRO**, not a PRO.
+- **Caregiver / observer-completed** = **ObsRO**.
+
+Even an interviewer-administered questionnaire stays a PRO if the interviewer only records the patient's own answers verbatim, adding no judgment.
 
 ## Why it's needed
 
