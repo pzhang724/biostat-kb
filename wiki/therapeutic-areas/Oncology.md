@@ -22,6 +22,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 
 **Biomedical**
 - [[Anti-Cancer Therapy Categories in Oncology Trials]]
+- [[Targeted Therapy and Tissue-Agnostic Biomarkers]]
 - [[ECOG Performance Status]]
 - [[12-Lead Resting ECG]]
 - [[Radiological Assessment]]
@@ -29,6 +30,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Anti-Emetic Premedication]]
 - [[Infusion-Related and Hypersensitivity Reactions]]
 - [[Physical Examination]]
+- [[Immunogenicity]]
 
 **Statistics**
 - [[Adverse Event Ascertainment]]
@@ -39,6 +41,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[Progression-Free Survival (PFS) and Overall Survival (OS)]]
 - [[Local (Investigator) vs Central (BICR) Tumour Assessment]]
 - [[MTD and RP2D]]
+- [[Simon's Two-Stage Design]]
 - [[Anti-Tumour Activity]]
 - [[End of Treatment vs End of Study]]
 - [[Schedule of Assessments]]
@@ -57,6 +60,7 @@ Top-level main narrative for the oncology learning thread. Indications are secti
 - [[IRB and IEC (Ethics Committees)]]
 - [[Protocol Amendment]]
 - [[Financial Disclosure (Clinical Investigators)]]
+- [[Oncology Therapeutic Radiopharmaceuticals — Dosage Optimization (FDA Draft Guidance)]]
 
 ## Tumour assessment data flow
 
@@ -68,4 +72,10 @@ How an imaging read becomes an efficacy endpoint, end to end:
 
 The disease state is [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)|mCRPC]] (metastatic, progressing despite castrate testosterone). How treatment effect is read out in advanced/mCRPC trials: a [[PSA (Prostate-Specific Antigen)|PSA]] biomarker and [[PSMA PET-CT]] imaging measure disease; bone progression follows [[PCWG3 Criteria]], fused with soft-tissue [[RECIST 1.1]] into the [[Modified RECIST 1.1 and PCWG3 Criteria]] criterion; [[PSA (Prostate-Specific Antigen)|PSA]] response is only a [[Surrogate Endpoint]]; radioligand programs add [[Pharmacokinetics (PK)]] / [[Dosimetry]].
 
-Prostate-specific terms: [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)]] · [[Prostate Cancer Diagnosis, Staging, and Grading]] · [[PSA (Prostate-Specific Antigen)]] · [[PSMA PET-CT]] · [[PCWG3 Criteria]] · [[Modified RECIST 1.1 and PCWG3 Criteria]] · [[Pharmacokinetics (PK)]] · [[Dosimetry]] · [[Lutetium-177 (177Lu)]] · [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]].
+Prostate-specific terms: [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)]] · [[Prostate Cancer Diagnosis, Staging, and Grading]] · [[PSA (Prostate-Specific Antigen)]] · [[PSMA PET-CT]] · [[PCWG3 Criteria]] · [[Modified RECIST 1.1 and PCWG3 Criteria]] · [[Pharmacokinetics (PK)]] · [[Dosimetry]] · [[Lutetium-177 (177Lu)]] · [[Radiopharmaceutical Therapy (RPT) and External Beam Radiation Therapy (EBRT)]] · [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]].
+
+## Lung cancer
+
+[[Non-Small Cell Lung Cancer (NSCLC)|NSCLC]] is the major lung-cancer class (vs small cell). Trial populations are layered **class → histology (squamous vs non-squamous) → biomarker** — e.g. *c-Met-overexpressing non-squamous NSCLC*, where **c-Met overexpression** is the target-selection biomarker for MET-directed therapy (parallel to how [[PSMA PET-CT|PSMA]] selects for ¹⁷⁷Lu-PSMA in prostate).
+
+Lung-specific terms: [[Non-Small Cell Lung Cancer (NSCLC)]].
