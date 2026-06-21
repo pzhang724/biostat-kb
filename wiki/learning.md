@@ -11,6 +11,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 ## Learned
 
 **Criteria & rules**
+- [[GINA (Global Initiative for Asthma)]]
 - [[RECIST 1.1]]
 - [[PCWG3 Criteria]]
 - [[Modified RECIST 1.1 and PCWG3 Criteria]]
@@ -22,6 +23,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Clinical Progression]]
 
 **Biomedical**
+- [[T2-High Asthma]]
 - [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)]]
 - [[Non-Small Cell Lung Cancer (NSCLC)]]
 - [[Targeted Therapy and Tissue-Agnostic Biomarkers]]
@@ -37,7 +39,10 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Lutetium-177 (177Lu)]]
 - [[Radiopharmaceutical Therapy (RPT) and External Beam Radiation Therapy (EBRT)]]
 - [[Pre-BD and Post-BD FEV1]]
+- [[Forced Vital Capacity (FVC)]]
 - [[FeNO (Fractional Exhaled Nitric Oxide)]]
+- [[Type 2 Inflammation Biomarkers (Asthma)]]
+- [[Inhaled Corticosteroids (ICS)]]
 - [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]
 - [[ECOG Performance Status]]
 - [[12-Lead Resting ECG]]
@@ -55,6 +60,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Action Taken for an Adverse Event]]
 - [[Adverse Event Outcome]]
 - [[CRF vs Non-CRF (External) Data]]
+- [[ePRO (Electronic Patient-Reported Outcome)]]
 - [[eCRF Forms (Prostate Cancer Trial)]]
 - [[Prior, Concomitant, and Subsequent Treatment]]
 - [[SDTM, SDTM IG, and Conformance Rules]]
@@ -69,6 +75,10 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 **Statistics**
 - [[Adverse Event Ascertainment]]
 - [[Follow-up of Adverse Events]]
+- [[Safety vs Tolerability]]
+- [[Inclusion and Exclusion Criteria]]
+- [[Annualized Asthma Exacerbation Rate (AAER)]]
+- [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]]
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]

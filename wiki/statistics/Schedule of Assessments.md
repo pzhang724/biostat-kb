@@ -4,8 +4,8 @@ type: concept
 status: learned
 tags: [trial-conduct, statistics, data-management]
 created: 2026-06-18
-updated: 2026-06-19
-sources: 2
+updated: 2026-06-21
+sources: 3
 ---
 
 # Schedule of Assessments
@@ -29,6 +29,18 @@ Tumor imaging     │   X    │      │      │ q8wk │ X │     │
 PK sampling       │        │  X   │  X   │   │     │     │
 Survival status   │        │      │      │   │     │  X  │  X
 ```
+
+## What to read first (a statistician's lens)
+
+Read it **endpoint-first**, not top-to-bottom. Priority order:
+
+1. **The primary & key-secondary endpoint rows — and their timing / frequency.** This is the single most important thing: *where and how often* the endpoint is measured (tumor imaging q8–9 wk; FEV1 at week 24). It drives the **analysis windows**, the **assessment-schedule bias**, and — for time-to-event endpoints like PFS — the **interval-censoring（区间删失）** (you can only detect progression at a scheduled scan).
+2. **The period / epoch structure** (the columns): Screening → Treatment → EOT → follow-up (safety + survival) → EOS — the timeline backbone and the **follow-up / censoring logic** ([[End of Treatment vs End of Study|EOT/EOS]]).
+3. **Baseline definition** — which row/visit is the **last pre-dose** assessment; every change-from-baseline endpoint hangs on it.
+4. **Visit windows (±days)** — they define the **analysis windows** and what counts as on-schedule.
+5. **Footnotes** — the load-bearing rules that change the analysis and are easy to miss: conditional ("only if…"), **method / evaluator** (local vs central, see [[Local (Investigator) vs Central (BICR) Tumour Assessment]]), fasting / **triplicate** / **time-matched to PK**, repeat-if-abnormal.
+
+**Bottom line**: find the primary / key endpoints, read exactly *when and how often* they're collected plus the **windows and footnotes** governing them, then the **period structure** for follow-up and censoring.
 
 ## Why it matters (esp. for a biostatistician)
 

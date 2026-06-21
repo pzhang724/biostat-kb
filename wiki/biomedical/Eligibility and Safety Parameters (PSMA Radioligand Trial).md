@@ -71,4 +71,4 @@ Prostate-specific prior lines (ADT, ARPIs like abiraterone/enzalutamide, taxane 
 
 **Bottom line:** generic thresholds, but two things sharpen them in prostate cancer — a bone-metastatic, elderly, comorbid population (marrow + cardiac + frailty), and the PSMA-radioligand mechanism (kidney, salivary, bladder, marrow are exactly where the radiation lands).
 
-Part of [[Oncology]]; radioligand dosing context in [[Pharmacokinetics (PK)]] / [[Dosimetry]]; supportive care includes [[Anti-Emetic Premedication]]. Per-parameter catalog of the full safety lab list: [[Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)]].
+Part of [[Oncology]]; radioligand dosing context in [[Pharmacokinetics (PK)]] / [[Dosimetry]]; supportive care includes [[Anti-Emetic Premedication]]. Per-parameter catalog of the full safety lab list: [[Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)]]. This is one concrete instance of the general [[Inclusion and Exclusion Criteria]].
