@@ -60,6 +60,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Action Taken for an Adverse Event]]
 - [[Adverse Event Outcome]]
 - [[CRF vs Non-CRF (External) Data]]
+- [[ePRO (Electronic Patient-Reported Outcome)]]
 - [[eCRF Forms (Prostate Cancer Trial)]]
 - [[Prior, Concomitant, and Subsequent Treatment]]
 - [[SDTM, SDTM IG, and Conformance Rules]]

@@ -25,4 +25,6 @@ So the disease-specific tools (diary, ACQ-6, AQLQ) quantify asthma burden and co
 - **AQLQ** — **higher = better** (1–7); indicates disease-specific **quality of life**.
 - **EQ-5D** — **higher utility = better**; indicates **general health state / utility** for QALY analyses.
 
+These are collected electronically as [[ePRO (Electronic Patient-Reported Outcome)]] (a daily diary plus visit questionnaires).
+
 Part of the [[Asthma]] therapeutic area; complements the efficacy endpoints [[Annualized Asthma Exacerbation Rate (AAER)]] and [[Pre-BD and Post-BD FEV1]].
