@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, trial-conduct, medical]
 created: 2026-06-18
 updated: 2026-06-20
-sources: 6
+sources: 7
 ---
 
 # MTD and RP2D
@@ -59,5 +59,39 @@ A phase I dose-finding design (剂量探索设计) to find the MTD, in the **mod
 - **vs 3+3** — targets a *specified* DLT rate, allows any cohort size, better operating characteristics. **vs CRM/[[#EWOC (Escalation With Overdose Control)|EWOC]]** — those fit/update a dose-toxicity curve continuously (model-based); BOIN is *model-assisted* — a likelihood/Bayesian argument produces the boundaries, but the trial rule is a plain interval comparison, **no curve fitting**.
 - **MTD selection at the end** — after stopping (max sample size, etc.), estimate toxicity rates by **isotonic regression (保序回归)** and pick the dose with rate closest to φ.
 - **Extensions** — **TITE-BOIN** (time-to-event; handles **late-onset toxicity (迟发毒性)** — relevant to long/delayed toxicities like [[Radiopharmaceutical Therapy (RPT) and External Beam Radiation Therapy (EBRT)|radioligands]]); **BOIN12** (utility-based, jointly uses toxicity + efficacy for **dose optimization** — see [[#Optimal treatment regimen]], Project Optimus); drug-combination BOIN.
+
+### Run it off a table — no live modeling
+
+The defining practical feature: **the whole escalation runs off one pre-computed table — no real-time modeling.**
+
+- **λ_e, λ_d are computed once**, before the trial, from φ alone — they do **not** depend on the accumulating data.
+- From them you print a **decision table (决策表)** indexed by *number of patients treated at the current dose*: for each N it gives "escalate if #DLT ≤ a / de-escalate if #DLT ≥ b / else stay."
+- **During conduct** every decision = look up the current dose's row, compare the DLT count, move. Arithmetic anyone can do — **no statistician at the bedside, no software, no curve re-fitting** after each cohort.
+- **Contrast CRM/EWOC** — those re-fit/update the dose-toxicity curve after *every* cohort (software + statistician in the loop) to get the next dose. BOIN front-loads all the thinking into the table.
+- The **only** modeling-like step in BOIN is a **one-time isotonic regression at the very end** to pick the MTD — not during escalation.
+
+Pre-computed decision table (φ = 0.25):
+
+| N at current dose | escalate if #DLT ≤ | de-escalate if #DLT ≥ | otherwise |
+|---|---|---|---|
+| 3 | 0 | 1 | stay |
+| 6 | 1 | 2 | stay |
+| 9 | 1 | 3 | stay |
+| 12 | 2 | 4 | stay |
+
+### Worked example
+
+Cohort size 3, doses D1 < D2 < D3, target φ = 0.25 — every step is just a table lookup:
+
+| Cohort | Dose | DLT this cohort | Running at dose | Table says | Move |
+|---|---|---|---|---|---|
+| 1 | D1 | 0 | 0/3 | 0 ≤ 0 | escalate → D2 |
+| 2 | D2 | 0 | 0/3 | 0 ≤ 0 | escalate → D3 |
+| 3 | D3 | 2 | 2/3 | 2 ≥ 1 | de-escalate → D2 |
+| 4 | D2 | 1 | 1/6 | 1 ≤ 1 | escalate → D3 |
+| 5 | D3 | 1 | 3/6 | 3 ≥ 2 | de-escalate → D2 |
+| 6 | D2 | 1 | 2/9 | = 2 | **stay** → stop (max N) |
+
+Final: D1 0/3 (0%), **D2 2/9 (~22%)**, D3 3/6 (50%). **MTD = the dose with rate closest to φ and not over → D2** (~22%, closest to 25%). Every move was a lookup; the only computation was the single end-of-trial MTD selection.
 
 Part of [[Oncology]].
