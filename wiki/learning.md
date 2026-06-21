@@ -47,6 +47,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Infusion-Related and Hypersensitivity Reactions]]
 - [[Physical Examination]]
 - [[Laboratory Safety Panels (Hematology, Chemistry, Coagulation, Urinalysis)]]
+- [[Immunogenicity]]
 
 **Data standards**
 - [[MedDRA]]
