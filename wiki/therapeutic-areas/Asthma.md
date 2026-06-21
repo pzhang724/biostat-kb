@@ -13,6 +13,13 @@ Main narrative for the asthma learning thread — strings together how disease a
 
 ## Measuring disease
 
-Two readouts seen so far: **lung function** via spirometry — [[Pre-BD and Post-BD FEV1]], where post- vs pre-bronchodilator change gives reversibility — and an **inflammation biomarker**, [[FeNO (Fractional Exhaled Nitric Oxide)]], reflecting type 2 / eosinophilic airway inflammation.
+Disease activity in asthma trials is read on four fronts:
 
-Asthma terms: [[Pre-BD and Post-BD FEV1]] · [[FeNO (Fractional Exhaled Nitric Oxide)]].
+- **Lung function** via spirometry — [[Pre-BD and Post-BD FEV1]] (post- vs pre-bronchodilator change = reversibility) and its partner [[Forced Vital Capacity (FVC)]] (the FEV1/FVC ratio = obstruction).
+- **Inflammation biomarkers** of the type 2 / eosinophilic phenotype — the breath marker [[FeNO (Fractional Exhaled Nitric Oxide)]] and the blood-based [[Type 2 Inflammation Biomarkers (Asthma)]] (eosinophils, IL-5, IgE, TARC).
+- **Clinical efficacy** — the [[Annualized Asthma Exacerbation Rate (AAER)]] (the usual primary endpoint).
+- **Patient experience** — [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]].
+
+The controller backbone is [[Inhaled Corticosteroids (ICS)]], on top of which type 2 biologics are added.
+
+Asthma terms: [[Pre-BD and Post-BD FEV1]] · [[Forced Vital Capacity (FVC)]] · [[FeNO (Fractional Exhaled Nitric Oxide)]] · [[Type 2 Inflammation Biomarkers (Asthma)]] · [[Annualized Asthma Exacerbation Rate (AAER)]] · [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]] · [[Inhaled Corticosteroids (ICS)]].

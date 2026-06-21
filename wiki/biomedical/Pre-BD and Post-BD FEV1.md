@@ -22,4 +22,4 @@ In asthma trials, pre-BD FEV1 is commonly an **inclusion criterion** and a **bas
 
 **Change from baseline of pre-BD FEV1** is one of the most common primary / key efficacy endpoints in asthma trials — the pre-rescue FEV1 at a landmark visit (e.g. week 24) minus the baseline value (in mL or L). Pre-BD is used (not post-BD) because it reflects the patient's own **maintained underlying lung function**, not yet lifted by a bronchodilator — so a rise shows the drug **sustainably** improved baseline airway function. The trial reads the **treatment-vs-control difference** in change from baseline, typically via **MMRM** (mixed model for repeated measures) adjusting for baseline FEV1.
 
-Part of the [[Asthma]] therapeutic area; a companion biomarker is [[FeNO (Fractional Exhaled Nitric Oxide)]].
+Part of the [[Asthma]] therapeutic area; a companion biomarker is [[FeNO (Fractional Exhaled Nitric Oxide)]], the partner spirometry measure is [[Forced Vital Capacity (FVC)]] (via the FEV1/FVC ratio), and exacerbations are tracked by the [[Annualized Asthma Exacerbation Rate (AAER)]].

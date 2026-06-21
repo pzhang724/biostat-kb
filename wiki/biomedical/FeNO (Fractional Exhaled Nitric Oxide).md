@@ -24,4 +24,4 @@ sources: 3
 - **More of a biomarker role** — FeNO change from baseline is usually a **secondary / pharmacodynamic (PD) endpoint** confirming the drug suppresses type 2 inflammation; FEV1 and exacerbations are the primary efficacy endpoints.
 - **Baseline FeNO also enriches / predicts** — patients with high baseline FeNO respond better to type 2 biologics, so the baseline value is often used to stratify or enrich enrollment, not just measured for how much it drops.
 
-Part of the [[Asthma]] therapeutic area; complements the lung-function readout [[Pre-BD and Post-BD FEV1]].
+Part of the [[Asthma]] therapeutic area; complements the lung-function readout [[Pre-BD and Post-BD FEV1]], the blood-based [[Type 2 Inflammation Biomarkers (Asthma)]], and the controller [[Inhaled Corticosteroids (ICS)]].

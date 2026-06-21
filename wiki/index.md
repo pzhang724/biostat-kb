@@ -2,7 +2,7 @@
 title: "Wiki Index"
 type: meta
 updated: 2026-06-21
-total_pages: 64
+total_pages: 69
 ---
 
 # Wiki Index
@@ -11,7 +11,7 @@ Master catalog, organized by layer. See [[learning|Learning Dashboard]] for lear
 
 A **therapeutic area** is the main narrative (a MOC that strings terms together; Oncology at top, indications as sections within it). Every other page is a **concept** filed by its nature — criteria/rules, biomedical, statistical, data-standard, or regulatory.
 
-**Quick stats**: 2 therapeutic-area maps · 61 concept pages · last updated 2026-06-21
+**Quick stats**: 2 therapeutic-area maps · 67 concept pages · last updated 2026-06-21
 
 ---
 
@@ -49,7 +49,10 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[Lutetium-177 (177Lu)]]
 - [[Radiopharmaceutical Therapy (RPT) and External Beam Radiation Therapy (EBRT)]]
 - [[Pre-BD and Post-BD FEV1]]
+- [[Forced Vital Capacity (FVC)]]
 - [[FeNO (Fractional Exhaled Nitric Oxide)]]
+- [[Type 2 Inflammation Biomarkers (Asthma)]]
+- [[Inhaled Corticosteroids (ICS)]]
 - [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]
 - [[ECOG Performance Status]]
 - [[12-Lead Resting ECG]]
@@ -66,6 +69,8 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[Adverse Event Ascertainment]]
 - [[Follow-up of Adverse Events]]
 - [[Safety vs Tolerability]]
+- [[Annualized Asthma Exacerbation Rate (AAER)]]
+- [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]]
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
