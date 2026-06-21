@@ -69,6 +69,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 **Statistics**
 - [[Adverse Event Ascertainment]]
 - [[Follow-up of Adverse Events]]
+- [[Safety vs Tolerability]]
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
