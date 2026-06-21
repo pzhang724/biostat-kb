@@ -11,6 +11,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 ## Learned
 
 **Criteria & rules**
+- [[GINA (Global Initiative for Asthma)]]
 - [[RECIST 1.1]]
 - [[PCWG3 Criteria]]
 - [[Modified RECIST 1.1 and PCWG3 Criteria]]
