@@ -75,6 +75,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Adverse Event Ascertainment]]
 - [[Follow-up of Adverse Events]]
 - [[Safety vs Tolerability]]
+- [[Inclusion and Exclusion Criteria]]
 - [[Annualized Asthma Exacerbation Rate (AAER)]]
 - [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]]
 - [[Intercurrent Event]]
