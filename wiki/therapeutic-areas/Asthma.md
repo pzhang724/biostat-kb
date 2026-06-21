@@ -20,6 +20,6 @@ Disease activity in asthma trials is read on four fronts:
 - **Clinical efficacy** — the [[Annualized Asthma Exacerbation Rate (AAER)]] (the usual primary endpoint).
 - **Patient experience** — [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]].
 
-The controller backbone is [[Inhaled Corticosteroids (ICS)]], on top of which type 2 biologics are added.
+The controller backbone is [[Inhaled Corticosteroids (ICS)]], on top of which type 2 biologics are added. Most of these biomarkers and the biologic strategy hang together as the [[T2-High Asthma]] endotype.
 
-Asthma terms: [[Pre-BD and Post-BD FEV1]] · [[Forced Vital Capacity (FVC)]] · [[FeNO (Fractional Exhaled Nitric Oxide)]] · [[Type 2 Inflammation Biomarkers (Asthma)]] · [[Annualized Asthma Exacerbation Rate (AAER)]] · [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]] · [[Inhaled Corticosteroids (ICS)]].
+Asthma terms: [[T2-High Asthma]] · [[Pre-BD and Post-BD FEV1]] · [[Forced Vital Capacity (FVC)]] · [[FeNO (Fractional Exhaled Nitric Oxide)]] · [[Type 2 Inflammation Biomarkers (Asthma)]] · [[Annualized Asthma Exacerbation Rate (AAER)]] · [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]] · [[Inhaled Corticosteroids (ICS)]].

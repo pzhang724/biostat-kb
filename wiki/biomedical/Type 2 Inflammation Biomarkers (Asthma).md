@@ -10,7 +10,7 @@ sources: 1
 
 # Type 2 Inflammation Biomarkers (Asthma)
 
-Markers of the **type 2 / eosinophilic（嗜酸性）"T2-high"** asthma phenotype. Each maps to a biologic drug target, so they are used to **phenotype, select/enrich, and monitor**. The breath-based one, [[FeNO (Fractional Exhaled Nitric Oxide)]], has its own page.
+Markers of the **type 2 / eosinophilic（嗜酸性）"T2-high"** asthma phenotype ([[T2-High Asthma]]). Each maps to a biologic drug target, so they are used to **phenotype, select/enrich, and monitor**. The breath-based one, [[FeNO (Fractional Exhaled Nitric Oxide)]], has its own page.
 
 - **Blood eosinophil count（血嗜酸性粒细胞计数）** — eosinophils（嗜酸性粒细胞）in peripheral blood, in cells/µL. A surrogate for airway eosinophilic inflammation; a high count marks the T2-high phenotype and predicts response to [[Inhaled Corticosteroids (ICS)]] and to anti-eosinophil biologics. Common enrichment threshold (e.g. ≥300 cells/µL) and a pharmacodynamic（药效学）readout (anti-IL-5 drives it down).
 - **Interleukin-5 (IL-5, 白细胞介素-5)** — the Th2 / ILC2 cytokine（细胞因子）driving eosinophil maturation, recruitment, and survival. Target of anti-IL-5 / anti-IL-5Rα biologics (mepolizumab, reslizumab, benralizumab) → eosinophil depletion.
