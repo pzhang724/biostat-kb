@@ -16,4 +16,6 @@ sources: 1
 - Often combined with a **LABA（long-acting β2-agonist, 长效β2受体激动剂）** as ICS/LABA. **High-dose ICS (± OCS)** defines the **severe-asthma** background on which biologics are added.
 - In trials: standard **background therapy** (patients stay on ICS) and a **severity / enrichment** criterion; high [[FeNO (Fractional Exhaled Nitric Oxide)]] / eosinophils predict good ICS response.
 
+**Direction & what it indicates**: ICS is a treatment, not a measured value, so there is no "good/bad" direction — but the **dose / step level indicates severity**: needing **high-dose ICS (± OCS)** to stay controlled indicates **more severe, harder-to-control** asthma (the population in which add-on biologics are studied).
+
 Part of the [[Asthma]] therapeutic area; tied to [[Type 2 Inflammation Biomarkers (Asthma)]], [[FeNO (Fractional Exhaled Nitric Oxide)]], and the [[Annualized Asthma Exacerbation Rate (AAER)]] endpoint.

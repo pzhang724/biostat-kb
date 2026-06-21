@@ -19,4 +19,10 @@ sources: 1
 
 So the disease-specific tools (diary, ACQ-6, AQLQ) quantify asthma burden and control; EQ-5D is the generic utility measure for health economics.
 
+**Direction & what each indicates** (watch the flipped scales):
+- **Symptom diary** — **lower score / fewer symptoms = better**; indicates day-to-day symptom burden and rescue use.
+- **ACQ-6** — **lower = better** (0–6); indicates **asthma control**.
+- **AQLQ** — **higher = better** (1–7); indicates disease-specific **quality of life**.
+- **EQ-5D** — **higher utility = better**; indicates **general health state / utility** for QALY analyses.
+
 Part of the [[Asthma]] therapeutic area; complements the efficacy endpoints [[Annualized Asthma Exacerbation Rate (AAER)]] and [[Pre-BD and Post-BD FEV1]].

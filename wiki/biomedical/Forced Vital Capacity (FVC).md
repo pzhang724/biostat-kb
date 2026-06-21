@@ -16,4 +16,6 @@ sources: 1
 - In asthma, airflow obstruction lowers FEV1 more than FVC, so the **FEV1/FVC ratio falls**.
 - In trials: collected alongside [[Pre-BD and Post-BD FEV1]] as a secondary lung-function measure; the ratio supports diagnosis and severity grading.
 
+**Direction & what it indicates**: **higher FVC = better** (more usable lung volume); a low FVC with a *normal* ratio indicates **restriction**. The **FEV1/FVC ratio: lower = worse**, indicating **airflow obstruction** (the asthma pattern). So FVC alone reads lung size, the ratio reads obstruction.
+
 Part of the [[Asthma]] therapeutic area; read with [[Pre-BD and Post-BD FEV1]].

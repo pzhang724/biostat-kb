@@ -17,6 +17,11 @@ Markers of the **type 2 / eosinophilic（嗜酸性）"T2-high"** asthma phenotyp
 - **IgE (immunoglobulin E, 免疫球蛋白E)** — the antibody（抗体）class mediating allergic / atopic（特应性）responses; allergen-bound IgE triggers mast-cell / basophil degranulation. Total / allergen-specific IgE marks **allergic asthma**; target of anti-IgE omalizumab (baseline IgE + body weight set the dose).
 - **TARC / CCL17 (thymus and activation-regulated chemokine, 胸腺活化调节趋化因子)** — a Th2-recruiting chemokine（趋化因子）; a biomarker of type 2 inflammation that falls with anti-IL-4Rα / IL-13 therapy (dupilumab); also used in atopic dermatitis.
 
-**Direction**: all are T2-high markers — elevated = heavier eosinophilic / allergic inflammation; effective type 2–targeted therapy lowers them.
+**Direction & what each indicates**: all are **T2-high markers — high = more inflammation** (worse, more active disease), and effective type 2–targeted therapy **lowers them** (so a fall = good as a pharmacodynamic readout). The twist: a **high *baseline* is "good" for drug selection** — it indicates the eosinophilic / allergic phenotype that **responds best** to type 2 biologics, so high baseline is used to enrich enrollment.
+
+- **Blood eosinophil count** — high = eosinophilic airway inflammation; predicts ICS / anti-eosinophil response; falls with anti-IL-5.
+- **IL-5** — high = active eosinophil-driving signal; indicates the eosinophilic axis is "on".
+- **IgE** — high = allergic / atopic burden; indicates allergic asthma; sets the omalizumab dose.
+- **TARC / CCL17** — high = ongoing type 2 inflammation; falls with anti-IL-4Rα / IL-13 (a PD marker).
 
 Part of the [[Asthma]] therapeutic area; complements the breath biomarker [[FeNO (Fractional Exhaled Nitric Oxide)]] and the controller [[Inhaled Corticosteroids (ICS)]].
