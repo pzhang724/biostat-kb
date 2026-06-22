@@ -1,7 +1,7 @@
 ---
 title: "Learning Dashboard"
 type: meta
-updated: 2026-06-20
+updated: 2026-06-22
 ---
 
 # Learning Dashboard
@@ -80,6 +80,7 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 - [[Inclusion and Exclusion Criteria]]
 - [[Annualized Asthma Exacerbation Rate (AAER)]]
 - [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]]
+- [[Estimand]]
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]

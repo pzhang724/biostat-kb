@@ -1,8 +1,8 @@
 ---
 title: "Wiki Index"
 type: meta
-updated: 2026-06-21
-total_pages: 74
+updated: 2026-06-22
+total_pages: 75
 ---
 
 # Wiki Index
@@ -11,7 +11,7 @@ Master catalog, organized by layer. See [[learning|Learning Dashboard]] for lear
 
 A **therapeutic area** is the main narrative (a MOC that strings terms together; Oncology at top, indications as sections within it). Every other page is a **concept** filed by its nature — criteria/rules, biomedical, statistical, data-standard, or regulatory.
 
-**Quick stats**: 2 therapeutic-area maps · 72 concept pages · last updated 2026-06-21
+**Quick stats**: 2 therapeutic-area maps · 73 concept pages · last updated 2026-06-22
 
 ---
 
@@ -75,6 +75,7 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[Inclusion and Exclusion Criteria]]
 - [[Annualized Asthma Exacerbation Rate (AAER)]]
 - [[Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)]]
+- [[Estimand]]
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
