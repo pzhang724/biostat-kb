@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, regulatory]
 created: 2026-06-22
 updated: 2026-06-22
-sources: 2
+sources: 3
 ---
 
 # Estimand
@@ -33,13 +33,19 @@ The key shift: pick the estimand **from** the clinical question, then choose the
 4. **Intercurrent event handling** — for each [[Intercurrent Event|ICE]] type, one of the five strategies below. This is the attribute E9(R1) **added**; it's where most of the thinking goes.
 5. **Population-level summary measure** — how individual outcomes are condensed into one comparison number: hazard ratio, difference in means, risk/odds ratio, etc.
 
-## The five intercurrent-event strategies
+## The five intercurrent-event strategies — plain version
 
-- **Treatment policy** — use the observed outcome regardless of the ICE; the ICE is part of the treatment "policy". Effect = effect of being **assigned** the regimen, whatever happens after (ITT spirit). Used for OS (you keep following the patient even after they switch/stop). Can't apply to an endpoint that stops existing after the ICE (e.g. on-treatment tumour size after death).
-- **Hypothetical** — the value that *would* have been observed had the ICE not happened. Used when you want the effect in a world without the complication — e.g. censor OS at the start of [[Anti-Cancer Therapy Categories in Oncology Trials|subsequent anti-cancer therapy]], asking "effect if no one switched."
-- **Composite** — fold the ICE **into** the endpoint definition, treating its occurrence as part of the outcome (often as failure). Used when the ICE itself is a bad outcome — e.g. "treatment failure" = progression OR rescue-medication use OR discontinuation for toxicity.
-- **While on treatment** — use only the outcome up to the ICE: the effect during the time the patient is actually on treatment. Used e.g. for symptom/PRO endpoints where only the on-treatment experience is of interest.
-- **Principal stratum** — restrict to the subpopulation that would **not** experience the ICE (under either treatment) — e.g. the effect among patients who would adhere, or never need rescue. Hard to identify in practice (stratum membership is partly unobserved).
+Anchor on **one patient**: a control-arm patient who, after progression, **switches** to another cancer drug (a classic ICE), then later dies. Their OS is "polluted" by the switch. Each strategy is just a different answer to *"what do we do with this patient?"*
+
+| Strategy | Plain idea (what you do with the patient) | Typically used for | What the math assumes |
+|---|---|---|---|
+| **Treatment policy** | Keep their real death time; ignore that they switched — count everything as-is. | Hard regulatory endpoints like [[Progression-Free Survival (PFS) and Overall Survival (OS)\|OS]] where post-ICE reality counts; the default ITT-style primary. | Almost none beyond randomization + administrative censoring — analyze observed data as-is. Robust, but the effect is **diluted** by post-ICE behaviour. |
+| **Hypothetical** | Pretend the switch never happened — censor at the switch, reconstruct "what their OS *would* have been." | Stripping out an ICE you don't want to credit/blame on the drug ([[Anti-Cancer Therapy Categories in Oncology Trials\|subsequent therapy]], rescue meds). | Censoring at the ICE is **non-informative (无信息删失) / MAR (随机缺失)** — the censored patient's future looks like comparable patients still at risk. Untestable — the load-bearing assumption. |
+| **Composite** | Count the switch *itself* as an event/failure — fold it into the endpoint. | When the ICE is itself a bad outcome (discontinuation for toxicity, needing rescue). | Little statistical assumption — nothing goes missing (the ICE is observed); the real assumption is the **clinical judgment** that the ICE = failure. |
+| **While on treatment** | Only use the outcome up to the switch; ignore everything after. | Symptom / PRO / QoL endpoints where only the on-treatment experience matters. | That the (patient-varying) **on-treatment window** *is* the intended quantity — different durations by design, not bias. |
+| **Principal stratum** | Only analyze patients who **wouldn't have switched at all** (under either arm). | Effect among adherers/tolerators; complier (依从者) effects; vaccine efficacy among the would-be-infected. | The latent stratum is only partly observed → needs strong identifying assumptions (**monotonicity 单调性** / exclusion-restriction, CACE/IV-style). Most assumption-heavy; often only bounds. |
+
+**Assumption burden rises**: treatment-policy (lightest) → composite / while-on-treatment (modest) → hypothetical (strong, untestable MAR) → principal stratum (strongest, partly unidentified).
 
 ## Why it changed practice
 
