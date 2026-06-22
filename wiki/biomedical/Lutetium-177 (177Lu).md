@@ -16,7 +16,7 @@ sources: 1
 - **Low-energy γ photons (imageable, 成像用)** — detectable by SPECT, so you can **image and do [[Dosimetry]] with the same therapeutic agent** ("theranostic"-friendly).
 - **Half-life ≈ 6.6–6.7 days (半衰期)** — long enough for distribution and in-body residence.
 - **Renally excreted (经肾排泄)** → kidney is dose-limiting; marrow also at risk (cf. creatinine / MDS on [[Eligibility and Safety Parameters (PSMA Radioligand Trial)]]).
-- Representative drugs: **¹⁷⁷Lu-PSMA-617** (prostate cancer), **¹⁷⁷Lu-DOTATATE** (neuroendocrine tumours).
+- Representative drugs: **¹⁷⁷Lu-PSMA-617** (prostate cancer), **¹⁷⁷Lu-DOTATATE** (neuroendocrine tumours, via [[Peptide Receptor Radionuclide Therapy (PRRT)]]).
 
 **Contrast:** ²²⁵Ac is an **α-emitter** (more potent, even shorter range); ⁶⁸Ga is the **PET imaging companion** (diagnostic — same PSMA target on [[PSMA PET-CT]]).
 
