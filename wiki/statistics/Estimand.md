@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, regulatory]
 created: 2026-06-22
 updated: 2026-06-22
-sources: 4
+sources: 5
 ---
 
 # Estimand
@@ -83,3 +83,18 @@ OS = time from randomization to death. How each strategy records **this one pati
 | **Principal stratum** | *excluded* | This patient *did* switch → not in the "would-not-switch" stratum → dropped from the analysis set. |
 
 **One patient**, but the analysis "sees" `540-event / 210-censored / 210-event / 185-censored / nothing` depending on the strategy — five different inputs pushing five different effect estimates. That is why the estimand (specifically the ICE attribute) must be fixed *before* any analysis.
+
+## Is the hypothetical estimand really just `210, censored`?
+
+In the dataset, yes — the row *is* `210, censored`. But that is only **bookkeeping**. Feeding it straight into a standard KM/Cox is the **naive** version, and it silently assumes the censoring is **non-informative / MAR (随机缺失)**: that patient 07, after day 210, would die at the same rate as comparable patients still at risk who did **not** switch.
+
+Why that's suspect: 07 switched **because** they progressed (day 185). Switching is triggered by worsening disease → switchers are a selected, **sicker** subset, so their true no-switch survival is shorter than the average still-at-risk peer's. The censoring time therefore carries prognostic information = **informative censoring (信息性删失)** — exactly what KM/Cox assume away. Naive censoring is **optimistic** about the switcher's counterfactual survival → biased.
+
+So `210, censored` is step 1 only. A credible hypothetical estimand needs an estimator that **corrects** for the informativeness:
+
+- **IPCW (inverse-probability-of-censoring weighting, 逆删失概率加权)** — model P(not yet switched | time-varying covariates); upweight similar not-switched patients to stand in for the censored ones. Assumes all drivers of switching are **measured** (no unmeasured confounding of the switch).
+- **RPSFTM / IPE (rank-preserving structural failure time model / iterative parameter estimation)** — structural models that "remove" the survival time the switch-to-effective-therapy bought, reconstructing the counterfactual no-switch survival. Standard oncology **treatment-switching** adjustments.
+
+Because the MAR bet is **untestable**, you stress-test it with a **sensitivity analysis (敏感性分析)** — e.g. a **tipping-point / delta-adjustment (delta 调整)**: progressively penalize the censored patients' assumed survival until the conclusion flips, and report the delta at which it tips. Needing an implausibly large penalty ⇒ the result is robust.
+
+**Bottom line**: `210, censored` is the data bookkeeping; the hypothetical estimand's credibility lives entirely in **how you treat that censoring afterwards** — naive KM = a strong MAR bet; IPCW / RPSFTM = adjusted; plus a sensitivity analysis so the conclusion doesn't hinge on the untestable part.
