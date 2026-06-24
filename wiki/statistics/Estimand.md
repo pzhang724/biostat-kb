@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, regulatory]
 created: 2026-06-22
 updated: 2026-06-22
-sources: 3
+sources: 4
 ---
 
 # Estimand
@@ -59,3 +59,27 @@ Endpoint: **OS**. ICE of interest: **subsequent anti-cancer therapy** (patients 
 - **Estimand B (hypothetical)** — censor OS at the switch. Answers "effect if no one had switched" — closer to the drug's intrinsic effect, but relies on censoring assumptions.
 
 Same patients, same OS data, two different numbers — because the ICE attribute differs. That is the whole point of specifying the estimand.
+
+## One patient, all five strategies
+
+A realistic **synthetic** patient (real patient-level data never goes in this wiki). Control-arm mCRPC patient, **OS** endpoint, with a switch ICE:
+
+| Day | Event |
+|---|---|
+| 0 | Randomized to control arm, starts treatment |
+| 185 | Radiographic progression; **discontinues** study treatment |
+| 210 | Starts [[Anti-Cancer Therapy Categories in Oncology Trials\|subsequent anti-cancer therapy]] — **the switch (ICE)** |
+| 540 | Dies |
+| 600 | Database cutoff |
+
+OS = time from randomization to death. How each strategy records **this one patient's** `(time, status)`:
+
+| Strategy | This patient's OS record | Why |
+|---|---|---|
+| **Treatment policy** | `540, event` | Death counts as-is; the switch is ignored — "whatever happens after" is included. |
+| **Hypothetical** | `210, censored` | Pretend no switch: censor at it; post-210 "no-switch" survival is reconstructed from comparable still-at-risk patients. |
+| **Composite** | `210, event` | Endpoint = death OR switch, whichever first → the switch *is* the failure; dying later is irrelevant. |
+| **While on treatment** | `185, censored` | Death happened **off** treatment (discontinued day 185) → censor at discontinuation. (Artificial for OS — fits symptom/PRO endpoints better — but shows the mechanic.) |
+| **Principal stratum** | *excluded* | This patient *did* switch → not in the "would-not-switch" stratum → dropped from the analysis set. |
+
+**One patient**, but the analysis "sees" `540-event / 210-censored / 210-event / 185-censored / nothing` depending on the strategy — five different inputs pushing five different effect estimates. That is why the estimand (specifically the ICE attribute) must be fixed *before* any analysis.
