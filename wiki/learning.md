@@ -1,7 +1,7 @@
 ---
 title: "Learning Dashboard"
 type: meta
-updated: 2026-06-22
+updated: 2026-06-24
 ---
 
 # Learning Dashboard
@@ -97,6 +97,15 @@ Tracks what has been learned, what is in progress, and what is queued. A page ex
 Therapeutic-area maps (main narratives that string the terms together):
 - [[Oncology]] (prostate cancer is a section within it)
 - [[Asthma]]
+- [[Acute Pain]]
+
+Acute pain trial terms (new indication):
+- [[Pain Intensity AUC (0-72h)]]
+- [[Pain NRS at Rest and with Movement (NRS-R, NRS-M)]]
+- [[Opioid-Free Rate]]
+- [[Patient Global Assessment (PGA)]]
+- [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]]
+- [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]]
 
 Reading through the SDTMIG v3.4 (chapter by chapter):
 - [[SDTMIG Fundamentals (Chapter 2)]]
