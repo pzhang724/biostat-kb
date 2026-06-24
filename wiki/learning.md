@@ -109,6 +109,7 @@ Acute pain trial terms (new indication):
 - [[ANCOVA (Analysis of Covariance)]]
 - [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]]
 - [[Withdrawal due to AE or Lack of Efficacy]]
+- [[Prohibited and Rescue Medication]]
 
 Reading through the SDTMIG v3.4 (chapter by chapter):
 - [[SDTMIG Fundamentals (Chapter 2)]]
