@@ -108,6 +108,7 @@ Acute pain trial terms (new indication):
 - [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]]
 - [[ANCOVA (Analysis of Covariance)]]
 - [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]]
+- [[Last Assessment]]
 - [[Withdrawal due to AE or Lack of Efficacy]]
 - [[Prohibited and Rescue Medication]]
 

@@ -2,7 +2,7 @@
 title: "Wiki Index"
 type: meta
 updated: 2026-06-24
-total_pages: 86
+total_pages: 87
 ---
 
 # Wiki Index
@@ -11,7 +11,7 @@ Master catalog, organized by layer. See [[learning|Learning Dashboard]] for lear
 
 A **therapeutic area** is the main narrative (a MOC that strings terms together; Oncology at top, indications as sections within it). Every other page is a **concept** filed by its nature — criteria/rules, biomedical, statistical, data-standard, or regulatory.
 
-**Quick stats**: 3 therapeutic-area maps · 83 concept pages · last updated 2026-06-24
+**Quick stats**: 3 therapeutic-area maps · 84 concept pages · last updated 2026-06-24
 
 ---
 
@@ -78,6 +78,7 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[Patient Global Assessment (PGA)]]
 - [[ANCOVA (Analysis of Covariance)]]
 - [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]]
+- [[Last Assessment]]
 - [[Withdrawal due to AE or Lack of Efficacy]]
 - [[Adverse Event Ascertainment]]
 - [[Follow-up of Adverse Events]]
