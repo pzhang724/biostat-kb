@@ -1,8 +1,8 @@
 ---
 title: "Wiki Index"
 type: meta
-updated: 2026-06-22
-total_pages: 75
+updated: 2026-06-24
+total_pages: 88
 ---
 
 # Wiki Index
@@ -11,7 +11,7 @@ Master catalog, organized by layer. See [[learning|Learning Dashboard]] for lear
 
 A **therapeutic area** is the main narrative (a MOC that strings terms together; Oncology at top, indications as sections within it). Every other page is a **concept** filed by its nature — criteria/rules, biomedical, statistical, data-standard, or regulatory.
 
-**Quick stats**: 2 therapeutic-area maps · 73 concept pages · last updated 2026-06-22
+**Quick stats**: 3 therapeutic-area maps · 85 concept pages · last updated 2026-06-24
 
 ---
 
@@ -19,9 +19,11 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 
 - [[Oncology]] (indications are sections within it, e.g. prostate cancer)
 - [[Asthma]]
+- [[Acute Pain]]
 
 ## Criteria & Rules
 
+- [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]]
 - [[GINA (Global Initiative for Asthma)]]
 - [[RECIST 1.1]]
 - [[PCWG3 Criteria]]
@@ -35,6 +37,9 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 
 ## Biomedical
 
+- [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]]
+- [[Local Anesthetic Systemic Toxicity (LAST)]]
+- [[Wound Healing]]
 - [[T2-High Asthma]]
 - [[Metastatic Castration-Resistant Prostate Cancer (mCRPC)]]
 - [[Non-Small Cell Lung Cancer (NSCLC)]]
@@ -69,6 +74,13 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 
 ## Statistics
 
+- [[Pain Intensity AUC (0-72h)]]
+- [[Pain NRS at Rest and with Movement (NRS-R, NRS-M)]]
+- [[Opioid-Free Rate]]
+- [[Patient Global Assessment (PGA)]]
+- [[ANCOVA (Analysis of Covariance)]]
+- [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]]
+- [[Withdrawal due to AE or Lack of Efficacy]]
 - [[Adverse Event Ascertainment]]
 - [[Follow-up of Adverse Events]]
 - [[Safety vs Tolerability]]
@@ -89,6 +101,7 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 
 ## Data Standards
 
+- [[Prohibited and Rescue Medication]]
 - [[MedDRA]]
 - [[WHODrug]]
 - [[Action Taken for an Adverse Event]]
