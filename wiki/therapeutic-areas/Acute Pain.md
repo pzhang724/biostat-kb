@@ -27,4 +27,8 @@ Acute pain trials need a reproducible pain stimulus. The standard model here is 
 
 The continuous pain endpoint is usually analysed by [[ANCOVA (Analysis of Covariance)]] adjusting for baseline pain. Missing scores (driven by [[Prohibited and Rescue Medication|rescue medication]] and [[Withdrawal due to AE or Lack of Efficacy]]) are filled by [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]] — the choice operationalizes the [[Estimand]]'s intercurrent-event strategy.
 
-Acute pain terms: [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]] · [[Pain Intensity AUC (0-72h)]] · [[Pain NRS at Rest and with Movement (NRS-R, NRS-M)]] · [[Opioid-Free Rate]] · [[Patient Global Assessment (PGA)]] · [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]] · [[ANCOVA (Analysis of Covariance)]] · [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]] · [[Last Assessment]] · [[Withdrawal due to AE or Lack of Efficacy]] · [[Prohibited and Rescue Medication]].
+## Safety
+
+Where a local anesthetic is used for post-surgical analgesia, the headline safety event is [[Local Anesthetic Systemic Toxicity (LAST)]]. The surgical incision is followed for [[Wound Healing]] — the analgesic must not impair it.
+
+Acute pain terms: [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]] · [[Pain Intensity AUC (0-72h)]] · [[Pain NRS at Rest and with Movement (NRS-R, NRS-M)]] · [[Opioid-Free Rate]] · [[Patient Global Assessment (PGA)]] · [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]] · [[ANCOVA (Analysis of Covariance)]] · [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]] · [[Withdrawal due to AE or Lack of Efficacy]] · [[Prohibited and Rescue Medication]] · [[Local Anesthetic Systemic Toxicity (LAST)]] · [[Wound Healing]].
