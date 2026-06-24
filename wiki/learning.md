@@ -106,6 +106,9 @@ Acute pain trial terms (new indication):
 - [[Patient Global Assessment (PGA)]]
 - [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]]
 - [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]]
+- [[ANCOVA (Analysis of Covariance)]]
+- [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]]
+- [[Withdrawal due to AE or Lack of Efficacy]]
 
 Reading through the SDTMIG v3.4 (chapter by chapter):
 - [[SDTMIG Fundamentals (Chapter 2)]]

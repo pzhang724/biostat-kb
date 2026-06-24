@@ -23,4 +23,8 @@ Acute pain trials need a reproducible pain stimulus. The standard model here is 
 - **Patient impression** — [[Patient Global Assessment (PGA)]].
 - **Discharge readiness** — the [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]] for day-surgery recovery.
 
-Acute pain terms: [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]] · [[Pain Intensity AUC (0-72h)]] · [[Pain NRS at Rest and with Movement (NRS-R, NRS-M)]] · [[Opioid-Free Rate]] · [[Patient Global Assessment (PGA)]] · [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]].
+## Analysis & missing data
+
+The continuous pain endpoint is usually analysed by [[ANCOVA (Analysis of Covariance)]] adjusting for baseline pain. Missing scores (driven by rescue medication and [[Withdrawal due to AE or Lack of Efficacy]]) are filled by [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]] — the choice operationalizes the [[Estimand]]'s intercurrent-event strategy.
+
+Acute pain terms: [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]] · [[Pain Intensity AUC (0-72h)]] · [[Pain NRS at Rest and with Movement (NRS-R, NRS-M)]] · [[Opioid-Free Rate]] · [[Patient Global Assessment (PGA)]] · [[Modified Post-Anesthesia Discharge Scoring System (MPADSS)]] · [[ANCOVA (Analysis of Covariance)]] · [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]] · [[Withdrawal due to AE or Lack of Efficacy]].
