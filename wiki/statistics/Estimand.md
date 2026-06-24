@@ -1,0 +1,100 @@
+---
+title: "Estimand"
+type: concept
+status: learned
+tags: [statistics, regulatory]
+created: 2026-06-22
+updated: 2026-06-22
+sources: 5
+---
+
+# Estimand
+
+An **estimand (估计目标)** is a precise description of **what is being estimated** — the target of estimation that makes the trial **objective** and the statistical **analysis** line up. It answers "what treatment effect, in whom, on what outcome, handling complications how" *before* a method is chosen or any analysis is run. Formalized by **ICH E9(R1)** (the addendum to E9) and pre-specified in the protocol/SAP.
+
+## The estimation chain
+
+E9(R1) makes an explicit chain:
+
+- **Objective** — the clinical question in words ("does drug A prolong survival vs B?").
+- **Estimand** — that question made precise via the five attributes: *what* is being estimated.
+- **Estimator (估计量)** — the statistical method used to estimate it (e.g. Cox model, MMRM).
+- **Estimate (估计值)** — the actual number produced (e.g. HR = 0.72).
+
+Plus **sensitivity analysis (敏感性分析)** — separate analyses under *different assumptions* about the **same** estimand, to test robustness. (Distinct from a **supplementary analysis**, which targets a *different* estimand.)
+
+The key shift: pick the estimand **from** the clinical question, then choose the estimator to match — not "run the standard analysis and see what it estimates."
+
+## The five attributes
+
+1. **Treatment** — the treatment condition(s) compared: not just the drug, but dose, schedule, and what counts as the regimen (e.g. monotherapy vs add-on to standard of care). Defines both arms.
+2. **Population** — the target patients, operationalized by [[Inclusion and Exclusion Criteria|inclusion/exclusion]]. Can be the whole trial population or a subgroup (a principal stratum is a special population defined by potential ICE behaviour).
+3. **Variable / endpoint** — the outcome measured on each patient (e.g. [[Progression-Free Survival (PFS) and Overall Survival (OS)|OS]], change-from-baseline FEV1), including how/when it's measured.
+4. **Intercurrent event handling** — for each [[Intercurrent Event|ICE]] type, one of the five strategies below. This is the attribute E9(R1) **added**; it's where most of the thinking goes.
+5. **Population-level summary measure** — how individual outcomes are condensed into one comparison number: hazard ratio, difference in means, risk/odds ratio, etc.
+
+## The five intercurrent-event strategies — plain version
+
+Anchor on **one patient**: a control-arm patient who, after progression, **switches** to another cancer drug (a classic ICE), then later dies. Their OS is "polluted" by the switch. Each strategy is just a different answer to *"what do we do with this patient?"*
+
+| Strategy | Plain idea (what you do with the patient) | Typically used for | What the math assumes |
+|---|---|---|---|
+| **Treatment policy** | Keep their real death time; ignore that they switched — count everything as-is. | Hard regulatory endpoints like [[Progression-Free Survival (PFS) and Overall Survival (OS)\|OS]] where post-ICE reality counts; the default ITT-style primary. | Almost none beyond randomization + administrative censoring — analyze observed data as-is. Robust, but the effect is **diluted** by post-ICE behaviour. |
+| **Hypothetical** | Pretend the switch never happened — censor at the switch, reconstruct "what their OS *would* have been." | Stripping out an ICE you don't want to credit/blame on the drug ([[Anti-Cancer Therapy Categories in Oncology Trials\|subsequent therapy]], rescue meds). | Censoring at the ICE is **non-informative (无信息删失) / MAR (随机缺失)** — the censored patient's future looks like comparable patients still at risk. Untestable — the load-bearing assumption. |
+| **Composite** | Count the switch *itself* as an event/failure — fold it into the endpoint. | When the ICE is itself a bad outcome (discontinuation for toxicity, needing rescue). | Little statistical assumption — nothing goes missing (the ICE is observed); the real assumption is the **clinical judgment** that the ICE = failure. |
+| **While on treatment** | Only use the outcome up to the switch; ignore everything after. | Symptom / PRO / QoL endpoints where only the on-treatment experience matters. | That the (patient-varying) **on-treatment window** *is* the intended quantity — different durations by design, not bias. |
+| **Principal stratum** | Only analyze patients who **wouldn't have switched at all** (under either arm). | Effect among adherers/tolerators; complier (依从者) effects; vaccine efficacy among the would-be-infected. | The latent stratum is only partly observed → needs strong identifying assumptions (**monotonicity 单调性** / exclusion-restriction, CACE/IV-style). Most assumption-heavy; often only bounds. |
+
+**Assumption burden rises**: treatment-policy (lightest) → composite / while-on-treatment (modest) → hypothetical (strong, untestable MAR) → principal stratum (strongest, partly unidentified).
+
+## Why it changed practice
+
+Before E9(R1), the analysis hid the real target: "ITT vs per-protocol", how dropouts were imputed, how switches/rescue meds were handled — all buried in the SAP, often inconsistent, decided after the fact. The framework forces these choices **up front** and **into the objective**: state the clinical question precisely, including how complications are handled, before choosing a method. **Same data + different ICE strategy = a genuinely different question**, not just a different analysis.
+
+## Worked oncology example — one endpoint, two estimands
+
+Endpoint: **OS**. ICE of interest: **subsequent anti-cancer therapy** (patients on control often switch to effective drugs after progression).
+
+- **Estimand A (treatment-policy)** — keep following OS no matter what they take next. Answers "real-world effect of *starting* on this drug." Switching dilutes the control arm's apparent disadvantage → effect looks smaller.
+- **Estimand B (hypothetical)** — censor OS at the switch. Answers "effect if no one had switched" — closer to the drug's intrinsic effect, but relies on censoring assumptions.
+
+Same patients, same OS data, two different numbers — because the ICE attribute differs. That is the whole point of specifying the estimand.
+
+## One patient, all five strategies
+
+A realistic **synthetic** patient (real patient-level data never goes in this wiki). Control-arm mCRPC patient, **OS** endpoint, with a switch ICE:
+
+| Day | Event |
+|---|---|
+| 0 | Randomized to control arm, starts treatment |
+| 185 | Radiographic progression; **discontinues** study treatment |
+| 210 | Starts [[Anti-Cancer Therapy Categories in Oncology Trials\|subsequent anti-cancer therapy]] — **the switch (ICE)** |
+| 540 | Dies |
+| 600 | Database cutoff |
+
+OS = time from randomization to death. How each strategy records **this one patient's** `(time, status)`:
+
+| Strategy | This patient's OS record | Why |
+|---|---|---|
+| **Treatment policy** | `540, event` | Death counts as-is; the switch is ignored — "whatever happens after" is included. |
+| **Hypothetical** | `210, censored` | Pretend no switch: censor at it; post-210 "no-switch" survival is reconstructed from comparable still-at-risk patients. |
+| **Composite** | `210, event` | Endpoint = death OR switch, whichever first → the switch *is* the failure; dying later is irrelevant. |
+| **While on treatment** | `185, censored` | Death happened **off** treatment (discontinued day 185) → censor at discontinuation. (Artificial for OS — fits symptom/PRO endpoints better — but shows the mechanic.) |
+| **Principal stratum** | *excluded* | This patient *did* switch → not in the "would-not-switch" stratum → dropped from the analysis set. |
+
+**One patient**, but the analysis "sees" `540-event / 210-censored / 210-event / 185-censored / nothing` depending on the strategy — five different inputs pushing five different effect estimates. That is why the estimand (specifically the ICE attribute) must be fixed *before* any analysis.
+
+## Is the hypothetical estimand really just `210, censored`?
+
+In the dataset, yes — the row *is* `210, censored`. But that is only **bookkeeping**. Feeding it straight into a standard KM/Cox is the **naive** version, and it silently assumes the censoring is **non-informative / MAR (随机缺失)**: that patient 07, after day 210, would die at the same rate as comparable patients still at risk who did **not** switch.
+
+Why that's suspect: 07 switched **because** they progressed (day 185). Switching is triggered by worsening disease → switchers are a selected, **sicker** subset, so their true no-switch survival is shorter than the average still-at-risk peer's. The censoring time therefore carries prognostic information = **informative censoring (信息性删失)** — exactly what KM/Cox assume away. Naive censoring is **optimistic** about the switcher's counterfactual survival → biased.
+
+So `210, censored` is step 1 only. A credible hypothetical estimand needs an estimator that **corrects** for the informativeness:
+
+- **IPCW (inverse-probability-of-censoring weighting, 逆删失概率加权)** — model P(not yet switched | time-varying covariates); upweight similar not-switched patients to stand in for the censored ones. Assumes all drivers of switching are **measured** (no unmeasured confounding of the switch).
+- **RPSFTM / IPE (rank-preserving structural failure time model / iterative parameter estimation)** — structural models that "remove" the survival time the switch-to-effective-therapy bought, reconstructing the counterfactual no-switch survival. Standard oncology **treatment-switching** adjustments.
+
+Because the MAR bet is **untestable**, you stress-test it with a **sensitivity analysis (敏感性分析)** — e.g. a **tipping-point / delta-adjustment (delta 调整)**: progressively penalize the censored patients' assumed survival until the conclusion flips, and report the delta at which it tips. Needing an implausibly large penalty ⇒ the result is robust.
+
+**Bottom line**: `210, censored` is the data bookkeeping; the hypothetical estimand's credibility lives entirely in **how you treat that censoring afterwards** — naive KM = a strong MAR bet; IPCW / RPSFTM = adjusted; plus a sensitivity analysis so the conclusion doesn't hinge on the untestable part.
