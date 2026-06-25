@@ -5,7 +5,7 @@ status: learned
 tags: [statistics, regulatory]
 created: 2026-06-25
 updated: 2026-06-25
-sources: 2
+sources: 3
 ---
 
 # Missing Data Mechanisms (MCAR, MAR, MNAR)
@@ -23,6 +23,22 @@ The Rubin/Little three-way classification of **why** data is missing (the **miss
 3. **Missing data ≠ [[Intercurrent Event]].** Under ICH E9(R1) you first fix the [[Estimand]] and the ICE handling strategy; the genuinely *absent* data is then missing data, handled by the analysis method (MMRM / MI / sensitivity). They interact — e.g. a *hypothetical* strategy deliberately creates missingness and then imputes it.
 4. **Convention:** primary analysis usually assumes MAR (MMRM or MI); MNAR sensitivity (especially delta-adjusting dropouts unfavourably, or control-based imputation) provides robustness. This is the spirit of FDA / the 2010 NRC missing-data report / ICH E9(R1).
 5. **Single imputation** ([[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)|LOCF/WOCF/BOCF]]) encodes strong, often unrealistic MNAR-type assumptions — now used as conservative *sensitivity*, not as the primary analysis.
+
+## Plain-language model (confirmed)
+
+- **MCAR** = thrown out at random, no signal (depends on nothing).
+- **MAR** = an *observed* characteristic explains who is more likely to go missing — conditional on it, missing and non-missing share a distribution. The catch: the "type of person" must be defined by **measured/observed** variables (covariates, earlier visits). If the distinguishing feature was never measured, it surfaces as MNAR. (MCAR is the special case of MAR where that observed set is empty.)
+- **MNAR** = no observed characteristic explains it — the real driver is the *unobserved value itself*.
+
+## How a SAP justifies the assumption
+
+You can't *prove* MAR vs MNAR from the data, so the SAP doesn't prove it — it **states a primary assumption, makes it as plausible as possible, then stress-tests departures**:
+
+1. Fix the [[Estimand]] (ICH E9(R1)) and the [[Intercurrent Event|ICE]] strategy first; only the genuinely *absent* data is then handled as missing data.
+2. **Primary analysis states MAR explicitly** — MMRM (likelihood-based, uses all observed visits, no explicit imputation) or multiple imputation under MAR. Including strong predictors of *both* outcome and dropout as covariates makes MAR more defensible ("conditional on these, missingness is unrelated to the unseen value").
+3. **Design-side support** the SAP leans on: minimize missingness, keep following patients after discontinuation (retrieved dropout / 停药后随访), record reason for withdrawal — per E9(R1) and the 2010 NRC missing-data report.
+4. **Pre-specify MNAR sensitivity analyses** — tipping-point / delta-adjustment, reference/control-based imputation (jump-to-reference, copy-reference), pattern-mixture. The conclusion is **robust** if it survives plausible MNAR departures.
+5. The SAP narrative reads roughly: *"Primary analysis assumes MAR; given the covariates included and the estimand's ICE strategy this is considered plausible; robustness to MNAR is assessed via tipping-point / reference-based imputation."*
 
 ## A worked data example
 
