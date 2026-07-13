@@ -117,6 +117,9 @@ Acute pain trial terms (new indication):
 Reading through the SDTMIG v3.4 (chapter by chapter):
 - [[SDTMIG Fundamentals (Chapter 2)]]
 
+Statistical methodology terms:
+- [[Prognostic Covariate Adjustment (PROCOVA)]]
+
 ## To Learn
 
 _None yet — add `- [ ]` items here (grouped by layer) as they come up._
