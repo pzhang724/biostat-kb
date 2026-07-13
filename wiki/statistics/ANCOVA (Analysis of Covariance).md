@@ -16,3 +16,5 @@ sources: 1
 - Removing baseline variability gains **precision** (精度); the treatment effect is the adjusted between-arm difference, reported as **LS means** (最小二乘均值, least-squares means).
 
 Runs on whatever endpoint values survive the [[Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)]] step. Part of the [[Acute Pain]] thread.
+
+- Instead of a raw baseline value, the covariate can be a **prognostic score** predicting outcome under control — see [[Prognostic Covariate Adjustment (PROCOVA)]].

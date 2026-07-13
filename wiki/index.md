@@ -1,8 +1,8 @@
 ---
 title: "Wiki Index"
 type: meta
-updated: 2026-06-25
-total_pages: 89
+updated: 2026-07-13
+total_pages: 90
 ---
 
 # Wiki Index
@@ -11,7 +11,7 @@ Master catalog, organized by layer. See [[learning|Learning Dashboard]] for lear
 
 A **therapeutic area** is the main narrative (a MOC that strings terms together; Oncology at top, indications as sections within it). Every other page is a **concept** filed by its nature — criteria/rules, biomedical, statistical, data-standard, or regulatory.
 
-**Quick stats**: 3 therapeutic-area maps · 86 concept pages · last updated 2026-06-25
+**Quick stats**: 3 therapeutic-area maps · 87 concept pages · last updated 2026-07-13
 
 ---
 
@@ -92,6 +92,7 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[Intercurrent Event]]
 - [[Surrogate Endpoint]]
 - [[Best Overall Response]]
+- [[Prognostic Covariate Adjustment (PROCOVA)]]
 - [[Progression-Free Survival (PFS) and Overall Survival (OS)]]
 - [[Local (Investigator) vs Central (BICR) Tumour Assessment]]
 - [[MTD and RP2D]]
