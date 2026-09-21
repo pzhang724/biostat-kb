@@ -225,3 +225,4 @@ Append-only record of ingests and status changes. Newest at the bottom.
 
 ## 2026-09-21
 - Captured chat Q&A → `raw/sources/2026-09-21 Asthma vs COPD.md`; created [[COPD (Chronic Obstructive Pulmonary Disease)]] (biomedical, status learning; progressive/largely-irreversible airflow limitation, smoking-driven, chronic bronchitis + emphysema, neutrophilic inflammation); added a "What Asthma Is" definition intro to [[Asthma]] (reversible obstruction, allergy-linked, contrast with COPD); cross-linked both; updated index.md and learning.md
+- Captured follow-up chat Q&A → `raw/sources/2026-09-21 asthma vs COPD treatment.md`; added "Treatment" section to [[COPD (Chronic Obstructive Pulmonary Disease)]] (bronchodilator-first, ICS select add-on, smoking cessation/rehab/oxygen; sources→2) and to [[Asthma]] (ICS-first controller + LABA/SABA + biologics, GINA stepwise; contrast note with COPD)
