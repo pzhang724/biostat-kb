@@ -9,6 +9,8 @@ updated: 2026-06-15
 
 # Asthma
 
+Chronic airway inflammatory disease with reversible airflow obstruction (bronchoconstriction that responds to bronchodilators/支气管扩张剂), often linked to allergy/atopy (特应性), usually starts in childhood. Hallmark is variable, reversible obstruction — contrast with [[COPD (Chronic Obstructive Pulmonary Disease)]], where obstruction is largely irreversible.
+
 Main narrative for the asthma learning thread — strings together how disease activity is measured in asthma trials.
 
 ## Measuring disease
