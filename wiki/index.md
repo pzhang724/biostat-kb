@@ -66,6 +66,7 @@ A **therapeutic area** is the main narrative (a MOC that strings terms together;
 - [[12-Lead Resting ECG]]
 - [[Radiological Assessment]]
 - [[Xerostomia]]
+- [[COPD (Chronic Obstructive Pulmonary Disease)]]
 - [[Anti-Emetic Premedication]]
 - [[Infusion-Related and Hypersensitivity Reactions]]
 - [[Physical Examination]]
