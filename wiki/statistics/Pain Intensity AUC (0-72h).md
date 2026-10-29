@@ -2,10 +2,7 @@
 title: "Pain Intensity AUC (0-72h)"
 type: concept
 status: learning
-tags: [statistics, trial-conduct]
 created: 2026-06-24
-updated: 2026-06-24
-sources: 1
 ---
 
 # Pain Intensity AUC (0-72h)

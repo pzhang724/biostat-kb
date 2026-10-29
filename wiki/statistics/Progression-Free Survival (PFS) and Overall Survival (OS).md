@@ -2,10 +2,7 @@
 title: "Progression-Free Survival (PFS) and Overall Survival (OS)"
 type: concept
 status: learned
-tags: [statistics, medical]
 created: 2026-06-19
-updated: 2026-06-19
-sources: 1
 ---
 
 # Progression-Free Survival (PFS) and Overall Survival (OS)

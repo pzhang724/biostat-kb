@@ -2,9 +2,7 @@
 title: "Asthma"
 type: therapeutic-area
 status: learning
-tags: [medical, trial-conduct]
 created: 2026-06-15
-updated: 2026-06-15
 ---
 
 # Asthma

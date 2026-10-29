@@ -2,10 +2,7 @@
 title: "ANCOVA (Analysis of Covariance)"
 type: concept
 status: learning
-tags: [statistics]
 created: 2026-06-24
-updated: 2026-06-24
-sources: 1
 ---
 
 # ANCOVA (Analysis of Covariance)

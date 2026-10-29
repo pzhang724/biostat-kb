@@ -2,10 +2,7 @@
 title: "Patient Global Assessment (PGA)"
 type: concept
 status: learning
-tags: [statistics, medical]
 created: 2026-06-24
-updated: 2026-06-24
-sources: 1
 ---
 
 # Patient Global Assessment (PGA)

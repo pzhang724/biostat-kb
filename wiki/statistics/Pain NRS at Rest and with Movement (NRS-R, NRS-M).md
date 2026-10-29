@@ -2,10 +2,7 @@
 title: "Pain NRS at Rest and with Movement (NRS-R, NRS-M)"
 type: concept
 status: learning
-tags: [statistics, medical]
 created: 2026-06-24
-updated: 2026-06-24
-sources: 1
 ---
 
 # Pain NRS at Rest and with Movement (NRS-R, NRS-M)

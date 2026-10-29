@@ -2,10 +2,7 @@
 title: "Intercurrent Event"
 type: concept
 status: learned
-tags: [statistics, regulatory]
 created: 2026-06-11
-updated: 2026-06-11
-sources: 1
 ---
 
 # Intercurrent Event

@@ -2,10 +2,7 @@
 title: "Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)"
 type: concept
 status: learned
-tags: [statistics, medical]
 created: 2026-06-21
-updated: 2026-06-21
-sources: 1
 ---
 
 # Asthma Patient-Reported Outcomes (Symptom Diary, ACQ-6, AQLQ, EQ-5D)

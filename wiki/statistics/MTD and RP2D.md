@@ -2,10 +2,7 @@
 title: "MTD and RP2D"
 type: concept
 status: learned
-tags: [statistics, trial-conduct, medical]
 created: 2026-06-18
-updated: 2026-06-20
-sources: 7
 ---
 
 # MTD and RP2D

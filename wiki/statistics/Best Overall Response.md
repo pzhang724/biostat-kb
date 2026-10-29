@@ -2,10 +2,7 @@
 title: "Best Overall Response"
 type: concept
 status: learned
-tags: [statistics, medical]
 created: 2026-06-11
-updated: 2026-06-19
-sources: 9
 ---
 
 # Best Overall Response

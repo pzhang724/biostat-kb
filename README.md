@@ -16,6 +16,7 @@ Claude saves it to `raw/`, then writes a short marker page in `wiki/` and links 
 
 - `wiki/` — my knowledge (this is what gets published)
 - `raw/` — original material I fed in (never edited, just kept for provenance)
+- `scripts/sync.py` — rebuilds the index/dashboard lists and checks links (`python3 scripts/sync.py`)
 - everything else — site machinery, ignore it
 
 ## Preview locally

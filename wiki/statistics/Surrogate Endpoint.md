@@ -2,10 +2,7 @@
 title: "Surrogate Endpoint"
 type: concept
 status: learned
-tags: [statistics, regulatory]
 created: 2026-06-11
-updated: 2026-06-19
-sources: 1
 ---
 
 # Surrogate Endpoint

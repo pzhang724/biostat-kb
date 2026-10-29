@@ -2,10 +2,7 @@
 title: "Annualized Asthma Exacerbation Rate (AAER)"
 type: concept
 status: learned
-tags: [statistics, medical]
 created: 2026-06-21
-updated: 2026-06-21
-sources: 1
 ---
 
 # Annualized Asthma Exacerbation Rate (AAER)

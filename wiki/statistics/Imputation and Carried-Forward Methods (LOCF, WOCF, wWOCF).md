@@ -2,10 +2,7 @@
 title: "Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)"
 type: concept
 status: learning
-tags: [statistics, trial-conduct]
 created: 2026-06-24
-updated: 2026-06-24
-sources: 1
 ---
 
 # Imputation and Carried-Forward Methods (LOCF, WOCF, wWOCF)

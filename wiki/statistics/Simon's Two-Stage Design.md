@@ -2,10 +2,7 @@
 title: "Simon's Two-Stage Design"
 type: concept
 status: learned
-tags: [statistics]
 created: 2026-06-20
-updated: 2026-06-20
-sources: 1
 ---
 
 # Simon's Two-Stage Design

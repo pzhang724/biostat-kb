@@ -2,9 +2,7 @@
 title: "Oncology"
 type: therapeutic-area
 status: learning
-tags: [medical, statistics]
 created: 2026-06-12
-updated: 2026-06-19
 ---
 
 # Oncology

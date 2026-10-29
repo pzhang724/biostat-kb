@@ -2,10 +2,7 @@
 title: "Estimand"
 type: concept
 status: learned
-tags: [statistics, regulatory]
 created: 2026-06-22
-updated: 2026-06-22
-sources: 5
 ---
 
 # Estimand
