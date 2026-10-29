@@ -7,7 +7,7 @@ created: 2026-06-19
 
 # Local (Investigator) vs Central (BICR) Tumour Assessment
 
-**Lesion selection happens once at baseline**, by whoever reads the images — at later visits you **don't re-select**, you re-measure the **same** target lesions and look for new ones (see [[RECIST 1.1#Step 0 — Baseline lesion setup (TU + TR) — four sub-steps, all fixed at baseline|Step 0]]). But **who reads** can be two **parallel** readers:
+**Lesion selection happens once at baseline**, by whoever reads the images — at later visits you **don't re-select**, you re-measure the **same** target lesions and look for new ones (see [[RECIST 1.1#Step 0 — Baseline lesion setup (TU + TR)|Step 0]]). But **who reads** can be two **parallel** readers:
 
 ## Local (investigator) read
 

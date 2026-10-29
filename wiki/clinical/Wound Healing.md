@@ -7,9 +7,9 @@ created: 2026-06-24
 
 # Wound Healing
 
-Post-surgical recovery of the surgical incision (伤口/切口愈合). In acute pain (急性疼痛) trials it's a **safety outcome** — the analgesic, especially one infiltrated / instilled at the surgical site (or an NSAID), must **not impair healing**.
+**Wound healing (伤口/切口愈合)** — how the surgical cut (incision, 切口) heals after surgery. In acute pain (急性疼痛) trials it is a **safety outcome**: the pain drug (analgesic, 镇痛药) must **not slow down or harm healing**. This matters most for a drug that is injected or dripped into the surgical site (infiltrated / instilled, 局部浸润/灌注), and for an NSAID (non-steroidal anti-inflammatory drug, 非甾体抗炎药).
 
-- Assessed by wound-healing status and complications: **dehiscence** (裂开), **infection** (感染), **delayed healing** (延迟愈合).
-- Particularly scrutinized for locally administered drugs at the wound.
+- Checked by healing status and by complications (并发症): **dehiscence** (伤口裂开), **infection** (感染), **delayed healing** (延迟愈合).
+- Checked especially closely for drugs given locally at the wound.
 
-Tied to the surgical setting in [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]]; part of the [[Acute Pain]] thread.
+Linked to the surgery in [[Osteotomy and Bunionectomy (Acute Pain Surgical Model)]]; part of the [[Acute Pain]] thread.

@@ -5,8 +5,8 @@ page's frontmatter, then lint the wiki. Run after every ingest:
     python3 scripts/sync.py
 
 Only the text between the auto:start / auto:end markers is rewritten.
-Exits 1 on errors (broken link, title != filename, page outside the five
-folders, bad status/type); orphan pages are reported as warnings.
+Exits 1 on errors (broken link or section link, title != filename, page
+outside the five folders, bad status/type); orphans are warnings.
 """
 import pathlib
 import re
@@ -25,6 +25,7 @@ STATUSES = ("learned", "learning")
 TYPES = {"concept", "therapeutic-area"}
 START, END = "<!-- auto:start -->", "<!-- auto:end -->"
 
+FENCE = re.compile(r"```.*?```", re.S)
 CODE = re.compile(r"```.*?```|`[^`\n]*`", re.S)
 LINK = re.compile(r"\[\[([^\]]+)\]\]")
 
@@ -37,12 +38,20 @@ def frontmatter(text):
     return {k.strip(): v.strip().strip('"') for k, v in pairs}
 
 
-def link_targets(text):
-    """Link targets with alias (| or table-escaped \\|) and #anchor removed."""
+def links(text):
+    """(target, anchor) for each wiki-link; the alias (| or table-escaped \\|) is dropped."""
     for raw in LINK.findall(CODE.sub("", text)):
-        target = re.split(r"\\?\||#", raw, maxsplit=1)[0].strip()
-        if target:
-            yield target
+        target, _, anchor = re.split(r"\\?\|", raw, maxsplit=1)[0].partition("#")
+        yield target.strip(), anchor.strip()
+
+
+def slug(heading):
+    """Section anchor the way Quartz (github-slugger) builds it."""
+    return re.sub(r"[^\w\- ]", "", heading.strip().lower()).replace(" ", "-")
+
+
+def headings(text):
+    return {slug(h) for h in re.findall(r"^#{1,6}\s+(.+?)\s*$", FENCE.sub("", text), re.M)}
 
 
 def load():
@@ -110,6 +119,7 @@ def main():
     # Lint against the files as they now stand.
     pages = {s: c[0] for s, c in load().items()}
     inbound = dict.fromkeys(pages, 0)
+    sections = {s: headings(text) for s, (_, _, text) in pages.items()}
     for stem, (rel, fm, text) in pages.items():
         if stem not in META:
             if len(rel.parts) != 2 or rel.parts[0] not in FOLDERS:
@@ -120,10 +130,14 @@ def main():
                 errors.append(f"{rel}: status must be one of {', '.join(STATUSES)}")
             if fm.get("type") not in TYPES:
                 errors.append(f"{rel}: type must be one of {', '.join(sorted(TYPES))}")
-        for target in set(link_targets(text)):
+        for target, anchor in set(links(text)):
+            target = target or stem
             if target not in pages:
                 errors.append(f"{rel}: broken link [[{target}]]")
-            elif stem not in META and target != stem:
+                continue
+            if anchor and not anchor.startswith("^") and slug(anchor) not in sections[target]:
+                errors.append(f"{rel}: broken section link [[{target}#{anchor}]]")
+            if stem not in META and target != stem:
                 inbound[target] += 1
     for stem, n in inbound.items():
         if n == 0 and stem not in META:
@@ -138,7 +152,6 @@ def main():
     if not errors and not warnings:
         print("lint: clean")
     return 1 if errors else 0
-
 
 
 if __name__ == "__main__":
