@@ -7,26 +7,26 @@ created: 2026-06-18
 
 # End of Treatment vs End of Study
 
-Two distinct milestones in a subject's trial participation.
+Two different milestones (里程碑) in a subject's participation in a trial.
 
-- **End of Treatment (EOT, 治疗结束)** — the point a patient **stops the study drug** (投资药物): completed planned cycles, disease **progression** (进展), unacceptable **toxicity** (毒性), withdrawal of consent, death, etc. Triggers an **EOT visit** + an EOT disposition record.
-- **End of Study (EOS, 研究结束)** — the point a patient's **entire participation** ends: the **last contact / last data point**, after any follow-up that continues post-treatment. Triggers an **EOS visit** + EOS disposition record.
+- **End of Treatment (EOT, 治疗结束)** — the point when a patient **stops the study drug** (试验药物): they finished the planned cycles, or had disease **progression** (进展), unacceptable **toxicity** (毒性), withdrew consent, died, etc. It triggers an **EOT visit** + an EOT disposition record (处置记录).
+- **End of Study (EOS, 研究结束)** — the point when a patient's **whole participation** ends: the **last contact / last data point**, after any follow-up that continues after treatment. It triggers an **EOS visit** + an EOS disposition record.
 
-**The difference in one line: EOT = stop the *drug*; EOS = stop *everything* (last contact).** A patient is commonly **off-treatment but still on-study**, sitting in the follow-up period between EOT and EOS.
+**The difference in one line: EOT = stop the *drug*; EOS = stop *everything* (last contact).** A patient is often **off treatment but still on study**, in the follow-up period between EOT and EOS.
 
 ## Between EOT and EOS
 
-- **Safety follow-up** (安全随访, ~30 days after last dose) — collect AEs/SAEs, subsequent therapy.
-- **Long-term / survival follow-up** (生存随访) — survival status + subsequent anti-cancer therapy, feeding OS.
+- **Safety follow-up** (安全随访, ~30 days after the last dose) — collect AEs/SAEs and subsequent therapy.
+- **Long-term / survival follow-up** (生存随访) — survival status + subsequent anti-cancer therapy, which feed OS (overall survival).
 
 ## Two senses of "End of Study"
 
-- **(a) Subject level** — an individual's end of participation.
-- **(b) Trial level** — the whole study's end = **Last Subject Last Visit (LSLV)** → **database lock** (数据库锁定). Context tells which.
+- **(a) Subject level** — one person's end of participation.
+- **(b) Trial level** — the end of the whole study = **Last Subject Last Visit (LSLV, 末例受试者末次访视)** → **database lock** (数据库锁定). The context tells you which one is meant.
 
 ## Why a biostatistician cares
 
-OS is measured from randomization to death, **censored** (删失) at the EOS / last-known-alive date — so the EOT→EOS follow-up window is exactly what feeds survival endpoints. The **DS (Disposition)** domain records **both** the EOT reason and the EOS reason. Going off treatment is an [[Intercurrent Event]] handled differently across estimands (treatment-policy vs hypothetical).
+OS is measured from randomization to death, **censored** (删失) at the EOS / last-known-alive date — so the EOT→EOS follow-up window is exactly what feeds the survival endpoints. The **DS (Disposition)** domain records **both** the EOT reason and the EOS reason. Going off treatment is an [[Intercurrent Event]] that is handled differently across estimands (treatment-policy vs hypothetical).
 
 ## Timeline
 
@@ -48,4 +48,4 @@ Long-term / survival follow-up (survival status, subsequent anti-cancer therapy)
 On-treatment │←—— EOT ——→│ off-treatment but still ON-STUDY │←—— EOS ——→│ off-study
 ```
 
-A trial-conduct concept feeding survival analysis in [[Oncology]]; the visit/period structure is laid out in the [[Schedule of Assessments]].
+A trial-conduct concept that feeds survival analysis in [[Oncology]]; the visit/period structure is laid out in the [[Schedule of Assessments]].
