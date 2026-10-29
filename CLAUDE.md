@@ -1,198 +1,134 @@
 # CLAUDE.md — biostat-kb Operating Schema
 
-This is the operating schema for `biostat-kb`, a personal **learning ledger** for a clinical-trial biostatistician. You (Claude) maintain the `wiki/` directory. The human curates `raw/` sources and directs what to ingest. You never modify or delete a human-authored file in `raw/` — your only writes to `raw/` are creating new capture files (fetched link copies, saved uploads, chat-shared knowledge; see "Everything the human gives you is a source").
+`biostat-kb` is a personal **learning ledger** for a clinical-trial biostatistician. You (Claude) maintain `wiki/`. The human supplies material and directs what to ingest. In `raw/` you only ever **create** capture files — never modify or delete a human-authored one.
 
 ## Purpose — read this first
 
-This wiki is **NOT an encyclopedia**. Its purpose is to let the human:
+This wiki is **NOT an encyclopedia**. It lets the human:
 
 1. **Confirm what they have learned** — a page existing means "I learned this";
-2. **See what they have not learned yet** — tracked as to-learn checklists;
-3. **Navigate connections** between learned items via wiki-links (rendered as backlinks/graph by Quartz).
+2. **See what they have not learned yet** — to-learn checklists;
+3. **Navigate connections** between learned items — wiki-links, rendered by Quartz as backlinks and a graph. This is the main value; keep the links rich.
 
-Consequences for how you write:
+So:
 
-- **Be terse.** Pages are evidence of learning, not substitutes for the source. A content page is a definition plus a handful of key points plus links — never textbook prose.
-- **Do not over-summarize.** The human digests the material themselves; you record that it happened and wire up the links. When in doubt, write less and link more. A page the human reads *instead of* the source defeats the purpose — pages are markers, not replacements.
-- **Never fabricate coverage.** Only create or expand a page for material the human actually ingested or explicitly said they learned.
-- **A page must not exceed what the human actually saw.** The ceiling for a page's content is **what you told the human in chat** (the answer they read) — nothing more. Do **not** add facts, parameters, caveats, examples, sub-points, or references that you did not surface in the conversation, even if correct and relevant. If it wasn't in the chat the human read, it does not go in the wiki — adding it puts material on the page that the human has never seen, which breaks "a page = I learned this." When unsure whether something was said, leave it out. Write **less** than the chat, never more.
+- **Be terse.** A page is a definition, a handful of key points, and links — a marker that learning happened, never textbook prose or a substitute for the source.
+- **Never fabricate coverage.** Only write pages for material the human actually ingested or said they learned.
+- **A page must not exceed what the human saw.** The ceiling is what you told the human in chat. Do not add facts, parameters, caveats, examples or references that weren't in the conversation, even if correct. When unsure whether something was said, leave it out.
 
-## Everything the human gives you is a source
+## Sources
 
-The wiki records what the human has **already** learned. They learn from the original material themselves — **your summaries are not a substitute for that** (if they didn't read the source, they didn't learn it, no matter what you wrote). So a wiki page is a terse **marker that learning happened**, plus links — never a summary meant to be read in place of the source.
+Material enters in exactly three forms; each is captured to `raw/` first, then ingested:
 
-The human provides material in exactly **three forms**, and all become sources:
+1. **A link** — fetch it, save a copy to `raw/sources/`.
+2. **An uploaded file / picture** — save to `raw/sources/` (notes/docs) or `raw/assets/` (images/PDFs).
+3. **Knowledge shared in chat** — capture the human's own words, not your elaboration.
 
-1. **A link (URL)** — fetch it, save a captured copy to `raw/sources/`, then ingest.
-2. **Uploaded files / pictures** — save the file to `raw/sources/` (documents/notes) or `raw/assets/` (images/PDFs), then ingest.
-3. **Knowledge shared in chat** — when the human states or pastes knowledge in conversation (e.g. "诶，这个可能有用", relaying something they learned at work, a snippet with their own commentary): capture *their words* faithfully to a new file in `raw/sources/`, then ingest. This is the one write to `raw/` you are allowed. Capture what they said, not your elaboration of it.
+- File name: `raw/sources/YYYY-MM-DD <short topic>.md`; first line gives the origin (`Source: <url>, captured <date>` · `Uploaded file, <date>` · `From chat, <date>`).
+- Your own explanations are not a source — except via the Q&A preference below.
+- Distinguish material from commands: "ingest X", "lint", "what next", "restructure this" are instructions to execute, not material to save. If a chat remark (not a question) might be either material or just conversation, ask before capturing.
+- `raw/` is provenance only and is **not published**. There is no per-source page in `wiki/`; the content page plus its `log.md` line is the published record.
 
-Rules:
+## User Preferences
 
-- **Never invent the source.** Knowledge enters only through these three forms. Do not write knowledge into the wiki that the human didn't supply this way — in particular, your own explanations during chat are not a source.
-- **Distinguish material from commands.** "ingest X", "lint the wiki", "what should I learn next", "restructure this" are instructions — execute them, don't save them. If it's ambiguous whether a chat remark is material to keep or just conversation, ask before capturing.
-- **Capture faithfully.** The raw copy is the original; the wiki page is the terse digested marker. Both are kept.
+Durable preferences live here (the repo travels between machines). Add new ones to this section.
 
-Capture file convention: `raw/sources/YYYY-MM-DD <short topic>.md`, first line noting origin (e.g. `Source: <url>, captured <date>`, `Uploaded file, <date>`, or `From chat, <date>`).
-
-**Raw captures are provenance only — they are NOT published.** The wiki does **not** keep a per-source note page (the old `wiki/sources/` layer was removed). The `raw/sources/` capture *is* the saved source; the published marker of learning is the content page (in one of the four layer folders below) plus the `wiki/log.md` entry that records which raw capture it came from. Do not recreate a published per-source-note layer.
-
-## User Preferences & Notes
-
-Durable preferences live **here** (in the repo), not in external/per-machine memory — the human may switch machines and the repo travels with them. Add new ones to this section.
-
-- **Save Q&A by default — and never ask whether to.** When the human asks a substantive question and you answer, capture that Q&A as a raw source (`From chat, <date>`) and run a light-touch ingest — without asking each time. This includes **follow-up and clarification questions**: the human has confirmed they don't ask things casually, so every substantive question they ask counts as material to keep. Do not pause to ask "should I record this?" — just do it. This **extends form #3 above**: for this human, their question + the ensuing answer *is* material worth keeping (it overrides the general "your chat explanations aren't a source / ask before capturing" caution). Still execute pure commands ("ingest X", "lint", "what next") as instructions, not material.
-- **Answer short first, expect follow-ups.** Keep the first answer to a short paragraph (~4–6 sentences or a few short bullets) — direct answer plus a little context, not a one-liner and not an exposition. The human follows up quickly to pull out detail. Applies to all chat, not just the Query workflow.
-- **Capture/ingest first, answer last.** Do the recording (capture + ingest + index/log/dashboard updates) BEFORE delivering the answer, so the substantive answer is the final thing in the turn — the human shouldn't have to scroll up past tool calls to re-find it. A one-line note like "记录并 ingest" before the tool calls is fine; the real answer goes at the bottom. (This reorders, but does not relax, "Save Q&A by default" or "Answer short first".)
-- **Gloss terms in Chinese, not sentences.** The human needs Chinese to reinforce/recall **terminology — biological, clinical, technical concept words** — but reads English prose fine and does **not** want whole sentences or phrases translated. So: add an inline Chinese gloss right after a **key term/concept** (e.g. `lesion (病灶)`, `clearance (清除率)`, `dose-limiting toxicity (剂量限制性毒性)`), and gloss generously across the load-bearing *terms* of a page so none is left English-only. But do **not** parenthetically translate clauses, summary lines, or descriptions the human can already read (no `(一句话…)`, no `(让病人活得更久…)`). A Chinese 口诀/memory hook is fine when the human asks for one. English remains the primary text; titles/filenames stay canonical. When adding a page, sweep it once so every key *term* carries a gloss — and so no full sentence does.
-- **When ingesting/digesting a source into a page, show the FULL page content in chat — not "重点"/highlights.** The human's explicit goal: *what you put in the wiki = exactly what they see in chat*, with nothing on the page they didn't read here. So when you read a source and build/expand a page (read-throughs, ingests, document digests), output the **complete digest** — every point that goes on the page — in the chat, verbatim parity with the page body. Do **not** hand back a shortened "key points" version while the page holds more; that breaks "a page = I learned this." This is the digest/ingest mode and it **overrides "Answer short first"** (which still applies to ordinary Q&A). If the full digest is long, that's fine — completeness and page↔chat parity win here. Practically: write the page, then paste its full body (minus frontmatter) into the reply.
-- **Lint proactively when wrapping a batch — don't wait to be asked.** As part of reaching a stopping point (before or alongside the auto commit & push below), run a quick **Lint** pass over the wiki: broken wiki-links, filename/title mismatches, pages in the wrong layer folder, orphans, status/dashboard drift, stale checkboxes, index out of sync, missing links between clearly related pages. **Silently fix the mechanical, unambiguous issues** (broken links, index/dashboard drift, obvious missing cross-links) and include them in the same commit; **surface anything judgment-dependent** (a page possibly in the wrong folder, a debatable merge/split) for the human rather than acting unilaterally. Don't run a full lint after every tiny edit — once per batch is enough.
-- **Commit & push on your own judgment — don't ask.** When a batch of ingested work has accumulated to a reasonable stopping point (e.g. a topic thread wrapped up, several pages added), stage everything, commit with a descriptive message, and push to `main` without asking. Don't pause to ask "should I push?". Still apply the Confidentiality scrub before every commit, and surface anything genuinely unexpected (e.g. a failed deploy, a sensitive-data catch). The human can always say "push now" to force one immediately.
+- **Save Q&A by default — never ask whether to.** Every substantive question the human asks (follow-ups and clarifications included) plus your answer is material: capture it as `From chat` and run a light-touch ingest without asking. Pure commands are still just commands.
+- **Answer short first.** A short paragraph (~4–6 sentences or a few bullets): direct answer plus a little context. The human follows up for detail.
+- **Chat language: simple English first.** Write every reply in plain, simple English (English is the human's second language), with a Chinese gloss after key terms, the same style as the wiki pages. Not Chinese-first, and not full bilingual.
+- **Record first, answer last.** Do the capture/ingest/sync before giving the answer, so the answer is the last thing in the turn. A one-line note like "记录并 ingest" before the tool calls is fine.
+- **Write pages in simple English (ESL).** All wiki pages use plain English for a reader whose second language is English: short sentences, common words, no idioms. Spell out every abbreviation at its first use on each page, and never invent your own abbreviation. Keep the technical terms (they are what is being learned), but explain them.
+- **Gloss in Chinese: key terms and hard words, not sentences.** Add a Chinese gloss after each load-bearing **term** (e.g. `lesion (病灶)`, `dose-limiting toxicity (剂量限制性毒性)`) and after any rare or hard general English word you keep (e.g. `adjudicator (裁决者)`, `ominous (凶险的)`), generously, so no key term is English-only. Never translate clauses or summary lines. A Chinese 口诀 (mnemonic) only when asked. English stays primary; titles and filenames stay canonical.
+- **When ingesting a source into a page, show the full page content in chat.** What goes on the page = exactly what the human reads in chat. Paste the complete page body (minus frontmatter), not highlights. This overrides "Answer short first" for ingests/digests.
+- **Lint at each stopping point.** Run `python3 scripts/sync.py` (below). Silently fix mechanical issues (broken links, missing cross-links); surface judgment calls (a page possibly in the wrong folder, a debatable merge/split) to the human.
+- **Commit & push on your own judgment — don't ask.** When a batch of work reaches a stopping point, commit with a descriptive message and push — to `main`, or to the session's assigned branch when one is given. Apply the Confidentiality scrub first; surface anything unexpected (failed deploy, sensitive-data catch).
 - **Published site:** Quartz v4 → https://pzhang724.github.io/biostat-kb/ (auto-deploys on push to `main`).
 - **Human:** clinical-trial biostatistician.
 
 ## Confidentiality — never commit sensitive data
 
-**This rule overrides "Capture faithfully" and "Save Q&A by default."** Before writing anything to `raw/`, `wiki/`, `log.md`, a commit message, or any file, scrub sensitive identifiers — when in doubt, mask and ask rather than store.
+**This overrides "capture faithfully" and "Save Q&A by default."** Before writing anything to `raw/`, `wiki/`, a commit message or any file, scrub:
 
-Treat as sensitive and **never persist verbatim**:
+- **Protocol / study / trial identifiers** — protocol numbers, study codes, internal trial IDs, IND/NDA numbers.
+- **Drug / compound identifiers** — sponsor compound codes, investigational product names, program-identifying isotope/formulation codes.
+- **Sponsor-confidential information** — unpublished program internals, pipeline specifics, non-public work details.
+- **Patient data / PHI** — names, subject IDs, dates of birth, site-identifying details.
 
-- **Protocol / study / trial identifiers** — protocol numbers (e.g. `XXX-020-001`), study codes, internal trial IDs, IND/NDA numbers.
-- **Drug / compound identifiers** — sponsor compound codes, investigational product names, isotope/formulation codes that identify a specific program.
-- **Sponsor-confidential information** — unpublished company/program internals, pipeline specifics, anything the human relays from work that isn't public.
-- **Patient data** — any patient-level data or PHI: names, subject/patient IDs, dates of birth, site-identifying details, etc.
+Handle it by **masking** in plain language ("some study", "a patient", "the study drug", "a sponsor"; bracketed placeholders like `[PROTOCOL]` where a slot must be explicit) or by **flagging** it ("this looks confidential — mask or skip?") and waiting. Keep pages at the level of public, generalizable knowledge. If sensitive data was saved, scrub the working tree immediately; if it reached a commit, stop and tell the human (history rewrite is their call).
 
-How to handle when such content appears (in chat, a pasted snippet, an uploaded file, or a draft page):
-
-1. **Mask it** — refer to it generically in plain language: "some study", "a patient", "the study drug", "a sponsor" (the human prefers this natural phrasing over bracketed tokens). Keep only the transferable, non-identifying methodology/concept. Bracketed placeholders (`[PROTOCOL]`, `[SUBJECT ID]`) are fine where a slot needs to be explicit.
-2. **Or flag it** — tell the human "this looks confidential — mask or skip?" and wait, rather than capturing it.
-3. Keep wiki pages at the level of **public, generalizable knowledge** (methods, standards, CDISC, statistical concepts). Identifying specifics never belong in a repo that auto-deploys to public GitHub Pages.
-
-If sensitive data has already been saved, scrub it from the working tree immediately; if it ever reaches a commit, stop and tell the human (history rewrite is their call).
-
-## Repository Layout
+## Layout
 
 ```
 biostat-kb/
-├── CLAUDE.md            # This file
-├── raw/
-│   ├── assets/          # PDFs, images (human-managed, read-only for you)
-│   └── sources/         # Raw clipped articles + notes captured from chat (don't edit human-authored ones)
-├── site/                # Quartz v4 framework — do not touch except for site config changes
-├── wiki/                # You maintain everything below (this is what publishes)
-│   ├── index.md         # Catalog of all pages, grouped by layer — update on every ingest
-│   ├── learning.md      # Learning dashboard: Learned / In Progress / To Learn
-│   ├── log.md           # Append-only activity log
-│   ├── therapeutic-areas/   # MAIN-NARRATIVE maps (MOCs): Oncology at top, indications (Prostate Cancer) under it — string terms together
-│   ├── criteria/            # Criteria & rules: assessment/decision rule-sets (RECIST, PCWG3, iRECIST, censoring/DLT rules…)
-│   ├── biomedical/          # Biomedical concepts: diseases, biology, biomarkers, imaging, PK/dosimetry
-│   ├── statistics/          # Statistical concepts: endpoints, estimands, surrogate/intercurrent, inference
-│   ├── data-standards/      # Data-standard concepts: CDISC SDTM, ADaM, controlled terminology
-│   ├── regulatory-guidance/ # Regulatory concepts: ICH (e.g. E9(R1)), FDA/EMA guidance documents
-│   └── templates/       # Page templates (reference only — not published, do not modify)
-└── .github/workflows/   # Pushing to main auto-deploys wiki/ to GitHub Pages
+├── CLAUDE.md
+├── raw/sources/  raw/assets/   # captures (unpublished provenance)
+├── scripts/sync.py             # regenerates index/learning lists + lints
+├── site/                       # Quartz v4 — touch only for site config changes
+└── wiki/                       # what publishes
+    ├── index.md                # catalog — lists are generated
+    ├── learning.md             # dashboard — Learned / In Progress generated; To Learn by hand
+    ├── log.md                  # append-only activity log
+    ├── therapeutic-areas/      # main-narrative maps
+    ├── clinical/               # diseases, biology, biomarkers, imaging, PK/dosimetry, clinical criteria
+    ├── statistics/             # endpoints, design, estimands, missing data, analysis methods
+    ├── trial-conduct/          # data standards + how a trial is run and recorded
+    ├── regulatory/             # what regulators / ethics committees require
+    └── templates/              # page templates (not published)
 ```
 
-## Domain Context
+### Which folder
 
-Knowledge spans seven domains (this is also the controlled tag vocabulary):
+Pick the page's **primary** nature; link to the rest. Moving a page between folders never breaks `[[links]]` (Quartz resolves by title).
 
-`biology` · `medical` · `statistics` · `standards` · `regulatory` · `data-management` · `trial-conduct`
+- `therapeutic-areas/` — a **map** (MOC, "map of content") at disease/area level that strings the terms together and adds no knowledge of its own. `Oncology` is the top map; indications (e.g. prostate cancer) are **sections within it**, promoted to their own page only if they grow large. A term is never a therapeutic area.
+- `clinical/` — the disease and how it is judged: diseases, biology, biomarkers, imaging, treatments, PK/dosimetry, safety measurements, and clinical assessment criteria (RECIST 1.1, PCWG3, CTCAE, GINA, SAE/AESI, DLT).
+- `statistics/` — endpoints, trial design (dose-finding, Simon two-stage), estimands and intercurrent events, missing data, analysis methods.
+- `trial-conduct/` — how a trial is run and its data recorded: CDISC (SDTM, ADaM, controlled terminology), MedDRA/WHODrug, CRFs/ePRO, schedule of assessments, eligibility criteria, AE collection/follow-up.
+- `regulatory/` — what regulators or ethics committees **require**: ICH guidelines, FDA/EMA guidance, IRB/IEC, Investigator's Brochure, protocol amendments, financial disclosure. (A statistical concept defined by ICH, like Estimand, stays in `statistics/`.)
 
-Most pages are cross-domain — tag each page with 1–3 domains from this exact list. **Never invent new domain tags.** Additional free-form tags are allowed after the domain tags but keep them rare.
+## Learned / To-Learn
 
-## The Learned / To-Learn Layer
-
-This is the core mechanism of the wiki:
-
-- **A wiki page exists ⇔ the human has learned it (or is actively learning it).** Frontmatter `status:` is `learning` or `learned`.
-- **To-learn items are NOT pages.** They live as `- [ ]` checklist entries in the **To Learn** section of `wiki/learning.md`, grouped by layer/topic.
-- **When the human learns something**: check the box in `learning.md`, create the page (status `learning` or `learned` as directed) in the right layer folder, link it from related pages, update `learning.md` and `index.md`.
-- **Chat remarks are progress signals.** When the human mentions in conversation "我在学 X" / "I'm learning X" / "I finished X", treat it as a directive to update this layer (create the page as `learning`, flip status, check boxes) — no link or upload needed for a status change. This is distinct from chat-shared *knowledge*, which gets captured to `raw/sources/` first.
-- Do not pre-create stub pages for unlearned material — an unlearned item is a checkbox, not a page.
-
-`wiki/learning.md` has three sections — **Learned** (links to pages with status `learned`), **In Progress** (status `learning`), **To Learn** (checklist, grouped by topic). Keep it in sync whenever any page's status changes.
+- **A page exists ⇔ the human has learned it or is learning it** (`status: learned | learning`).
+- **To-learn items are not pages** — they are `- [ ]` lines in the **To Learn** section of `learning.md`, grouped by folder. Never pre-create stub pages.
+- Chat remarks like "我在学 X" / "I finished X" are status directives: create the page as `learning`, flip `status:`, tick boxes. (That is distinct from chat-shared knowledge, which is captured first.)
+- The Learned / In Progress lists are generated from `status:` by `scripts/sync.py` — change the page's `status:`, never the list.
 
 ## Page Conventions
 
-### YAML Frontmatter
-
 ```yaml
 ---
-title: "Page Title"
-type: concept | therapeutic-area  # concept = a term page; therapeutic-area = a main-narrative MOC
-status: learning | learned
-tags: [medical, statistics]       # 1–3 from the domain vocabulary
+title: "Page Title"          # must equal the filename
+type: concept                # or therapeutic-area (a map)
+status: learning             # or learned
 created: YYYY-MM-DD
-updated: YYYY-MM-DD
-sources: 1                        # count of raw captures that informed this page
 ---
 ```
 
-### Cross-References
+That's all. No tags, source counts or `updated:` dates — the folder is the category, `log.md` is the provenance, and Quartz takes the modified date from git.
 
-- Use Obsidian wiki-links: `[[Page Title]]`; section anchors as `[[Page Title#Section]]`.
-- Every page should link to at least one other existing wiki page (skip only while the wiki is nearly empty).
-- When you create a new page, add inbound links to it from existing related pages.
-- **Links must resolve.** Never wiki-link a page that doesn't exist — unlearned items are plain-text checkboxes, not links.
-
-### File Naming
-
-**Critical: the filename basename must equal the frontmatter `title`** — Quartz slugifies link text and filename identically; if they differ the published link 404s.
-
-- Use the readable title as the filename, including spaces, parentheses, em-dashes, curly braces: `Analysis Results Data ({cards}).md`.
-- Sanitize Windows-illegal chars (`< > : " / \ | ? *`) by rephrasing the title — do not invent a kebab-case alternate.
-- When referencing a page, use the **exact** canonical title. One canonical title per file; fix variant references rather than tolerating them.
-- **Meta files are the exception** (`index.md`, `learning.md`, `log.md`): their filenames intentionally differ from their titles ("Wiki Index", "Learning Dashboard", "Activity Log"). Quartz resolves a `[[wiki-link]]` by **filename slug, not title**, so link the dashboard as `[[learning|Learning Dashboard]]` (not `[[Learning Dashboard]]`, which 404s). Content pages keep filename == title so plain `[[Title]]` works.
-
-Folder placement — two kinds of pages:
-
-1. **Therapeutic-area maps** live in `therapeutic-areas/`. A therapeutic area is the **main narrative** at the disease/area granularity — **not** an individual term. `Oncology` is the top map; indications (e.g. prostate cancer) are **sections within `Oncology`**, not separate peer pages — they reuse the same cross-cutting concepts, so don't split them out. A therapeutic-area page is a MOC (`type: therapeutic-area`) whose job is to **string the relevant terms together** and link them; it adds no new knowledge of its own. (Promote an indication to its own page only if it grows large enough to need one.)
-2. **Concept pages** (the actual terms) live in exactly one **concept-type** folder by their nature:
-   - `criteria/` — criteria & rules: standardized assessment/decision rule-sets (RECIST 1.1, PCWG3, the modified composite criterion, measurability rules; later iRECIST, censoring/DLT rules, etc.). These are *rules for classifying a state/endpoint* — distinct from data standards (how data is structured) and from biomedical concepts (the biology/clinical entities themselves).
-   - `biomedical/` — biomedical concepts: diseases, biology, biomarkers, imaging, PK, dosimetry.
-   - `statistics/` — statistical concepts: endpoints, estimands, intercurrent events, surrogate endpoints, best overall response.
-   - `data-standards/` — data-standard concepts: CDISC SDTM, ADaM, controlled terminology.
-   - `regulatory-guidance/` — regulatory concepts: ICH (e.g. E9(R1)), FDA/EMA guidance documents.
-
-So the granularity is: **a term is NOT a therapeutic area** — it is a criteria/biomedical/statistical/data-standard/regulatory concept, and a therapeutic-area map links to it. Many concepts are cross-cutting — file under the **primary** type and wiki-link to the rest. Moving a page between folders does **not** break `[[wiki-links]]` (Quartz resolves by title, not path).
+- **Links:** Obsidian wiki-links `[[Page Title]]`, anchors `[[Page Title#Section]]`. Every page links to at least one other page; when you create a page, also add inbound links from related pages (and from its therapeutic-area map). Never link a page that doesn't exist — unlearned items are plain-text checkboxes.
+- **Filename = title, exactly** (Quartz slugifies both; a mismatch 404s). Use the readable title with spaces/parentheses: `Analysis Results Data ({cards}).md`. Rephrase to avoid `< > : " / \ | ? *`; never invent a kebab-case alternate. Always reference the exact canonical title.
+- **Meta files** (`index.md`, `learning.md`, `log.md`) are the exception: Quartz resolves links by filename, so link the dashboard as `[[learning|Learning Dashboard]]`.
 
 ## Workflows
 
-### Capture (when the human supplies a link, uploads a file/picture, or shares knowledge in chat)
-
-1. For a link: fetch it and save a captured copy to `raw/sources/YYYY-MM-DD <short topic>.md` (origin line `Source: <url>, captured <date>`). For an upload: save it to `raw/sources/` (notes/docs) or `raw/assets/` (images/PDFs). For chat-shared knowledge: save the human's words to `raw/sources/YYYY-MM-DD <short topic>.md` (origin line `From chat, <date>`).
-2. Continue straight into the Ingest workflow on that new file.
-
 ### Ingest (default: light touch)
 
-When told to ingest a source (or right after Capture):
-
-1. **Read** the raw file in `raw/sources/`.
-2. **Create or update** content pages in the right layer folder (`therapeutic-areas/`, `statistics/`, `data-standards/`, `regulatory-guidance/`) **only for what the human actually engaged with** — typically 1–4 pages, not an exhaustive sweep. Ask if unsure what they consider "learned" from it. Do **not** create a published source-note page.
-3. **Check off** any matching to-learn items in `learning.md`.
-4. **Update** `wiki/index.md` (under the right layer section); **append** to `wiki/log.md`, naming the `raw/sources/` capture the page came from.
+1. **Capture** to `raw/` (see Sources).
+2. **Write** or extend the content page(s) in the right folder — only what the human engaged with, typically 1–4 pages. Add the cross-links (related pages + the therapeutic-area map).
+3. If a to-learn checkbox matches, tick it in `learning.md`.
+4. **Sync:** `python3 scripts/sync.py` — regenerates the index and dashboard lists and lints. Fix any ERROR before moving on.
+5. **Log:** append one line per ingest to `wiki/log.md` under today's `## YYYY-MM-DD` heading (append with the shell; no need to read the whole file):
+   `- <page(s)> — new | extended | status → learned ← raw/sources/<file>.md`
 
 ### Query
 
-1. Read `wiki/index.md` (and `learning.md` if the question concerns progress).
-2. Read the relevant pages in full; synthesize with `[[Page Title]]` citations.
-3. **Answer short first.** The human follows up quickly — give the direct answer plus a little context (aim for a short paragraph, ~4-6 sentences, not a one-liner and not an exposition); let the follow-ups pull out detail.
+Read the relevant pages (find them via `index.md`), answer with `[[Page Title]]` citations, short first.
 
 ### Learning Review
 
-When asked "what should I learn next" (or similar): read `learning.md` and `index.md`, propose 2–3 next items with a one-line rationale each, considering what learned pages they would connect to.
+"What should I learn next?" → read `learning.md` and `index.md`; propose 2–3 items, one line of rationale each, favouring ones that connect to learned pages.
 
 ### Lint
 
-When told to "lint the wiki": check for broken wiki-links, filename/title mismatches, pages filed in the wrong layer folder, orphan pages, status/dashboard drift between pages and `learning.md`, stale checkboxes (item learned but box unchecked), index sections out of sync with the folders, and missing links between clearly related pages. Report as a numbered checklist; fix only when told.
-
-## Log Format
-
-Append to `wiki/log.md`, newest entry at the bottom:
-
-```
-## YYYY-MM-DD
-- Ingested `raw/sources/<file>`; created [[X]] (statistics), updated [[Y]] (therapeutic-areas)
-- Marked [[Z]] as learned; checked off in learning.md
-```
+`python3 scripts/sync.py` checks broken links, filename/title mismatches, pages outside the five folders, bad status/type, and orphans. Beyond that, look for pages in the wrong folder and missing links between clearly related pages. When the human asks for a lint, report a numbered checklist.
