@@ -35,6 +35,7 @@ Durable preferences live here (the repo travels between machines). Add new ones 
 
 - **Save Q&A by default — never ask whether to.** Every substantive question the human asks (follow-ups and clarifications included) plus your answer is material: capture it as `From chat` and run a light-touch ingest without asking. Pure commands are still just commands.
 - **Answer short first.** A short paragraph (~4–6 sentences or a few bullets): direct answer plus a little context. The human follows up for detail.
+- **Chat language: simple English first.** Write every reply in plain, simple English (English is the human's second language), with a Chinese gloss after key terms, the same style as the wiki pages. Not Chinese-first, and not full bilingual.
 - **Record first, answer last.** Do the capture/ingest/sync before giving the answer, so the answer is the last thing in the turn. A one-line note like "记录并 ingest" before the tool calls is fine.
 - **Gloss terms in Chinese, not sentences.** Add a Chinese gloss after each load-bearing **term** (e.g. `lesion (病灶)`, `dose-limiting toxicity (剂量限制性毒性)`), generously, so no key term is English-only. Never translate clauses or summary lines. A Chinese 口诀 (mnemonic) only when asked. English stays primary; titles and filenames stay canonical.
 - **When ingesting a source into a page, show the full page content in chat.** What goes on the page = exactly what the human reads in chat. Paste the complete page body (minus frontmatter), not highlights. This overrides "Answer short first" for ingests/digests.
